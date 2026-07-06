@@ -17,122 +17,108 @@
     </style>
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js" type="text/javascript"></script>
   <script src="/_sdk/0179d719c431a79e.data_sdk.js" type="text/javascript" integrity="sha512-OsRvJkI5GkC3MJQcgotQYotpzrMSX415GiKKgvYdxQEEkzD/fdchShO2FMSy0PJr/tiINMXOk5Vl2zAgg6bUiA=="></script>
+  <script src="/_sdk/e063511df281944a.editing_sdk.js" type="text/javascript" integrity="sha512-Xa8p4aPfoMxVnzxQE2WAG0FfoaPLxdjOJMfUZGm1yZosJTYmnNDvgLkJ2EoN0i3zxjeQVAzUMSXNvTKQVqbXyQ=="></script>
   <script src="/_sdk/0b3af1c300e720aa.resizing_sdk.js" type="text/javascript" integrity="sha512-nX1P6oXZmEY5wCI2lUVg3BwKu1cr0yi+ZpXgZ0Yn90vkSwvpmyzBMvOyD6VLJUtBwFI2dSrw1b6OvORxSggw3w=="></script>
  </head>
- <body data-template-id="__page-root" class="w-full text-[#f5f0e8]" style="background: rgb(13, 7, 4);"><!-- Navigation -->
+ <body data-template-id="__page-root" class="w-full text-[#f5f0e8]" style="background: rgb(13, 7, 4);">
   <nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-[#0d0704]/90 border-b border-[#c9a96e]/20">
-   <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"><a href="#hero" data-template-id="nav-logo" class="canva-text text-xl font-semibold tracking-wider" style="color: rgb(201, 169, 110); font-weight: 600;">Heritage Atelier</a> <button id="mobile-toggle" class="md:hidden text-[#c9a96e]" aria-label="메뉴 열기">
-     <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M3 6h18M3 12h18M3 18h18"></path>
+   <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#hero" class="text-xl font-semibold tracking-wider text-[#c9a96e]">Heritage Atelier</a> <button id="mobile-toggle" class="md:hidden text-[#c9a96e]" aria-label="메뉴 열기">
+     <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"></path>
      </svg></button>
-    <div id="nav-links" class="hidden md:flex gap-8 text-sm tracking-wide"><a href="#story" data-template-id="nav-item-1" class="canva-link nav-link" style="color: rgb(245, 240, 232);">소개</a> <a href="#services" data-template-id="nav-item-2" class="canva-link nav-link" style="color: rgb(245, 240, 232);">서비스</a> <a href="#process" data-template-id="nav-item-3" class="canva-link nav-link" style="color: rgb(245, 240, 232);">제작과정</a> <a href="#plans" data-template-id="nav-item-4" class="canva-link nav-link" style="color: rgb(245, 240, 232);">플랜</a> <a href="#contact" data-template-id="nav-item-5" class="canva-link nav-link" style="color: rgb(245, 240, 232);">상담하기</a>
+    <div id="nav-links" class="hidden md:flex gap-8 text-sm tracking-wide">
+     <a href="#story" class="nav-link">소개</a> <a href="#services" class="nav-link">서비스</a> <a href="#process" class="nav-link">제작과정</a> <a href="#plans" class="nav-link">플랜</a> <a href="#contact" class="nav-link">상담하기</a>
     </div>
    </div>
-   <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col gap-4 text-sm"><a href="#story" class="nav-link">소개</a> <a href="#services" class="nav-link">서비스</a> <a href="#process" class="nav-link">제작과정</a> <a href="#plans" class="nav-link">플랜</a> <a href="#contact" class="nav-link">상담하기</a>
+   <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col gap-4 text-sm">
+    <a href="#story" class="nav-link">소개</a> <a href="#services" class="nav-link">서비스</a> <a href="#process" class="nav-link">제작과정</a> <a href="#plans" class="nav-link">플랜</a> <a href="#contact" class="nav-link">상담하기</a>
    </div>
-  </nav><!-- Hero -->
+  </nav>
   <section id="hero" class="relative min-h-screen flex items-center justify-center text-center px-6 pt-20">
    <div class="relative z-10 max-w-3xl mx-auto">
-    <h1 data-template-id="hero-headline" class="canva-text text-3xl md:text-5xl leading-tight font-light tracking-wide mb-6" style="color: rgb(245, 240, 232); font-weight: 300; font-size: 27px;">
-살아 있는 순간을 가장 깊고 아름답게 기록하는<br>
-헤리티지 아뜰리에
-    </h1>
-    <p data-template-id="hero-sub" class="canva-text text-base md:text-lg opacity-80 leading-relaxed mb-10 max-w-xl mx-auto" style="color: rgb(245, 240, 232); font-weight: 300;">가문의 기억과 사랑, 목소리와 시간을 
-한 권의 기록으로 남깁니다. 
-
-지금 이 순간의 빛나는 삶을 예술로 보존합니다.</p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center"><a href="#contact" data-template-id="hero-cta-1" class="canva-button px-8 py-3 border border-[#c9a96e] text-[#c9a96e] hover:bg-[#c9a96e] hover:text-[#221612] transition-all text-sm tracking-widest" style="color: rgb(201, 169, 110);">상담 신청하기</a> <a href="#services" data-template-id="hero-cta-2" class="canva-button px-8 py-3 border border-[#f5f0e8]/30 hover:border-[#c9a96e] transition-all text-sm tracking-widest" style="color: rgb(245, 240, 232);">서비스 보기</a>
+    <h1 class="text-3xl md:text-5xl leading-tight font-light tracking-wide mb-6">살아 있는 순간을 가장 깊고 아름답게 기록하는<br>
+      헤리티지 아뜰리에</h1>
+    <p class="text-base md:text-lg opacity-80 leading-relaxed mb-10 max-w-xl mx-auto font-light">가문의 기억과 사랑, 목소리와 시간을 한 권의 기록으로 남깁니다.<br>
+      지금 이 순간의 빛나는 삶을 예술로 보존합니다.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+     <a href="#contact" class="px-8 py-3 border border-[#c9a96e] text-[#c9a96e] hover:bg-[#c9a96e] hover:text-[#221612] transition-all text-sm tracking-widest">상담 신청하기</a> <a href="#services" class="px-8 py-3 border border-[#f5f0e8]/30 hover:border-[#c9a96e] transition-all text-sm tracking-widest">서비스 보기</a>
     </div>
    </div>
-  </section><!-- Corporate Values -->
+  </section>
   <section id="values" class="py-24 md:py-32 px-6 bg-[#1a0f0a]">
    <div class="max-w-6xl mx-auto text-center mb-16">
-    <p data-template-id="values-label" class="canva-text text-xs tracking-[0.3em] uppercase mb-4" style="color:#c9a96e">Core Values</p>
-    <h2 data-template-id="values-title" class="canva-text text-2xl md:text-4xl font-light mb-4" style="color: rgb(245, 240, 232); font-weight: 300; font-size: 36px;">기업 가치</h2>
+    <p class="text-xs tracking-[0.3em] uppercase mb-4 text-[#c9a96e]">Core Values</p>
+    <h2 class="text-2xl md:text-4xl font-light mb-4">기업 가치</h2>
     <div class="gold-line w-20 mx-auto"></div>
    </div>
    <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
-    <div data-template-id="value-1" class="canva-card p-8 rounded-sm border border-[#c9a96e]/15" style="background: rgb(13, 7, 4);">
-     <p data-template-id="value-1-text" class="canva-text text-base leading-[2] opacity-90" style="color: rgb(245, 240, 232); font-weight: 300;">한 권의 책을 넘어, 가문의 역사와 자부심을 
-세대 간에 명예롭게 잇습니다. 
-존경할 수 있는 조상의 흔적을 
-후대에 전승하여 선물하는 것, 
-그것이 우리의 시작입니다.</p>
+    <div class="p-8 rounded-sm border border-[#c9a96e]/15 bg-[#0d0704]">
+     <p class="text-base leading-[2] opacity-90 font-light">한 권의 책을 넘어, 가문의 역사와 자부심을 세대 간에 명예롭게 잇습니다. 존경할 수 있는 조상의 흔적을 후대에 전승하여 선물하는 것, 그것이 우리의 시작입니다.</p>
     </div>
-    <div data-template-id="value-2" class="canva-card p-8 rounded-sm border border-[#c9a96e]/15" style="background: rgb(13, 7, 4);">
-     <p data-template-id="value-2-text" class="canva-text text-base leading-[2] opacity-90" style="color: rgb(245, 240, 232); font-weight: 300;">살아 있는 순간의 황금기를 축하하고,
-후대가 다시 만날 수 있는 증거를 남깁니다. 
-장인정신으로 한 사람의 삶을 예술로 
-완성하는 것입니다.</p>
+    <div class="p-8 rounded-sm border border-[#c9a96e]/15 bg-[#0d0704]">
+     <p class="text-base leading-[2] opacity-90 font-light">살아 있는 순간의 황금기를 축하하고, 후대가 다시 만날 수 있는 증거를 남깁니다. 장인정신으로 한 사람의 삶을 예술로 완성하는 것입니다.</p>
     </div>
-    <div data-template-id="value-3" class="canva-card p-8 rounded-sm border border-[#c9a96e]/15" style="background: rgb(13, 7, 4);">
-     <p data-template-id="value-3-text" class="canva-text text-base leading-[2] opacity-90" style="color: rgb(245, 240, 232); font-weight: 300;">물질적 효도에서 한 걸음 나아가, 
-정서적·시간적 연결을 가능하게 합니다. 
-진정성 있는 기록이 만드는 
-혁신적인 연결이야말로 
-가문의 미래를 세우는 것입니다.</p>
+    <div class="p-8 rounded-sm border border-[#c9a96e]/15 bg-[#0d0704]">
+     <p class="text-base leading-[2] opacity-90 font-light">물질적 효도에서 한 걸음 나아가, 정서적·시간적 연결을 가능하게 합니다. 진정성 있는 기록이 만드는 혁신적인 연결이야말로 가문의 미래를 세우는 것입니다.</p>
     </div>
    </div>
-  </section><!-- Brand Story -->
+  </section>
   <section id="story" class="py-24 md:py-32 px-6">
    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
     <div>
-     <p data-template-id="story-label" class="canva-text text-xs tracking-[0.3em] uppercase mb-4" style="color:#c9a96e">이야기의 시작</p>
+     <p class="text-xs tracking-[0.3em] uppercase mb-4 text-[#c9a96e]">이야기의 시작</p>
      <div class="gold-line w-12 mb-8"></div>
-     <p data-template-id="story-text" class="canva-text text-base leading-[2.2] opacity-90" style="color: rgb(245, 240, 232); font-weight: 300;">어느 날, 어머니로부터 인체조직기증 약정서를 작성하셨다는 이야기를 듣고 문득 깨달았습니다. 
-언젠가 어머니의 목소리도, 손끝의 온기도, 함께한 시간도 희미해질 수 있다는 것을. 
-
-그래서 결심했습니다. 살아 계신 지금, 이 순간을 가장 깊고 아름답게 기록하겠다고. 
-
-우리는 책을 만드는 회사가 아닙니다. 한 사람의 삶을 가문의 유산으로 남기는 기록 전문 아뜰리에입니다.</p>
+     <p class="text-base leading-[2.2] opacity-90 font-light">어느 날, 어머니로부터 인체조직기증 약정서를 작성하셨다는 이야기를 듣고 문득 깨달았습니다. 언젠가 어머니의 목소리도, 손끝의 온기도, 함께한 시간도 희미해질 수 있다는 것을.<br><br>
+       그래서 결심했습니다. 살아 계신 지금, 이 순간을 가장 깊고 아름답게 기록하겠다고.<br><br>
+       우리는 책을 만드는 회사가 아닙니다. 한 사람의 삶을 가문의 유산으로 남기는 기록 전문 아뜰리에입니다.</p>
     </div>
    </div>
-  </section><!-- Services -->
+  </section>
   <section id="services" class="py-24 md:py-32 px-6">
    <div class="max-w-6xl mx-auto text-center mb-16">
-    <p data-template-id="services-label" class="canva-text text-xs tracking-[0.3em] uppercase mb-4" style="color:#c9a96e">Services</p>
-    <h2 data-template-id="services-title" class="canva-text text-2xl md:text-4xl font-light mb-4" style="color: rgb(245, 240, 232); font-weight: 300; font-size: 24px;">우리가 기록하는 것들</h2>
+    <p class="text-xs tracking-[0.3em] uppercase mb-4 text-[#c9a96e]">Services</p>
+    <h2 class="text-2xl md:text-4xl font-light mb-4">우리가 기록하는 것들</h2>
     <div class="gold-line w-20 mx-auto"></div>
    </div>
    <div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-    <div data-template-id="svc-1" class="canva-card card-hover p-8 rounded-sm border border-[#c9a96e]/15 text-center" style="background: rgb(26, 15, 10);">
-     <h3 data-template-id="svc-1-title" class="canva-text text-lg mb-3 font-medium" style="color: rgb(245, 240, 232); font-weight: 500; font-size: 19px;">애니메이션 일대기</h3>
-     <p data-template-id="svc-1-desc" class="canva-text text-sm opacity-70 leading-relaxed" style="color: rgb(245, 240, 232);">애니메이션으로 의뢰자의 기억을 남기고 전승합니다.</p>
+    <div class="card-hover p-8 rounded-sm border border-[#c9a96e]/15 text-center bg-[#1a0f0a]">
+     <h3 class="text-lg mb-3 font-medium">애니메이션 일대기</h3>
+     <p class="text-sm opacity-70 leading-relaxed">애니메이션으로 의뢰자의 기억을 남기고 전승합니다.</p>
     </div>
-    <div data-template-id="svc-2" class="canva-card card-hover p-8 rounded-sm border border-[#c9a96e]/15 text-center" style="background: rgb(26, 15, 10);">
-     <h3 data-template-id="svc-2-title" class="canva-text text-lg mb-3 font-medium" style="color: rgb(245, 240, 232); font-weight: 500; font-size: 19px;">현장 방문</h3>
-     <p data-template-id="svc-2-desc" class="canva-text text-sm opacity-70 leading-relaxed" style="color: rgb(245, 240, 232);">직접 찾아가 삶의 현장을 기록합니다.</p>
+    <div class="card-hover p-8 rounded-sm border border-[#c9a96e]/15 text-center bg-[#1a0f0a]">
+     <h3 class="text-lg mb-3 font-medium">현장 방문</h3>
+     <p class="text-sm opacity-70 leading-relaxed">직접 찾아가 삶의 현장을 기록합니다.</p>
     </div>
-    <div data-template-id="svc-3" class="canva-card card-hover p-8 rounded-sm border border-[#c9a96e]/15 text-center" style="background: rgb(26, 15, 10);">
-     <h3 data-template-id="svc-3-title" class="canva-text text-lg mb-3 font-medium" style="color: rgb(245, 240, 232); font-weight: 500; font-size: 19px;">가족 전기</h3>
-     <p data-template-id="svc-3-desc" class="canva-text text-sm opacity-70 leading-relaxed" style="color: rgb(245, 240, 232);">가족이 함께 읽고 대화할 수 있는 전기를 만듭니다.</p>
+    <div class="card-hover p-8 rounded-sm border border-[#c9a96e]/15 text-center bg-[#1a0f0a]">
+     <h3 class="text-lg mb-3 font-medium">가족 전기</h3>
+     <p class="text-sm opacity-70 leading-relaxed">가족이 함께 읽고 대화할 수 있는 전기를 만듭니다.</p>
     </div>
-    <div data-template-id="svc-4" class="canva-card card-hover p-8 rounded-sm border border-[#c9a96e]/15 text-center" style="background: rgb(26, 15, 10);">
-     <h3 data-template-id="svc-4-title" class="canva-text text-lg mb-3 font-medium" style="color: rgb(245, 240, 232); font-weight: 500; font-size: 19px;">그림 동화책</h3>
-     <p data-template-id="svc-4-desc" class="canva-text text-sm opacity-70 leading-relaxed" style="color: rgb(245, 240, 232);">손주를 위한 그림 동화책으로 삶의 교훈을 전합니다.</p>
+    <div class="card-hover p-8 rounded-sm border border-[#c9a96e]/15 text-center bg-[#1a0f0a]">
+     <h3 class="text-lg mb-3 font-medium">그림 동화책</h3>
+     <p class="text-sm opacity-70 leading-relaxed">손주를 위한 그림 동화책으로 삶의 교훈을 전합니다.</p>
     </div>
-    <div data-template-id="svc-5" class="canva-card card-hover p-8 rounded-sm border border-[#c9a96e]/15 text-center" style="background: rgb(26, 15, 10);">
-     <h3 data-template-id="svc-5-title" class="canva-text text-lg mb-3 font-medium" style="color: rgb(245, 240, 232); font-weight: 500; font-size: 19px;">빛나는 순간</h3>
-     <p data-template-id="svc-5-desc" class="canva-text text-sm opacity-70 leading-relaxed" style="color: rgb(245, 240, 232);">살아 계실 때 가장 빛나는 순간을 기록합니다.</p>
+    <div class="card-hover p-8 rounded-sm border border-[#c9a96e]/15 text-center bg-[#1a0f0a]">
+     <h3 class="text-lg mb-3 font-medium">빛나는 순간</h3>
+     <p class="text-sm opacity-70 leading-relaxed">살아 계실 때 가장 빛나는 순간을 기록합니다.</p>
     </div>
-    <div data-template-id="svc-6" class="canva-card card-hover p-8 rounded-sm border border-[#c9a96e]/15 text-center" style="background: rgb(26, 15, 10);">
-     <h3 data-template-id="svc-6-title" class="canva-text text-lg mb-3 font-medium" style="color: rgb(245, 240, 232); font-weight: 500; font-size: 19px;">관계의 기록</h3>
-     <p data-template-id="svc-6-desc" class="canva-text text-sm opacity-70 leading-relaxed" style="color: rgb(245, 240, 232);">기록보다 관계를 남깁니다.</p>
+    <div class="card-hover p-8 rounded-sm border border-[#c9a96e]/15 text-center bg-[#1a0f0a]">
+     <h3 class="text-lg mb-3 font-medium">관계의 기록</h3>
+     <p class="text-sm opacity-70 leading-relaxed">기록보다 관계를 남깁니다.</p>
     </div>
-    <div data-template-id="svc-7" class="canva-card card-hover p-8 rounded-sm border border-[#c9a96e]/15 text-center" style="background: rgb(26, 15, 10);">
-     <h3 data-template-id="svc-7-title" class="canva-text text-lg mb-3 font-medium" style="color: rgb(245, 240, 232); font-weight: 500; font-size: 19px;">경영 백서</h3>
-     <p data-template-id="svc-7-desc" class="canva-text text-sm opacity-70 leading-relaxed" style="color: rgb(245, 240, 232);">직접 일군 사업의 경영 철학을 백서로 남깁니다.</p>
+    <div class="card-hover p-8 rounded-sm border border-[#c9a96e]/15 text-center bg-[#1a0f0a]">
+     <h3 class="text-lg mb-3 font-medium">경영 백서</h3>
+     <p class="text-sm opacity-70 leading-relaxed">직접 일군 사업의 경영 철학을 백서로 남깁니다.</p>
     </div>
-    <div data-template-id="svc-8" class="canva-card card-hover p-8 rounded-sm border border-[#c9a96e]/15 text-center" style="background: rgb(26, 15, 10);">
-     <h3 data-template-id="svc-8-title" class="canva-text text-lg mb-3 font-medium" style="color: rgb(245, 240, 232); font-weight: 500; font-size: 19px;">디지털 아카이브</h3>
-     <p data-template-id="svc-8-desc" class="canva-text text-sm opacity-70 leading-relaxed" style="color: rgb(245, 240, 232);">가문 전용 프라이빗 웹페이지로 영구 보존합니다.</p>
+    <div class="card-hover p-8 rounded-sm border border-[#c9a96e]/15 text-center bg-[#1a0f0a]">
+     <h3 class="text-lg mb-3 font-medium">디지털 아카이브</h3>
+     <p class="text-sm opacity-70 leading-relaxed">가문 전용 프라이빗 웹페이지로 영구 보존합니다.</p>
     </div>
    </div>
-  </section><!-- Process -->
+  </section>
   <section id="process" class="py-24 md:py-32 px-6">
    <div class="max-w-6xl mx-auto text-center mb-16">
-    <p data-template-id="process-label" class="canva-text text-xs tracking-[0.3em] uppercase mb-4" style="color:#c9a96e">Process</p>
-    <h2 data-template-id="process-title" class="canva-text text-2xl md:text-4xl font-light mb-4" style="color: rgb(245, 240, 232); font-weight: 300; font-size: 24px;">아뜰리에 공정</h2>
+    <p class="text-xs tracking-[0.3em] uppercase mb-4 text-[#c9a96e]">Process</p>
+    <h2 class="text-2xl md:text-4xl font-light mb-4">아뜰리에 공정</h2>
     <div class="gold-line w-20 mx-auto"></div>
    </div>
    <div class="max-w-5xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-center">
@@ -140,134 +126,139 @@
      <div class="w-10 h-10 rounded-full bg-[#c9a96e] text-[#221612] flex items-center justify-center mx-auto mb-3 text-sm font-bold">
       01
      </div>
-     <h4 data-template-id="proc-1-title" class="canva-text text-sm font-medium mb-1" style="color: rgb(245, 240, 232); font-weight: 500;">상담</h4>
-     <p data-template-id="proc-1-desc" class="canva-text text-xs opacity-60" style="color: rgb(245, 240, 232);">고객의 니즈와 기록 목적을 상담합니다</p>
+     <h4 class="text-sm font-medium mb-1">상담</h4>
+     <p class="text-xs opacity-60">고객의 니즈와 기록 목적을 상담합니다</p>
     </div>
     <div>
      <div class="w-10 h-10 rounded-full bg-[#c9a96e] text-[#221612] flex items-center justify-center mx-auto mb-3 text-sm font-bold">
       02
      </div>
-     <h4 data-template-id="proc-2-title" class="canva-text text-sm font-medium mb-1" style="color: rgb(245, 240, 232); font-weight: 500;">기획</h4>
-     <p data-template-id="proc-2-desc" class="canva-text text-xs opacity-60" style="color: rgb(245, 240, 232);">맞춤형 기획서를 작성하여 컨펌 후 진행</p>
+     <h4 class="text-sm font-medium mb-1">기획</h4>
+     <p class="text-xs opacity-60">맞춤형 기획서를 작성하여 컨펌 후 진행</p>
     </div>
     <div>
      <div class="w-10 h-10 rounded-full bg-[#c9a96e] text-[#221612] flex items-center justify-center mx-auto mb-3 text-sm font-bold">
       03
      </div>
-     <h4 data-template-id="proc-3-title" class="canva-text text-sm font-medium mb-1" style="color: rgb(245, 240, 232); font-weight: 500;">인터뷰</h4>
-     <p data-template-id="proc-3-desc" class="canva-text text-xs opacity-60" style="color: rgb(245, 240, 232);">인생 이야기를 자세히 듣습니다</p>
+     <h4 class="text-sm font-medium mb-1">인터뷰</h4>
+     <p class="text-xs opacity-60">인생 이야기를 자세히 듣습니다</p>
     </div>
     <div>
      <div class="w-10 h-10 rounded-full bg-[#c9a96e] text-[#221612] flex items-center justify-center mx-auto mb-3 text-sm font-bold">
       04
      </div>
-     <h4 data-template-id="proc-4-title" class="canva-text text-sm font-medium mb-1" style="color: rgb(245, 240, 232); font-weight: 500;">촬영</h4>
-     <p data-template-id="proc-4-desc" class="canva-text text-xs opacity-60" style="color: rgb(245, 240, 232);">사진과 영상을 촬영합니다</p>
+     <h4 class="text-sm font-medium mb-1">촬영</h4>
+     <p class="text-xs opacity-60">사진과 영상을 촬영합니다</p>
     </div>
     <div>
      <div class="w-10 h-10 rounded-full bg-[#c9a96e] text-[#221612] flex items-center justify-center mx-auto mb-3 text-sm font-bold">
       05
      </div>
-     <h4 data-template-id="proc-5-title" class="canva-text text-sm font-medium mb-1" style="color: rgb(245, 240, 232); font-weight: 500;">제작</h4>
-     <p data-template-id="proc-5-desc" class="canva-text text-xs opacity-60" style="color: rgb(245, 240, 232);">전기, 영상 등을 정성껏 제작합니다</p>
+     <h4 class="text-sm font-medium mb-1">제작</h4>
+     <p class="text-xs opacity-60">전기, 영상 등을 정성껏 제작합니다</p>
     </div>
     <div>
      <div class="w-10 h-10 rounded-full bg-[#c9a96e] text-[#221612] flex items-center justify-center mx-auto mb-3 text-sm font-bold">
       06
      </div>
-     <h4 data-template-id="proc-6-title" class="canva-text text-sm font-medium mb-1" style="color: rgb(245, 240, 232); font-weight: 500;">납품</h4>
-     <p data-template-id="proc-6-desc" class="canva-text text-xs opacity-60" style="color: rgb(245, 240, 232);">가족과 함께 감동을 나눕니다</p>
+     <h4 class="text-sm font-medium mb-1">납품</h4>
+     <p class="text-xs opacity-60">가족과 함께 감동을 나눕니다</p>
     </div>
    </div>
-  </section><!-- Plans -->
+  </section>
   <section id="plans" class="py-24 md:py-32 px-6">
    <div class="max-w-6xl mx-auto text-center mb-16">
-    <p data-template-id="plans-label" class="canva-text text-xs tracking-[0.3em] uppercase mb-4" style="color:#c9a96e">Premium Plans</p>
-    <h2 data-template-id="plans-title" class="canva-text text-2xl md:text-4xl font-light mb-4" style="color: rgb(245, 240, 232); font-weight: 300; font-size: 24px;">프리미엄 플랜</h2>
+    <p class="text-xs tracking-[0.3em] uppercase mb-4 text-[#c9a96e]">Premium Plans</p>
+    <h2 class="text-2xl md:text-4xl font-light mb-4">프리미엄 플랜</h2>
     <div class="gold-line w-20 mx-auto"></div>
    </div>
    <div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    <div data-template-id="plan-1" class="canva-card card-hover p-8 rounded-sm border border-[#c9a96e]/20" style="background: rgb(26, 15, 10);">
-     <h3 data-template-id="plan-1-name" class="canva-text text-lg font-medium mb-3" style="color: rgb(201, 169, 110); font-weight: 600; font-size: 19px;">SET. Green</h3>
-     <p data-template-id="plan-1-desc" class="canva-text text-sm opacity-70 leading-relaxed" style="color: rgb(245, 240, 232);">동화책 + 영상편지</p>
+    <div class="card-hover p-8 rounded-sm border border-[#c9a96e]/20 bg-[#2a1c16]">
+     <h3 class="text-lg font-semibold mb-3 text-[#c9a96e]">SET. Green</h3>
+     <p class="text-sm opacity-70 leading-relaxed">동화책 + 영상편지</p>
     </div>
-    <div data-template-id="plan-2" class="canva-card card-hover p-8 rounded-sm border border-[#c9a96e]/20" style="background: rgb(42, 28, 22);">
-     <h3 data-template-id="plan-2-name" class="canva-text text-lg font-medium mb-3" style="color: rgb(201, 169, 110); font-weight: 600; font-size: 19px;">SET. Standard Blue</h3>
-     <p data-template-id="plan-2-desc" class="canva-text text-sm opacity-70 leading-relaxed" style="color: rgb(245, 240, 232);">동화책 + 영상편지 + 전기</p>
+    <div class="card-hover p-8 rounded-sm border border-[#c9a96e]/20 bg-[#2a1c16]">
+     <h3 class="text-lg font-semibold mb-3 text-[#c9a96e]">SET. Standard Blue</h3>
+     <p class="text-sm opacity-70 leading-relaxed">동화책 + 영상편지 + 전기</p>
     </div>
-    <div data-template-id="plan-3" class="canva-card card-hover p-8 rounded-sm border border-[#c9a96e]/20" style="background: rgb(26, 15, 10);">
-     <h3 data-template-id="plan-3-name" class="canva-text text-lg font-medium mb-3" style="color: rgb(201, 169, 110); font-weight: 600; font-size: 19px;">SET. Special Orange</h3>
-     <p data-template-id="plan-3-desc" class="canva-text text-sm opacity-70 leading-relaxed" style="color: rgb(245, 240, 232);">동화책 + 영상편지 + 전기 + 다큐멘터리</p>
+    <div class="card-hover p-8 rounded-sm border border-[#c9a96e]/20 bg-[#2a1c16]">
+     <h3 class="text-lg font-semibold mb-3 text-[#c9a96e]">SET. Special Orange</h3>
+     <p class="text-sm opacity-70 leading-relaxed">동화책 + 영상편지 + 전기 + 다큐멘터리</p>
     </div>
-    <div data-template-id="plan-4" class="canva-card card-hover p-8 rounded-sm border border-[#c9a96e]/20" style="background: rgb(42, 28, 22);">
-     <h3 data-template-id="plan-4-name" class="canva-text text-lg font-medium mb-3" style="color: rgb(201, 169, 110); font-weight: 600; font-size: 19px;">SET. Luxury Red</h3>
-     <p data-template-id="plan-4-desc" class="canva-text text-sm opacity-70 leading-relaxed" style="color: rgb(245, 240, 232);">동화책 + 영상편지 + 전기 + 사업백서</p>
+    <div class="card-hover p-8 rounded-sm border border-[#c9a96e]/20 bg-[#2a1c16]">
+     <h3 class="text-lg font-semibold mb-3 text-[#c9a96e]">SET. Luxury Red</h3>
+     <p class="text-sm opacity-70 leading-relaxed">동화책 + 영상편지 + 전기 + 사업백서</p>
     </div>
-    <div data-template-id="plan-5" class="canva-card card-hover p-8 rounded-sm border border-[#c9a96e]/20" style="background: rgb(42, 28, 22);">
-     <h3 data-template-id="plan-5-name" class="canva-text text-lg font-medium mb-3" style="color: rgb(201, 169, 110); font-weight: 600; font-size: 19px;">SET. Elegant Black</h3>
-     <p data-template-id="plan-5-desc" class="canva-text text-sm opacity-70 leading-relaxed" style="color: rgb(245, 240, 232);">동화책 + 영상편지 + 전기 + 다큐멘터리 + 사업백서</p>
+    <div class="card-hover p-8 rounded-sm border border-[#c9a96e]/20 bg-[#2a1c16]">
+     <h3 class="text-lg font-semibold mb-3 text-[#c9a96e]">SET. Elegant Black</h3>
+     <p class="text-sm opacity-70 leading-relaxed">동화책 + 영상편지 + 전기 + 다큐멘터리 + 사업백서</p>
     </div>
-    <div data-template-id="plan-6" class="canva-card card-hover p-8 rounded-sm border border-[#c9a96e]/30 bg-[#c9a96e]/5" style="background: rgb(42, 28, 22);">
-     <h3 data-template-id="plan-6-name" class="canva-text text-lg font-medium mb-3" style="color: rgb(201, 169, 110); font-weight: 600; font-size: 19px;">SET. Prestige Gold Black</h3>
-     <p data-template-id="plan-6-desc" class="canva-text text-sm opacity-70 leading-relaxed" style="color: rgb(245, 240, 232);">동화책 + 영상편지 + 전기 + 다큐멘터리 + 사업백서 + 기념식 파티</p>
+    <div class="card-hover p-8 rounded-sm border border-[#c9a96e]/30 bg-[#2a1c16]">
+     <h3 class="text-lg font-semibold mb-3 text-[#c9a96e]">SET. Prestige Gold Black</h3>
+     <p class="text-sm opacity-70 leading-relaxed">동화책 + 영상편지 + 전기 + 다큐멘터리 + 사업백서 + 기념식 파티</p>
     </div>
    </div>
-  </section><!-- Contact -->
+  </section>
   <section id="contact" class="py-24 md:py-32 px-6">
    <div class="max-w-3xl mx-auto text-center mb-12">
-    <p data-template-id="contact-label" class="canva-text text-xs tracking-[0.3em] uppercase mb-4" style="color:#c9a96e">Consultation</p>
-    <h2 data-template-id="contact-title" class="canva-text text-2xl md:text-4xl font-light mb-4" style="color: rgb(245, 240, 232); font-weight: 300; font-size: 24px;">상담 신청</h2>
+    <p class="text-xs tracking-[0.3em] uppercase mb-4 text-[#c9a96e]">Consultation</p>
+    <h2 class="text-2xl md:text-4xl font-light mb-4">상담 신청</h2>
     <div class="gold-line w-20 mx-auto"></div>
    </div>
    <form id="contact-form" class="max-w-2xl mx-auto space-y-6">
     <div class="grid sm:grid-cols-2 gap-6">
-     <div><label data-template-id="label-name" for="f-name" class="canva-text block text-xs tracking-wider mb-2 opacity-80" style="color: rgb(245, 240, 232);">성함</label> <input id="f-name" name="name" type="text" required="" class="w-full bg-transparent border-b border-[#c9a96e]/30 py-2 text-sm focus:border-[#c9a96e] outline-none transition">
+     <div>
+      <label for="f-name" class="block text-xs tracking-wider mb-2 opacity-80">성함</label> <input id="f-name" name="name" type="text" required="" class="w-full bg-transparent border-b border-[#c9a96e]/30 py-2 text-sm focus:border-[#c9a96e] outline-none transition">
      </div>
-     <div><label data-template-id="label-phone" for="f-phone" class="canva-text block text-xs tracking-wider mb-2 opacity-80" style="color: rgb(245, 240, 232);">연락처</label> <input id="f-phone" name="phone" type="tel" required="" class="w-full bg-transparent border-b border-[#c9a96e]/30 py-2 text-sm focus:border-[#c9a96e] outline-none transition">
+     <div>
+      <label for="f-phone" class="block text-xs tracking-wider mb-2 opacity-80">연락처</label> <input id="f-phone" name="phone" type="tel" required="" class="w-full bg-transparent border-b border-[#c9a96e]/30 py-2 text-sm focus:border-[#c9a96e] outline-none transition">
      </div>
     </div>
-    <div><label data-template-id="label-email" for="f-email" class="canva-text block text-xs tracking-wider mb-2 opacity-80" style="color: rgb(245, 240, 232);">이메일</label> <input id="f-email" name="email" type="email" required="" class="w-full bg-transparent border-b border-[#c9a96e]/30 py-2 text-sm focus:border-[#c9a96e] outline-none transition">
+    <div>
+     <label for="f-email" class="block text-xs tracking-wider mb-2 opacity-80">이메일</label> <input id="f-email" name="email" type="email" required="" class="w-full bg-transparent border-b border-[#c9a96e]/30 py-2 text-sm focus:border-[#c9a96e] outline-none transition">
     </div>
     <div class="grid sm:grid-cols-2 gap-6">
-     <div><label data-template-id="label-service" for="f-service" class="canva-text block text-xs tracking-wider mb-2 opacity-80" style="color: rgb(245, 240, 232);">희망 서비스</label> <select id="f-service" name="service" class="w-full bg-transparent border-b border-[#c9a96e]/30 py-2 text-sm focus:border-[#c9a96e] outline-none"> <option value="" class="bg-[#221612]">선택해주세요</option> <option value="green" class="bg-[#221612]">SET. Green</option> <option value="blue" class="bg-[#221612]">SET. Standard Blue</option> <option value="orange" class="bg-[#221612]">SET. Special Orange</option> <option value="red" class="bg-[#221612]">SET. Luxury Red</option> <option value="black" class="bg-[#221612]">SET. Elegant Black</option> <option value="gold" class="bg-[#221612]">SET. Prestige Gold Black</option> </select>
+     <div>
+      <label for="f-service" class="block text-xs tracking-wider mb-2 opacity-80">희망 서비스</label> <select id="f-service" name="service" class="w-full bg-transparent border-b border-[#c9a96e]/30 py-2 text-sm focus:border-[#c9a96e] outline-none"> <option value="" class="bg-[#221612]">선택해주세요</option> <option value="green" class="bg-[#221612]">SET. Green</option> <option value="blue" class="bg-[#221612]">SET. Standard Blue</option> <option value="orange" class="bg-[#221612]">SET. Special Orange</option> <option value="red" class="bg-[#221612]">SET. Luxury Red</option> <option value="black" class="bg-[#221612]">SET. Elegant Black</option> <option value="gold" class="bg-[#221612]">SET. Prestige Gold Black</option> </select>
      </div>
-     <div><label data-template-id="label-purpose" for="f-purpose" class="canva-text block text-xs tracking-wider mb-2 opacity-80" style="color: rgb(245, 240, 232);">상담 목적</label> <input id="f-purpose" name="purpose" type="text" class="w-full bg-transparent border-b border-[#c9a96e]/30 py-2 text-sm focus:border-[#c9a96e] outline-none transition">
+     <div>
+      <label for="f-purpose" class="block text-xs tracking-wider mb-2 opacity-80">상담 목적</label> <input id="f-purpose" name="purpose" type="text" class="w-full bg-transparent border-b border-[#c9a96e]/30 py-2 text-sm focus:border-[#c9a96e] outline-none transition">
      </div>
     </div>
-    <div><label data-template-id="label-schedule" for="f-schedule" class="canva-text block text-xs tracking-wider mb-2 opacity-80" style="color: rgb(245, 240, 232);">희망 일정</label> <input id="f-schedule" name="schedule" type="text" class="w-full bg-transparent border-b border-[#c9a96e]/30 py-2 text-sm focus:border-[#c9a96e] outline-none transition">
+    <div>
+     <label for="f-schedule" class="block text-xs tracking-wider mb-2 opacity-80">희망 일정</label> <input id="f-schedule" name="schedule" type="text" class="w-full bg-transparent border-b border-[#c9a96e]/30 py-2 text-sm focus:border-[#c9a96e] outline-none transition">
     </div>
-    <div><label data-template-id="label-message" for="f-message" class="canva-text block text-xs tracking-wider mb-2 opacity-80" style="color: rgb(245, 240, 232);">문의 내용</label> <textarea id="f-message" name="message" rows="4" class="w-full bg-transparent border-b border-[#c9a96e]/30 py-2 text-sm focus:border-[#c9a96e] outline-none transition resize-none"></textarea>
+    <div>
+     <label for="f-message" class="block text-xs tracking-wider mb-2 opacity-80">문의 내용</label> <textarea id="f-message" name="message" rows="4" class="w-full bg-transparent border-b border-[#c9a96e]/30 py-2 text-sm focus:border-[#c9a96e] outline-none transition resize-none"></textarea>
     </div>
-    <div class="flex items-start gap-3"><input id="f-privacy" type="checkbox" required="" class="mt-1 accent-[#c9a96e]"> <label data-template-id="label-privacy" for="f-privacy" class="canva-text text-xs opacity-70 leading-relaxed" style="color: rgb(245, 240, 232);">개인정보 수집 및 이용에 동의합니다. 수집된 정보는 상담 목적으로만 활용되며, 상담 완료 후 안전하게 폐기됩니다.</label>
+    <div class="flex items-start gap-3">
+     <input id="f-privacy" type="checkbox" required="" class="mt-1 accent-[#c9a96e]"> <label for="f-privacy" class="text-xs opacity-70 leading-relaxed">개인정보 수집 및 이용에 동의합니다. 수집된 정보는 상담 목적으로만 활용되며, 상담 완료 후 안전하게 폐기됩니다.</label>
     </div>
-    <div class="text-center pt-4"><button data-template-id="contact-submit" type="submit" class="canva-button px-12 py-3 border border-[#c9a96e] text-[#c9a96e] hover:bg-[#c9a96e] hover:text-[#221612] transition-all text-sm tracking-widest" style="color: rgb(201, 169, 110);">상담 신청하기</button>
+    <div class="text-center pt-4">
+     <button type="submit" class="px-12 py-3 border border-[#c9a96e] text-[#c9a96e] hover:bg-[#c9a96e] hover:text-[#221612] transition-all text-sm tracking-widest">상담 신청하기</button>
     </div>
    </form>
    <div id="success-msg" class="hidden max-w-2xl mx-auto text-center py-16">
-    <p data-template-id="success-text" class="canva-text text-xl mb-4" style="color: rgb(201, 169, 110); font-weight: 500;">감사합니다. 상담 신청이 접수되었습니다.</p>
-    <p data-template-id="success-sub" class="canva-text text-sm opacity-70" style="color: rgb(245, 240, 232);">빠른 시일 내에 연락드리겠습니다.</p>
+    <p class="text-xl mb-4 text-[#c9a96e] font-medium">감사합니다. 상담 신청이 접수되었습니다.</p>
+    <p class="text-sm opacity-70">빠른 시일 내에 연락드리겠습니다.</p>
    </div>
-  </section><!-- Footer -->
+  </section>
   <footer class="border-t border-[#c9a96e]/15 py-16 px-6">
    <div class="max-w-4xl mx-auto text-center">
-    <p data-template-id="footer-brand" class="canva-text text-2xl font-light tracking-widest mb-6" style="color:#c9a96e">Heritage Atelier</p>
+    <p class="text-2xl font-light tracking-widest mb-6 text-[#c9a96e]">Heritage Atelier</p>
     <div class="gold-line w-12 mx-auto mb-6"></div>
-    <p data-template-id="footer-email" class="canva-text text-sm opacity-70 mb-2" style="color: rgb(245, 240, 232);">E-MAIL: rhk1258@gmail.com</p>
-    <p data-template-id="footer-tel" class="canva-text text-sm opacity-70 mb-2" style="color: rgb(245, 240, 232);">Tel. 010-4877-1258</p>
-    <p data-template-id="footer-address" class="canva-text text-sm opacity-70" style="color: rgb(245, 240, 232);">서울특별시 서초구 서초대로 1600-11, 서초레몬 4층</p>
+    <p class="text-sm opacity-70 mb-2">E-MAIL: rhk1258@gmail.com</p>
+    <p class="text-sm opacity-70 mb-2">Tel. 010-4877-1258</p>
+    <p class="text-sm opacity-70">서울특별시 서초구 서초대로 1600-11, 서초레몬 4층</p>
    </div>
   </footer>
-  <script src="/_sdk/e063511df281944a.editing_sdk.js" integrity="sha512-Xa8p4aPfoMxVnzxQE2WAG0FfoaPLxdjOJMfUZGm1yZosJTYmnNDvgLkJ2EoN0i3zxjeQVAzUMSXNvTKQVqbXyQ=="></script>
   <script>
-        // Mobile menu
         document.getElementById('mobile-toggle').addEventListener('click', () => {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
-        // Close mobile menu on link click
         document.querySelectorAll('#mobile-menu a').forEach(a => {
             a.addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden'));
         });
-        // Form
         document.getElementById('contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
             const fd = new FormData(this);
@@ -278,5 +269,5 @@
             document.getElementById('success-msg').classList.remove('hidden');
         });
     </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a16ba9a73427ea03',t:'MTc4MzMxMDAwOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a16be3cfa61b8127',t:'MTc4MzMxMjM5Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body></html>
