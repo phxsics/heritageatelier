@@ -1630,7 +1630,32 @@ rhk1258@gmail.com
 </footer>
 
 <style>
+.photo-fade{
+    overflow:hidden;
+}
 
+.photo-fade img{
+    width:100%;
+    display:block;
+
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%
+        );
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%
+        );
+}
 #contact{
 
 background:#090807;
