@@ -34,7 +34,23 @@
     <a href="#story" class="nav-link">소개</a> <a href="#services" class="nav-link">서비스</a> <a href="#process" class="nav-link">제작과정</a> <a href="#plans" class="nav-link">플랜</a> <a href="#contact" class="nav-link">상담하기</a>
    </div>
   </nav>
-  <section id="hero" class="relative min-h-screen flex items-center justify-center text-center px-6 pt-20">
+  <section
+  id="hero"
+  class="relative min-h-screen flex items-center justify-center text-center px-6 pt-20 overflow-hidden">
+
+  <!-- 배경 이미지 -->
+  <div class="absolute inset-0">
+    <img
+      src="images/file_000000004570720697baccdfa882ce64.png"
+      alt=""
+      class="w-full h-full object-cover opacity-30">
+  </div>
+
+  <!-- 검은 오버레이 -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-[#0d0704]/55 to-[#0d0704]/90"></div>
+
+  <!-- 내용 -->
+  <div class="relative z-10 max-w-3xl mx-auto">
    <div class="relative z-10 max-w-3xl mx-auto">
     <h1 class="text-3xl md:text-5xl leading-tight font-light tracking-wide mb-6">살아 있는 순간을<br> 가장 깊고 아름답게 기록하는<br>
       헤리티지 아뜰리에</h1>
