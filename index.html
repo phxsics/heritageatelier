@@ -1830,6 +1830,7 @@ document.getElementById("success-msg").style.display="block";
 });
 
 </script>
+<script>
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".menu a, .mobile-menu a");
 
@@ -1839,31 +1840,31 @@ window.addEventListener("scroll", () => {
 
     sections.forEach(section => {
 
-        const sectionTop = section.offsetTop - 150;
-        const sectionHeight = section.offsetHeight;
+        const top = section.offsetTop - 180;
+        const bottom = top + section.offsetHeight;
 
-        if (window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + sectionHeight) {
-
-            current = section.getAttribute("id");
-
+        if(window.scrollY >= top && window.scrollY < bottom){
+            current = section.id;
         }
 
     });
+
+    // ABOUT은 philosophy와 story 둘 다 포함
+    if(current === "philosophy" || current === "story"){
+        current = "story";
+    }
 
     navLinks.forEach(link => {
 
         link.classList.remove("active");
 
-        if (link.getAttribute("href") === "#" + current) {
-
+        if(link.getAttribute("href") === "#" + current){
             link.classList.add("active");
-
         }
 
     });
 
 });
-     
+</script>
 </body>
 </html>
