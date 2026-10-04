@@ -3,13 +3,22 @@
 
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
 
-<meta name="naver-site-verification" content="c3c35e6756ad3a8ca7048bcf78173a666c7b376b">
+<meta
+    name="naver-site-verification"
+    content="c3c35e6756ad3a8ca7048bcf78173a666c7b376b"
+>
 
 <title>Heritage Atelier | Every Life Deserves To Be Remembered.</title>
 
-<meta name="description" content="한 사람의 삶을 가장 깊고 아름답게 기록하는 프리미엄 라이프 헤리티지 브랜드.">
+<meta
+    name="description"
+    content="한 사람의 삶을 가장 깊고 아름답게 기록하는 프리미엄 라이프 헤리티지 브랜드."
+>
 
 <meta property="og:title" content="Heritage Atelier">
 <meta property="og:description" content="Every Life Deserves To Be Remembered.">
@@ -17,20 +26,43 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+>
 
 <style>
 
 /* =========================================================
-   BASIC
+   HERITAGE ATELIER
+   DESIGN SYSTEM
 ========================================================= */
 
 :root {
+
     --gold:#c9a96e;
+    --gold-soft:#dcc59a;
+
     --bg:#090807;
+    --bg-soft:#0d0c0a;
     --bg2:#11100e;
+    --card:#13110f;
+
     --text:#f4efe8;
+    --muted:rgba(244,239,232,.68);
+
+    --line:rgba(201,169,110,.20);
+    --line-strong:rgba(201,169,110,.42);
+
+    --max:1240px;
+
 }
+
+
+/* =========================================================
+   RESET
+========================================================= */
 
 * {
     margin:0;
@@ -40,16 +72,27 @@
 
 html {
     scroll-behavior:smooth;
-    scroll-padding-top:80px;
+    scroll-padding-top:86px;
 }
 
 body {
+
     width:100%;
+
     overflow-x:hidden;
+
     background:var(--bg);
+
     color:var(--text);
-    font-family:'Noto Serif KR','Batang','바탕',serif;
+
+    font-family:
+        'Noto Serif KR',
+        'Batang',
+        '바탕',
+        serif;
+
     -webkit-font-smoothing:antialiased;
+
 }
 
 body *,
@@ -60,64 +103,125 @@ input,
 textarea,
 select,
 option {
-    font-family:'Noto Serif KR','Batang','바탕',serif;
+
+    font-family:
+        'Noto Serif KR',
+        'Batang',
+        '바탕',
+        serif;
+
 }
 
 img {
+
     display:block;
+
+    width:100%;
     max-width:100%;
+
 }
 
 a {
+
     color:inherit;
+
     text-decoration:none;
+
 }
 
 button,
 input,
-textarea,
-select {
+textarea {
+
     font:inherit;
+
+}
+
+button {
+
+    color:inherit;
+
 }
 
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
+
     font-weight:400;
+
 }
 
+::selection {
+
+    background:var(--gold);
+    color:var(--bg);
+
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
 .container {
-    width:100%;
-    max-width:1280px;
+
+    width:min(
+        calc(100% - 64px),
+        var(--max)
+    );
+
     margin:0 auto;
+
 }
 
 .section {
-    padding:140px 24px;
+
+    padding:
+        clamp(110px, 10vw, 160px)
+        0;
+
 }
 
 .section-eyebrow {
-    color:var(--gold);
-    letter-spacing:.4em;
-    text-transform:uppercase;
-    font-size:12px;
-    margin-bottom:24px;
-}
 
-.fade {
-    opacity:.82;
-    line-height:2;
-    word-break:keep-all;
+    color:var(--gold);
+
+    font-size:11px;
+
+    letter-spacing:.38em;
+
+    text-transform:uppercase;
+
+    margin-bottom:24px;
+
 }
 
 .gold-line {
-    width:80px;
+
+    width:64px;
     height:1px;
+
+    margin:28px auto;
+
     background:var(--gold);
-    margin:26px auto;
+
+}
+
+.fade {
+
+    color:var(--muted);
+
+    line-height:2;
+
+    word-break:keep-all;
+
+}
+
+.mobile-br {
+
+    display:none;
+
 }
 
 
@@ -126,136 +230,226 @@ h6 {
 ========================================================= */
 
 nav {
+
     position:fixed;
+
     top:0;
     left:0;
+
+    z-index:1000;
+
     width:100%;
-    z-index:999;
-    background:rgba(9,8,7,.75);
-    -webkit-backdrop-filter:blur(18px);
-    backdrop-filter:blur(18px);
-    border-bottom:1px solid rgba(201,169,110,.15);
+
+    background:rgba(9,8,7,.78);
+
+    -webkit-backdrop-filter:blur(20px);
+    backdrop-filter:blur(20px);
+
+    border-bottom:1px solid rgba(201,169,110,.12);
+
 }
 
 .nav-inner {
-    max-width:1280px;
+
+    width:min(
+        calc(100% - 64px),
+        var(--max)
+    );
+
     height:78px;
-    margin:auto;
-    padding:0 32px;
+
+    margin:0 auto;
+
     display:flex;
-    justify-content:space-between;
+
     align-items:center;
+
+    justify-content:space-between;
+
 }
 
 .logo {
+
     color:var(--gold);
-    font-size:21px;
+
+    font-size:19px;
+
     font-weight:500;
-    letter-spacing:.12em;
+
+    letter-spacing:.14em;
+
     white-space:nowrap;
+
 }
 
 .menu {
+
     display:flex;
+
+    align-items:center;
+
     gap:42px;
+
 }
 
 .menu a {
+
     position:relative;
-    color:white;
-    font-size:13px;
-    letter-spacing:.12em;
-    transition:.3s;
+
+    color:rgba(255,255,255,.82);
+
+    font-size:12px;
+
+    letter-spacing:.16em;
+
+    transition:
+        color .3s ease;
+
 }
 
 .menu a:hover,
 .menu a.active,
 .mobile-menu a.active {
+
     color:var(--gold);
+
 }
 
 .menu a.active::after {
+
     content:"";
+
     position:absolute;
+
     left:0;
-    bottom:-8px;
+    bottom:-9px;
+
     width:100%;
     height:1px;
+
     background:var(--gold);
+
 }
 
 
-/* MOBILE BUTTON */
+/* =========================================================
+   MOBILE NAV BUTTON
+========================================================= */
 
 .mobile-btn {
+
     display:none;
+
+    position:relative;
+
     width:42px;
     height:42px;
-    position:relative;
+
     background:transparent;
+
     border:0;
+
     cursor:pointer;
+
 }
 
 .mobile-btn span {
+
     position:absolute;
+
     right:5px;
-    display:block;
+
     height:1px;
-    background:white;
-    transition:.3s;
+
+    background:var(--text);
+
+    transition:.3s ease;
+
 }
 
 .mobile-btn span:nth-child(1) {
+
     top:13px;
     width:27px;
+
 }
 
 .mobile-btn span:nth-child(2) {
+
     top:21px;
-    width:21px;
+    width:20px;
+
 }
 
 .mobile-btn span:nth-child(3) {
+
     top:29px;
     width:27px;
+
 }
 
 .mobile-btn.open span:nth-child(1) {
+
     top:21px;
+
     transform:rotate(45deg);
+
 }
 
 .mobile-btn.open span:nth-child(2) {
+
     opacity:0;
+
 }
 
 .mobile-btn.open span:nth-child(3) {
+
     top:21px;
+
     transform:rotate(-45deg);
+
 }
 
 
-/* MOBILE MENU */
+/* =========================================================
+   MOBILE MENU
+========================================================= */
 
 .mobile-menu {
+
     display:none;
-    padding:4px 22px 22px;
+
+    padding:
+        5px
+        24px
+        24px;
+
     background:rgba(9,8,7,.98);
-    border-top:1px solid rgba(255,255,255,.05);
+
+    border-top:1px solid rgba(255,255,255,.04);
+
 }
 
 .mobile-menu.show {
+
     display:block;
+
 }
 
 .mobile-menu a {
+
     display:block;
+
     padding:18px 2px;
-    border-bottom:1px solid rgba(255,255,255,.06);
-    color:white;
-    font-size:14px;
-    letter-spacing:.15em;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.06);
+
+    font-size:13px;
+
+    letter-spacing:.16em;
+
 }
 
 
@@ -264,139 +458,247 @@ nav {
 ========================================================= */
 
 #hero {
+
     position:relative;
+
     min-height:100vh;
     min-height:100svh;
+
     display:flex;
+
     align-items:center;
+
     overflow:hidden;
+
 }
 
 .hero-background {
+
     position:absolute;
+
     inset:0;
+
 }
 
 .hero-image {
-    width:100%;
+
     height:100%;
+
     object-fit:cover;
+
     object-position:center;
-    filter:brightness(.78);
-    animation:heroZoom 18s ease-in-out infinite alternate;
+
+    filter:brightness(.76);
+
+    animation:
+        heroZoom
+        18s
+        ease-in-out
+        infinite
+        alternate;
+
 }
 
 .hero-overlay {
+
     position:absolute;
+
     inset:0;
-    background:rgba(0,0,0,.38);
+
+    background:rgba(0,0,0,.27);
+
 }
 
 .hero-gradient {
+
     position:absolute;
+
     inset:0;
-    background:linear-gradient(
-        90deg,
-        rgba(9,8,7,.9) 0%,
-        rgba(9,8,7,.65) 35%,
-        rgba(9,8,7,.18) 70%,
-        transparent 100%
-    );
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(9,8,7,.94) 0%,
+            rgba(9,8,7,.69) 38%,
+            rgba(9,8,7,.20) 72%,
+            rgba(9,8,7,.05) 100%
+        );
+
 }
 
 .hero-content {
+
     position:relative;
-    z-index:10;
-    padding:120px 24px 80px;
+
+    z-index:5;
+
+    padding-top:120px;
+    padding-bottom:90px;
+
 }
 
 .hero-text {
-    max-width:700px;
+
+    max-width:730px;
+
 }
 
 .hero-subtitle {
+
+    margin-bottom:29px;
+
     color:var(--gold);
-    font-size:13px;
-    letter-spacing:.45em;
-    margin-bottom:30px;
+
+    font-size:11px;
+
+    letter-spacing:.46em;
+
 }
 
 .hero-text h1 {
-    font-size:62px;
-    line-height:1.3;
-    letter-spacing:-.04em;
-    margin-bottom:34px;
+
+    max-width:680px;
+
+    margin-bottom:32px;
+
+    font-size:
+        clamp(46px, 5vw, 67px);
+
+    line-height:1.35;
+
+    letter-spacing:-.045em;
+
     word-break:keep-all;
+
 }
 
 .hero-description {
-    font-size:18px;
+
+    max-width:570px;
+
+    margin-bottom:48px;
+
+    color:rgba(244,239,232,.82);
+
+    font-size:16px;
+
     line-height:2;
-    opacity:.88;
-    margin-bottom:52px;
+
     word-break:keep-all;
+
 }
 
 .hero-buttons {
+
     display:flex;
-    gap:16px;
+
+    gap:13px;
+
 }
 
 .gold-btn,
 .line-btn {
-    min-width:180px;
-    padding:17px 36px;
+
+    min-width:178px;
+
+    min-height:52px;
+
+    padding:14px 27px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
-    font-size:14px;
-    transition:.3s;
+
+    font-size:12px;
+
+    letter-spacing:.06em;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        color .3s ease;
+
 }
 
 .gold-btn {
+
     background:var(--gold);
+
     color:var(--bg);
+
 }
 
 .line-btn {
+
     border:1px solid var(--gold);
+
     color:var(--gold);
+
 }
 
 .gold-btn:hover {
+
     transform:translateY(-2px);
+
 }
 
 .line-btn:hover {
+
     background:var(--gold);
+
     color:var(--bg);
+
 }
 
 .scroll-down {
+
     position:absolute;
-    bottom:36px;
+
+    z-index:10;
+
+    bottom:34px;
     left:50%;
+
     transform:translateX(-50%);
-    z-index:20;
+
 }
 
 .scroll-down span {
+
     display:block;
+
     width:1px;
-    height:65px;
-    background:rgba(255,255,255,.45);
-    animation:scrollLine 2s infinite;
+    height:58px;
+
+    background:
+        rgba(255,255,255,.4);
+
+    animation:
+        scrollLine
+        2s
+        infinite;
+
 }
 
 @keyframes heroZoom {
-    from { transform:scale(1); }
-    to { transform:scale(1.07); }
+
+    from {
+        transform:scale(1);
+    }
+
+    to {
+        transform:scale(1.06);
+    }
+
 }
 
 @keyframes scrollLine {
+
     0% {
         opacity:0;
-        transform:translateY(-10px);
+        transform:translateY(-8px);
     }
 
     50% {
@@ -405,8 +707,9 @@ nav {
 
     100% {
         opacity:0;
-        transform:translateY(10px);
+        transform:translateY(8px);
     }
+
 }
 
 
@@ -415,27 +718,42 @@ nav {
 ========================================================= */
 
 #philosophy {
+
     background:var(--bg2);
+
 }
 
 .philosophy-inner {
-    max-width:900px;
+
+    max-width:850px;
+
     margin:auto;
+
     text-align:center;
+
 }
 
 .philosophy-title {
-    font-size:54px;
-    line-height:1.45;
+
+    font-size:
+        clamp(38px,4.2vw,54px);
+
+    line-height:1.5;
+
     letter-spacing:-.035em;
-    margin-bottom:30px;
+
     word-break:keep-all;
+
 }
 
 .philosophy-description {
-    max-width:780px;
-    margin:auto;
-    font-size:17px;
+
+    max-width:720px;
+
+    margin:0 auto;
+
+    font-size:15px;
+
 }
 
 
@@ -444,63 +762,99 @@ nav {
 ========================================================= */
 
 #story {
+
     background:var(--bg);
+
 }
 
 .story-grid {
+
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:80px;
+
+    grid-template-columns:
+        minmax(0,.92fr)
+        minmax(0,1.08fr);
+
+    gap:
+        clamp(60px,8vw,110px);
+
     align-items:center;
+
 }
 
 .story-photo-wrap {
+
     position:relative;
+
 }
 
 .photo-fade {
+
     overflow:hidden;
+
 }
 
 .photo-fade img {
-    width:100%;
+
+    min-height:590px;
+
     object-fit:cover;
-    transition:transform 1.2s;
 
-    -webkit-mask-image:radial-gradient(
-        ellipse at center,
-        black 35%,
-        rgba(0,0,0,.8) 55%,
-        rgba(0,0,0,.45) 72%,
-        rgba(0,0,0,.15) 86%,
-        transparent 100%
-    );
+    object-position:center top;
 
-    mask-image:radial-gradient(
-        ellipse at center,
-        black 35%,
-        rgba(0,0,0,.8) 55%,
-        rgba(0,0,0,.45) 72%,
-        rgba(0,0,0,.15) 86%,
-        transparent 100%
-    );
+    transition:
+        transform
+        1.2s ease;
+
+    -webkit-mask-image:
+        radial-gradient(
+            ellipse at center,
+            black 38%,
+            rgba(0,0,0,.85) 60%,
+            rgba(0,0,0,.42) 80%,
+            transparent 100%
+        );
+
+    mask-image:
+        radial-gradient(
+            ellipse at center,
+            black 38%,
+            rgba(0,0,0,.85) 60%,
+            rgba(0,0,0,.42) 80%,
+            transparent 100%
+        );
+
 }
 
 .photo-fade img:hover {
-    transform:scale(1.02);
+
+    transform:scale(1.015);
+
 }
 
 .story-title {
-    font-size:50px;
-    margin-bottom:24px;
+
+    margin-bottom:20px;
+
+    font-size:
+        clamp(38px,4vw,50px);
+
 }
 
 .story-text .gold-line {
+
     margin-left:0;
+
 }
 
 .story-text p {
-    margin-bottom:25px;
+
+    max-width:620px;
+
+    margin-bottom:22px;
+
+    font-size:15px;
+
 }
 
 
@@ -509,56 +863,103 @@ nav {
 ========================================================= */
 
 #services {
+
     background:var(--bg2);
+
 }
 
 .services-heading {
-    max-width:800px;
-    margin:0 auto 85px;
+
+    max-width:720px;
+
+    margin:
+        0 auto
+        76px;
+
     text-align:center;
+
 }
 
 .services-title {
-    font-size:50px;
-    line-height:1.4;
+
+    font-size:
+        clamp(38px,4vw,50px);
+
+    line-height:1.45;
+
 }
 
 .service-row {
-    display:flex;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(300px,.9fr)
+        minmax(320px,1fr);
+
     align-items:center;
-    justify-content:space-between;
-    gap:60px;
-    padding:46px 0;
-    border-bottom:1px solid rgba(201,169,110,.18);
-    transition:.3s;
+
+    gap:70px;
+
+    padding:43px 4px;
+
+    border-bottom:
+        1px solid
+        var(--line);
+
+    transition:
+        padding .3s ease;
+
 }
 
 .service-row:first-child {
-    border-top:1px solid rgba(201,169,110,.18);
+
+    border-top:
+        1px solid
+        var(--line);
+
 }
 
 .service-row:hover {
-    padding-left:10px;
+
+    padding-left:12px;
+    padding-right:12px;
+
 }
 
 .service-number {
+
     display:block;
+
+    margin-bottom:13px;
+
     color:var(--gold);
-    font-size:11px;
-    letter-spacing:.4em;
-    margin-bottom:15px;
+
+    font-size:9px;
+
+    letter-spacing:.42em;
+
 }
 
 .service-row h3 {
-    font-size:32px;
+
+    font-size:
+        clamp(25px,2.5vw,32px);
+
 }
 
 .service-row p {
-    width:100%;
-    max-width:480px;
-    opacity:.8;
+
+    max-width:470px;
+
+    color:var(--muted);
+
+    font-size:14px;
+
     line-height:2;
+
     word-break:keep-all;
+
 }
 
 
@@ -567,56 +968,111 @@ nav {
 ========================================================= */
 
 #why {
+
     background:var(--bg);
+
 }
 
 .why-heading {
-    max-width:800px;
-    margin:0 auto 80px;
+
+    max-width:740px;
+
+    margin:
+        0 auto
+        70px;
+
     text-align:center;
+
 }
 
 .why-title {
-    font-size:48px;
-    margin-bottom:20px;
+
+    font-size:
+        clamp(37px,4vw,48px);
+
+    line-height:1.45;
+
     word-break:keep-all;
+
 }
 
 .why-grid {
+
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:28px;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:18px;
+
 }
 
 .why-card {
-    padding:46px;
-    border:1px solid rgba(201,169,110,.15);
-    background:var(--bg2);
-    transition:.35s;
+
+    min-height:260px;
+
+    padding:42px;
+
+    border:
+        1px solid
+        rgba(201,169,110,.14);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(19,17,15,.92),
+            rgba(14,13,11,.92)
+        );
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease;
+
 }
 
 .why-card:hover {
-    transform:translateY(-6px);
-    border-color:rgba(201,169,110,.42);
+
+    transform:translateY(-5px);
+
+    border-color:
+        rgba(201,169,110,.38);
+
 }
 
 .why-card span {
+
     display:block;
+
+    margin-bottom:18px;
+
     color:var(--gold);
-    font-size:11px;
+
+    font-size:9px;
+
     letter-spacing:.4em;
-    margin-bottom:17px;
+
 }
 
 .why-card h3 {
-    font-size:28px;
-    margin-bottom:20px;
+
+    margin-bottom:17px;
+
+    font-size:25px;
+
 }
 
 .why-card p {
-    opacity:.8;
+
+    max-width:430px;
+
+    color:var(--muted);
+
+    font-size:14px;
+
     line-height:2;
+
     word-break:keep-all;
+
 }
 
 
@@ -625,59 +1081,103 @@ nav {
 ========================================================= */
 
 #process {
+
     background:var(--bg2);
+
 }
 
 .process-heading {
+
+    margin-bottom:76px;
+
     text-align:center;
-    margin-bottom:80px;
+
 }
 
 .process-title {
-    font-size:48px;
-    word-break:keep-all;
+
+    font-size:
+        clamp(37px,4vw,48px);
+
+    line-height:1.45;
+
 }
 
 .process-line {
+
     display:flex;
-    align-items:center;
-    justify-content:space-between;
+
+    align-items:flex-start;
+
 }
 
 .process-item {
-    width:160px;
+
+    width:150px;
+
+    flex-shrink:0;
+
     text-align:center;
+
 }
 
 .circle {
-    width:70px;
-    height:70px;
-    margin:0 auto 22px;
+
+    width:64px;
+    height:64px;
+
+    margin:
+        0 auto
+        19px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     border-radius:50%;
+
     background:var(--gold);
+
     color:var(--bg);
-    font-size:13px;
+
+    font-size:11px;
+
     font-weight:700;
+
 }
 
 .process-item h4 {
-    font-size:19px;
-    margin-bottom:8px;
+
+    margin-bottom:7px;
+
+    font-size:17px;
+
 }
 
 .process-item p {
-    font-size:13px;
-    opacity:.7;
+
+    color:var(--muted);
+
+    font-size:11px;
+
 }
 
 .process-connector {
+
     flex:1;
+
     height:1px;
-    margin:0 18px;
-    background:rgba(201,169,110,.3);
+
+    margin:
+        32px
+        15px
+        0;
+
+    background:
+        rgba(201,169,110,.28);
+
 }
 
 
@@ -686,159 +1186,612 @@ nav {
 ========================================================= */
 
 #contact {
-    background:var(--bg);
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(201,169,110,.045),
+            transparent 42%
+        ),
+        var(--bg);
+
 }
 
 .contact-container {
-    max-width:850px;
+
+    max-width:920px;
+
 }
 
 .contact-heading {
+
+    max-width:650px;
+
+    margin:
+        0 auto
+        70px;
+
     text-align:center;
-    margin-bottom:75px;
+
 }
 
 .contact-title {
-    font-size:50px;
-    margin-bottom:24px;
+
+    margin-bottom:20px;
+
+    font-size:
+        clamp(39px,4vw,50px);
+
+}
+
+.contact-intro {
+
+    font-size:14px;
+
+}
+
+
+/* =========================================================
+   FORM PANEL
+========================================================= */
+
+.form-panel {
+
+    padding:
+        55px
+        58px
+        58px;
+
+    border:
+        1px solid
+        rgba(201,169,110,.16);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(17,16,14,.82),
+            rgba(10,9,8,.72)
+        );
+
+    box-shadow:
+        0 30px 90px
+        rgba(0,0,0,.18);
+
 }
 
 #contact-form {
+
     display:flex;
+
     flex-direction:column;
-    gap:27px;
+
+    gap:30px;
+
 }
 
 .form-grid {
+
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:28px;
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+    gap:34px;
+
 }
 
-.form-field > label {
+.form-field > label,
+.form-label {
+
     display:block;
+
+    margin-bottom:9px;
+
     color:var(--gold);
-    font-size:12px;
-    letter-spacing:.12em;
-    margin-bottom:8px;
+
+    font-size:11px;
+
+    letter-spacing:.10em;
+
 }
 
-input,
-textarea,
-select {
+.form-note {
+
+    margin-left:5px;
+
+    color:
+        rgba(244,239,232,.38);
+
+    font-size:9px;
+
+    letter-spacing:0;
+
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+
     width:100%;
-    padding:16px 0;
-    color:white;
+
+    padding:
+        13px
+        2px;
+
+    color:var(--text);
+
     background:transparent;
+
     border:0;
-    border-bottom:1px solid rgba(201,169,110,.25);
+
+    border-bottom:
+        1px solid
+        rgba(201,169,110,.28);
+
     border-radius:0;
+
     outline:none;
-    font-size:16px;
-    transition:.3s;
+
+    font-size:14px;
+
+    transition:
+        border-color .3s ease;
+
+}
+
+input::placeholder,
+textarea::placeholder {
+
+    color:
+        rgba(244,239,232,.28);
+
 }
 
 input:focus,
-textarea:focus,
-select:focus {
-    border-color:var(--gold);
+textarea:focus {
+
+    border-bottom-color:
+        var(--gold);
+
 }
 
 textarea {
-    min-height:140px;
+
+    min-height:130px;
+
+    line-height:1.9;
+
     resize:vertical;
+
 }
 
 
 /* =========================================================
-   SERVICE MULTI SELECT
+   SERVICES CHECKBOXES
 ========================================================= */
 
-.service-note {
-    opacity:.48;
-    font-size:10px;
-    letter-spacing:0;
-}
-
 .service-check-list {
+
     display:flex;
+
     flex-wrap:wrap;
-    gap:14px 25px;
-    margin-top:17px;
+
+    gap:
+        13px
+        24px;
+
+    padding-top:7px;
+
 }
 
 .service-check-list label {
+
     display:flex;
+
     align-items:center;
+
     gap:8px;
-    margin:0;
-    color:rgba(244,239,232,.78);
-    font-size:13px;
+
+    color:
+        rgba(244,239,232,.74);
+
+    font-size:12px;
+
+    line-height:1.5;
+
     cursor:pointer;
+
 }
 
 .service-check-list input {
-    width:15px;
-    height:15px;
-    margin:0;
-    padding:0;
+
+    width:14px;
+    height:14px;
+
+    flex:0 0 auto;
+
     accent-color:var(--gold);
+
     cursor:pointer;
+
 }
 
 
 /* =========================================================
-   DATE SELECT
+   CUSTOM DATE PICKER
 ========================================================= */
 
-.schedule-field {
-    display:block;
-    width:100%;
+.date-picker {
+
+    position:relative;
+
 }
 
-.date-selects {
-    display:grid;
-    grid-template-columns:1.4fr 1fr 1fr;
-    gap:14px;
+.date-trigger {
+
     width:100%;
-    margin-top:8px;
-}
 
-.date-selects select {
-    display:block;
-    width:100%;
-    height:54px;
-    padding:0 12px;
+    min-height:54px;
 
-    background:#11100e;
-    color:#f4efe8;
+    padding:
+        0
+        16px;
 
-    border:1px solid rgba(201,169,110,.22);
-    border-bottom-color:rgba(201,169,110,.5);
+    display:flex;
 
-    border-radius:2px;
+    align-items:center;
 
-    outline:none;
+    justify-content:space-between;
 
-    font-size:15px;
+    gap:20px;
+
+    background:
+        rgba(255,255,255,.015);
+
+    color:
+        rgba(244,239,232,.52);
+
+    border:
+        1px solid
+        rgba(201,169,110,.25);
 
     cursor:pointer;
 
-    appearance:auto;
-    -webkit-appearance:auto;
+    text-align:left;
+
+    transition:
+        border-color .3s ease,
+        background .3s ease;
+
 }
 
-.date-selects select:hover {
-    border-color:rgba(201,169,110,.6);
+.date-trigger:hover,
+.date-trigger.active {
+
+    border-color:
+        rgba(201,169,110,.58);
+
+    background:
+        rgba(201,169,110,.025);
+
 }
 
-.date-selects select:focus {
-    border-color:var(--gold);
+.date-trigger.has-value {
+
+    color:var(--text);
+
 }
 
-.date-selects option {
+.date-trigger-text {
+
+    font-size:13px;
+
+}
+
+.date-icon {
+
+    position:relative;
+
+    width:18px;
+    height:18px;
+
+    flex:0 0 auto;
+
+    border:
+        1px solid
+        var(--gold);
+
+    opacity:.82;
+
+}
+
+.date-icon::before {
+
+    content:"";
+
+    position:absolute;
+
+    left:3px;
+    right:3px;
+    top:5px;
+
+    height:1px;
+
+    background:var(--gold);
+
+}
+
+.date-icon::after {
+
+    content:"";
+
+    position:absolute;
+
+    top:-3px;
+    left:4px;
+
+    width:8px;
+    height:4px;
+
+    border-left:
+        1px solid
+        var(--gold);
+
+    border-right:
+        1px solid
+        var(--gold);
+
+}
+
+
+/* =========================================================
+   CALENDAR
+========================================================= */
+
+.calendar {
+
+    position:absolute;
+
+    z-index:80;
+
+    top:calc(100% + 10px);
+    right:0;
+
+    width:330px;
+
+    padding:20px;
+
+    visibility:hidden;
+
+    opacity:0;
+
+    transform:
+        translateY(-5px);
+
+    pointer-events:none;
+
     background:#11100e;
-    color:#f4efe8;
+
+    border:
+        1px solid
+        rgba(201,169,110,.28);
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.52);
+
+    transition:
+        opacity .2s ease,
+        transform .2s ease,
+        visibility .2s;
+
+}
+
+.calendar.open {
+
+    visibility:visible;
+
+    opacity:1;
+
+    transform:
+        translateY(0);
+
+    pointer-events:auto;
+
+}
+
+.calendar-header {
+
+    display:grid;
+
+    grid-template-columns:
+        38px
+        1fr
+        38px;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.calendar-nav {
+
+    width:34px;
+    height:34px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:transparent;
+
+    border:
+        1px solid
+        rgba(201,169,110,.16);
+
+    color:var(--gold);
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    transition:.25s;
+
+}
+
+.calendar-nav:hover {
+
+    border-color:
+        var(--gold);
+
+    background:
+        rgba(201,169,110,.06);
+
+}
+
+.calendar-title {
+
+    text-align:center;
+
+    color:var(--text);
+
+    font-size:14px;
+
+    letter-spacing:.08em;
+
+}
+
+.calendar-weekdays,
+.calendar-days {
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(7,1fr);
+
+}
+
+.calendar-weekdays {
+
+    margin-bottom:8px;
+
+}
+
+.calendar-weekdays span {
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    height:28px;
+
+    color:
+        rgba(244,239,232,.38);
+
+    font-size:9px;
+
+}
+
+.calendar-days {
+
+    row-gap:3px;
+
+}
+
+.calendar-day {
+
+    position:relative;
+
+    width:36px;
+    height:36px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:0;
+
+    border-radius:50%;
+
+    background:transparent;
+
+    color:
+        rgba(244,239,232,.78);
+
+    font-size:11px;
+
+    cursor:pointer;
+
+    transition:
+        background .2s ease,
+        color .2s ease;
+
+}
+
+.calendar-day:hover:not(:disabled) {
+
+    background:
+        rgba(201,169,110,.12);
+
+    color:var(--gold);
+
+}
+
+.calendar-day.today::after {
+
+    content:"";
+
+    position:absolute;
+
+    bottom:4px;
+
+    width:3px;
+    height:3px;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+}
+
+.calendar-day.selected {
+
+    background:var(--gold);
+
+    color:var(--bg);
+
+}
+
+.calendar-day.selected::after {
+
+    background:var(--bg);
+
+}
+
+.calendar-day:disabled {
+
+    color:
+        rgba(244,239,232,.15);
+
+    cursor:default;
+
+}
+
+.calendar-empty {
+
+    width:36px;
+    height:36px;
+
 }
 
 
@@ -847,21 +1800,41 @@ textarea {
 ========================================================= */
 
 .agree {
+
     display:flex;
+
     align-items:flex-start;
-    gap:12px;
+
+    gap:10px;
+
+    padding-top:2px;
+
 }
 
 .agree input {
-    width:auto;
-    margin-top:4px;
+
+    width:14px;
+    height:14px;
+
+    margin-top:3px;
+
+    flex:0 0 auto;
+
     accent-color:var(--gold);
+
 }
 
 .agree label {
-    color:rgba(244,239,232,.7);
-    font-size:12px;
+
+    color:
+        rgba(244,239,232,.58);
+
+    font-size:11px;
+
     line-height:1.7;
+
+    cursor:pointer;
+
 }
 
 
@@ -870,50 +1843,85 @@ textarea {
 ========================================================= */
 
 .submit-btn {
+
+    width:100%;
+
     min-height:56px;
-    margin-top:8px;
-    padding:17px;
+
+    margin-top:3px;
+
+    padding:16px 24px;
+
+    border:1px solid var(--gold);
+
     background:var(--gold);
+
     color:var(--bg);
-    border:0;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    letter-spacing:.14em;
+
     cursor:pointer;
-    font-size:14px;
-    letter-spacing:.12em;
-    transition:.3s;
+
+    transition:
+        transform .3s ease,
+        opacity .3s ease;
+
 }
 
 .submit-btn:hover {
-    opacity:.92;
+
     transform:translateY(-2px);
+
 }
 
 .submit-btn:disabled {
-    opacity:.6;
+
+    opacity:.55;
+
     cursor:not-allowed;
+
     transform:none;
+
 }
 
 
 /* =========================================================
-   FORM RESULT
+   FORM MESSAGE
 ========================================================= */
 
 .form-message {
-    margin-top:12px;
-    padding:20px;
+
+    padding:19px;
+
+    border:
+        1px solid
+        rgba(201,169,110,.25);
+
     text-align:center;
-    font-size:14px;
+
+    font-size:12px;
+
     line-height:1.9;
+
 }
 
 .form-success {
+
     color:var(--gold);
-    border:1px solid rgba(201,169,110,.3);
+
 }
 
 .form-error {
-    color:#e5b1a9;
-    border:1px solid rgba(229,177,169,.25);
+
+    color:#e4b3aa;
+
+    border-color:
+        rgba(228,179,170,.25);
+
 }
 
 
@@ -922,22 +1930,41 @@ textarea {
 ========================================================= */
 
 footer {
-    padding:78px 24px;
-    border-top:1px solid rgba(201,169,110,.15);
+
+    padding:
+        74px
+        24px
+        66px;
+
+    border-top:
+        1px solid
+        rgba(201,169,110,.13);
+
     text-align:center;
+
 }
 
 footer h2 {
-    color:var(--gold);
-    letter-spacing:.22em;
-    font-size:26px;
+
     margin-bottom:18px;
+
+    color:var(--gold);
+
+    font-size:22px;
+
+    letter-spacing:.22em;
+
 }
 
 footer p {
-    opacity:.65;
-    line-height:2;
-    font-size:13px;
+
+    color:
+        rgba(244,239,232,.48);
+
+    font-size:11px;
+
+    line-height:2.05;
+
 }
 
 
@@ -948,28 +1975,46 @@ footer p {
 @media (max-width:900px) {
 
     .menu {
+
         display:none;
+
     }
 
     .mobile-btn {
-        display:block;
-    }
 
-    .section {
-        padding:105px 28px;
+        display:block;
+
     }
 
     .story-grid {
+
         grid-template-columns:1fr;
+
         gap:55px;
+
+    }
+
+    .story-photo-wrap {
+
+        max-width:650px;
+
+        margin:auto;
+
     }
 
     .why-grid {
+
         grid-template-columns:1fr;
+
     }
 
-    .form-grid {
-        grid-template-columns:1fr;
+    .form-panel {
+
+        padding:
+            45px
+            40px
+            48px;
+
     }
 
 }
@@ -982,372 +2027,717 @@ footer p {
 @media (max-width:767px) {
 
     html {
-        scroll-padding-top:68px;
+
+        scroll-padding-top:70px;
+
     }
 
-    .nav-inner {
-        height:68px;
-        padding:0 20px;
-    }
+    .container {
 
-    .logo {
-        font-size:15px;
-        letter-spacing:.12em;
+        width:
+            calc(100% - 40px);
+
     }
 
     .section {
-        padding:92px 22px;
+
+        padding:
+            92px
+            0;
+
     }
+
+    .mobile-br {
+
+        display:block;
+
+    }
+
+
+    /* NAV */
+
+    .nav-inner {
+
+        width:
+            calc(100% - 40px);
+
+        height:68px;
+
+    }
+
+    .logo {
+
+        font-size:14px;
+
+        letter-spacing:.12em;
+
+    }
+
+
+    /* COMMON */
 
     .section-eyebrow {
-        font-size:10px;
-        margin-bottom:18px;
-    }
 
-    .fade {
-        font-size:14px;
-        line-height:2;
+        margin-bottom:17px;
+
+        font-size:9px;
+
+        letter-spacing:.34em;
+
     }
 
     .gold-line {
-        width:48px;
-        margin:22px auto 28px;
+
+        width:45px;
+
+        margin:
+            21px auto
+            26px;
+
+    }
+
+    .fade {
+
+        font-size:13px;
+
+        line-height:2.05;
+
     }
 
 
     /* HERO */
 
     #hero {
+
         align-items:flex-end;
+
     }
 
     .hero-image {
+
         object-position:center center;
+
+        filter:brightness(.84);
+
         animation:none;
-        filter:brightness(.86);
+
     }
 
     .hero-overlay {
-        background:rgba(0,0,0,.15);
+
+        background:
+            rgba(0,0,0,.12);
+
     }
 
     .hero-gradient {
-        background:linear-gradient(
-            180deg,
-            rgba(9,8,7,.03) 0%,
-            rgba(9,8,7,.05) 30%,
-            rgba(9,8,7,.38) 56%,
-            rgba(9,8,7,.88) 86%,
-            rgba(9,8,7,.97) 100%
-        );
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(9,8,7,.02) 0%,
+                rgba(9,8,7,.04) 30%,
+                rgba(9,8,7,.30) 52%,
+                rgba(9,8,7,.88) 84%,
+                rgba(9,8,7,.98) 100%
+            );
+
     }
 
     .hero-content {
-        width:100%;
-        padding:105px 22px 52px;
+
+        width:
+            calc(100% - 40px);
+
+        padding:
+            100px
+            0
+            49px;
+
     }
 
     .hero-text {
-        max-width:430px;
+
+        max-width:420px;
+
     }
 
     .hero-subtitle {
-        font-size:10px;
-        margin-bottom:17px;
+
+        margin-bottom:16px;
+
+        font-size:9px;
+
+        letter-spacing:.39em;
+
     }
 
     .hero-text h1 {
-        font-size:clamp(32px,9.2vw,42px);
-        line-height:1.42;
-        letter-spacing:-.055em;
-        margin-bottom:20px;
+
+        margin-bottom:19px;
+
+        font-size:
+            clamp(
+                31px,
+                9vw,
+                41px
+            );
+
+        line-height:1.43;
+
+        letter-spacing:-.05em;
+
     }
 
     .hero-description {
-        max-width:320px;
-        font-size:13px;
-        line-height:1.85;
+
+        max-width:315px;
+
         margin-bottom:28px;
+
+        font-size:12px;
+
+        line-height:1.95;
+
     }
 
     .hero-buttons {
+
         display:grid;
-        grid-template-columns:1fr 1fr;
-        gap:9px;
-        width:100%;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:8px;
+
     }
 
     .gold-btn,
     .line-btn {
+
         min-width:0;
-        width:100%;
-        padding:14px 6px;
-        font-size:11px;
+        min-height:47px;
+
+        padding:
+            12px
+            5px;
+
+        font-size:10px;
+
     }
 
     .scroll-down {
+
         display:none;
+
     }
 
 
     /* PHILOSOPHY */
 
-    #philosophy {
-        padding-top:100px;
-        padding-bottom:100px;
-    }
-
     .philosophy-title {
-        font-size:29px;
-        line-height:1.55;
-        margin-bottom:20px;
+
+        font-size:28px;
+
+        line-height:1.6;
+
     }
 
     .philosophy-description {
-        font-size:14px;
-        line-height:2.05;
+
+        max-width:330px;
+
+        font-size:13px;
+
     }
 
 
     /* STORY */
 
     #story {
-        padding-top:88px;
-        padding-bottom:105px;
+
+        padding-top:85px;
+
     }
 
     .story-grid {
+
         display:flex;
+
         flex-direction:column;
-        gap:48px;
+
+        gap:42px;
+
+    }
+
+    .story-photo-wrap {
+
+        width:100%;
+
     }
 
     .photo-fade img {
-        width:100%;
+
+        min-height:0;
+
         max-height:500px;
-        object-fit:cover;
+
         object-position:center top;
 
-        -webkit-mask-image:linear-gradient(
-            to bottom,
-            black 0%,
-            black 78%,
-            rgba(0,0,0,.65) 88%,
-            transparent 100%
-        );
+        -webkit-mask-image:
+            linear-gradient(
+                to bottom,
+                black 0%,
+                black 76%,
+                rgba(0,0,0,.62) 87%,
+                transparent 100%
+            );
 
-        mask-image:linear-gradient(
-            to bottom,
-            black 0%,
-            black 78%,
-            rgba(0,0,0,.65) 88%,
-            transparent 100%
-        );
+        mask-image:
+            linear-gradient(
+                to bottom,
+                black 0%,
+                black 76%,
+                rgba(0,0,0,.62) 87%,
+                transparent 100%
+            );
+
     }
 
     .story-title {
-        font-size:34px;
+
+        font-size:32px;
+
     }
 
     .story-text p {
-        font-size:14px;
+
+        margin-bottom:19px;
+
+        font-size:13px;
+
         line-height:2.05;
-        margin-bottom:21px;
+
     }
 
 
     /* SERVICES */
 
     .services-heading {
-        margin-bottom:48px;
+
+        margin-bottom:47px;
+
     }
 
     .services-title {
-        font-size:34px;
+
+        font-size:32px;
+
     }
 
     .service-row {
+
         display:block;
-        padding:30px 2px 32px;
+
+        padding:
+            28px
+            2px
+            30px;
+
     }
 
     .service-row:hover {
+
         padding-left:2px;
+        padding-right:2px;
+
     }
 
     .service-number {
-        font-size:9px;
-        margin-bottom:11px;
+
+        margin-bottom:10px;
+
+        font-size:8px;
+
     }
 
     .service-row h3 {
-        font-size:24px;
-        margin-bottom:14px;
+
+        margin-bottom:13px;
+
+        font-size:22px;
+
+        line-height:1.5;
+
     }
 
     .service-row p {
-        max-width:320px;
-        font-size:13px;
-        line-height:1.9;
+
+        max-width:310px;
+
+        font-size:12px;
+
+        line-height:1.95;
+
     }
 
 
     /* WHY */
 
     .why-heading {
-        margin-bottom:48px;
+
+        margin-bottom:44px;
+
     }
 
     .why-title {
-        font-size:30px;
-        line-height:1.5;
+
+        font-size:29px;
+
     }
 
     .why-grid {
-        gap:12px;
+
+        gap:11px;
+
     }
 
     .why-card {
-        padding:29px 23px;
+
+        min-height:0;
+
+        padding:
+            28px
+            23px
+            30px;
+
     }
 
     .why-card:hover {
+
         transform:none;
+
+    }
+
+    .why-card span {
+
+        margin-bottom:13px;
+
+        font-size:8px;
+
     }
 
     .why-card h3 {
-        font-size:23px;
+
         margin-bottom:12px;
+
+        font-size:21px;
+
     }
 
     .why-card p {
-        font-size:13px;
-        line-height:1.9;
+
+        max-width:310px;
+
+        font-size:12px;
+
+        line-height:1.95;
+
     }
 
 
     /* PROCESS */
 
     .process-heading {
-        margin-bottom:55px;
+
+        margin-bottom:49px;
+
     }
 
     .process-title {
-        font-size:31px;
-        line-height:1.5;
+
+        font-size:29px;
+
     }
 
     .process-line {
+
         display:block;
-        max-width:320px;
+
+        max-width:310px;
+
         margin:auto;
+
     }
 
     .process-item {
+
         width:100%;
-        min-height:90px;
+
+        min-height:82px;
 
         display:grid;
 
-        grid-template-columns:58px 1fr;
-        grid-template-rows:1fr 1fr;
+        grid-template-columns:
+            52px
+            1fr;
 
-        column-gap:18px;
+        grid-template-rows:
+            1fr
+            1fr;
+
+        column-gap:17px;
 
         text-align:left;
+
     }
 
     .circle {
+
         grid-row:1 / 3;
-        width:52px;
-        height:52px;
+
+        width:48px;
+        height:48px;
+
         margin:0;
-        font-size:11px;
+
+        font-size:9px;
+
     }
 
     .process-item h4 {
+
         align-self:end;
-        font-size:18px;
-        margin-bottom:3px;
+
+        margin-bottom:2px;
+
+        font-size:16px;
+
     }
 
     .process-item p {
+
         align-self:start;
-        font-size:11px;
+
+        font-size:10px;
+
     }
 
     .process-connector {
+
         width:1px;
-        height:42px;
-        margin:-21px 0 -21px 26px;
+        height:38px;
+
+        margin:
+            -19px
+            0
+            -19px
+            24px;
+
     }
 
 
     /* CONTACT */
 
     .contact-heading {
-        margin-bottom:55px;
+
+        margin-bottom:46px;
+
     }
 
     .contact-title {
-        font-size:35px;
+
+        font-size:32px;
+
+    }
+
+    .contact-intro {
+
+        max-width:310px;
+
+        margin:auto;
+
+        font-size:12px;
+
+    }
+
+    .form-panel {
+
+        margin-left:-4px;
+        margin-right:-4px;
+
+        padding:
+            34px
+            22px
+            36px;
+
     }
 
     #contact-form {
-        gap:23px;
+
+        gap:26px;
+
     }
 
-    input,
-    textarea,
-    select {
-        font-size:16px;
-        padding:14px 0;
+    .form-grid {
+
+        grid-template-columns:1fr;
+
+        gap:26px;
+
     }
+
+    .form-field > label,
+    .form-label {
+
+        margin-bottom:8px;
+
+        font-size:10px;
+
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    textarea {
+
+        padding:
+            12px
+            1px;
+
+        font-size:16px;
+
+    }
+
+    textarea {
+
+        min-height:120px;
+
+    }
+
+
+    /* SERVICE */
 
     .service-check-list {
+
         display:grid;
-        grid-template-columns:1fr 1fr;
-        gap:14px 10px;
+
+        grid-template-columns:1fr;
+
+        gap:12px;
+
+        padding-top:7px;
+
     }
 
     .service-check-list label {
+
+        font-size:11px;
+
+    }
+
+
+    /* DATE */
+
+    .date-trigger {
+
+        min-height:52px;
+
+        padding:
+            0
+            14px;
+
+    }
+
+    .date-trigger-text {
+
+        font-size:11px;
+
+    }
+
+    .calendar {
+
+        left:0;
+        right:auto;
+
+        width:100%;
+
+        padding:
+            18px
+            13px;
+
+    }
+
+    .calendar-header {
+
+        margin-bottom:15px;
+
+    }
+
+    .calendar-title {
+
         font-size:12px;
+
     }
 
-    .date-selects {
-        grid-template-columns:1.35fr 1fr 1fr;
-        gap:8px;
+    .calendar-day,
+    .calendar-empty {
+
+        width:35px;
+        height:35px;
+
     }
 
-    .date-selects select {
-        height:52px;
-        padding:0 7px;
-        font-size:14px;
+    .calendar-day {
+
+        font-size:10px;
+
     }
+
+
+    /* PRIVACY */
+
+    .agree label {
+
+        font-size:10px;
+
+    }
+
+
+    /* SUBMIT */
 
     .submit-btn {
-        width:100%;
-    }
 
-    .form-message {
-        padding:17px 12px;
-        font-size:13px;
+        min-height:53px;
+
+        font-size:11px;
+
     }
 
 
     /* FOOTER */
 
     footer {
-        padding:62px 22px 52px;
+
+        padding:
+            59px
+            20px
+            51px;
+
     }
 
     footer h2 {
-        font-size:19px;
+
+        font-size:17px;
+
         letter-spacing:.18em;
+
     }
 
     footer p {
-        font-size:11px;
+
+        font-size:10px;
+
     }
 
 }
@@ -1359,36 +2749,47 @@ footer p {
 
 @media (max-width:380px) {
 
-    .section {
-        padding-left:18px;
-        padding-right:18px;
-    }
+    .container,
+    .nav-inner,
+    .hero-content {
 
-    .nav-inner {
-        padding-left:18px;
-        padding-right:18px;
+        width:
+            calc(100% - 32px);
+
     }
 
     .logo {
-        font-size:14px;
-    }
 
-    .hero-content {
-        padding-left:18px;
-        padding-right:18px;
+        font-size:13px;
+
     }
 
     .hero-text h1 {
-        font-size:30px;
+
+        font-size:29px;
+
     }
 
-    .service-check-list {
-        grid-template-columns:1fr;
+    .form-panel {
+
+        padding-left:18px;
+        padding-right:18px;
+
     }
 
-    .date-selects {
-        grid-template-columns:1fr;
-        gap:9px;
+    .calendar {
+
+        padding-left:8px;
+        padding-right:8px;
+
+    }
+
+    .calendar-day,
+    .calendar-empty {
+
+        width:32px;
+        height:32px;
+
     }
 
 }
@@ -1401,14 +2802,19 @@ footer p {
 @media (prefers-reduced-motion:reduce) {
 
     html {
+
         scroll-behavior:auto;
+
     }
 
     *,
     *::before,
     *::after {
+
         animation:none !important;
+
         transition:none !important;
+
     }
 
 }
@@ -1421,35 +2827,49 @@ footer p {
 
 
 <!-- =========================================================
-     NAV
+     NAVIGATION
 ========================================================= -->
 
 <nav>
 
 <div class="nav-inner">
 
-    <a href="#hero" class="logo">
+    <a
+        href="#hero"
+        class="logo"
+    >
         HERITAGE ATELIER
     </a>
 
+
     <div class="menu">
 
-        <a href="#story">ABOUT</a>
+        <a href="#story">
+            ABOUT
+        </a>
 
-        <a href="#services">SERVICES</a>
+        <a href="#services">
+            SERVICES
+        </a>
 
-        <a href="#process">PROCESS</a>
+        <a href="#process">
+            PROCESS
+        </a>
 
-        <a href="#contact">CONTACT</a>
+        <a href="#contact">
+            CONTACT
+        </a>
 
     </div>
+
 
     <button
         id="mobileBtn"
         class="mobile-btn"
         type="button"
         aria-label="메뉴 열기"
-        aria-expanded="false">
+        aria-expanded="false"
+    >
 
         <span></span>
         <span></span>
@@ -1460,12 +2880,26 @@ footer p {
 </div>
 
 
-<div id="mobileMenu" class="mobile-menu">
+<div
+    id="mobileMenu"
+    class="mobile-menu"
+>
 
-    <a href="#story">ABOUT</a>
-    <a href="#services">SERVICES</a>
-    <a href="#process">PROCESS</a>
-    <a href="#contact">CONTACT</a>
+    <a href="#story">
+        ABOUT
+    </a>
+
+    <a href="#services">
+        SERVICES
+    </a>
+
+    <a href="#process">
+        PROCESS
+    </a>
+
+    <a href="#contact">
+        CONTACT
+    </a>
 
 </div>
 
@@ -1478,16 +2912,20 @@ footer p {
 
 <section id="hero">
 
+
 <div class="hero-background">
 
     <img
         src="file_000000004570720697baccdfa882ce64.png"
         alt="Heritage Atelier"
-        class="hero-image">
+        class="hero-image"
+    >
 
 </div>
 
+
 <div class="hero-overlay"></div>
+
 <div class="hero-gradient"></div>
 
 
@@ -1495,36 +2933,61 @@ footer p {
 
 <div class="hero-text">
 
+
     <p class="hero-subtitle">
+
         HERITAGE ATELIER
+
     </p>
 
+
     <h1>
+
         살아 있는 순간을<br>
+
         가장 깊고<br>
+
         아름답게 기록합니다.
+
     </h1>
+
 
     <p class="hero-description">
 
-        Every Life Deserves To Be Remembered.<br><br>
+        Every Life Deserves To Be Remembered.
 
-        가문의 기억과 사랑, 목소리와 시간을
+        <br><br>
+
+        가문의 기억과 사랑,
+        <br class="mobile-br">
+
+        목소리와 시간을
+
+        <br class="mobile-br">
+
         한 권의 기록으로 남깁니다.
 
     </p>
 
+
     <div class="hero-buttons">
 
-        <a href="#contact" class="gold-btn">
+        <a
+            href="#contact"
+            class="gold-btn"
+        >
             상담 신청하기
         </a>
 
-        <a href="#services" class="line-btn">
+        <a
+            href="#services"
+            class="line-btn"
+        >
             서비스 보기
         </a>
 
     </div>
+
 
 </div>
 
@@ -1532,8 +2995,11 @@ footer p {
 
 
 <div class="scroll-down">
+
     <span></span>
+
 </div>
+
 
 </section>
 
@@ -1542,37 +3008,64 @@ footer p {
      PHILOSOPHY
 ========================================================= -->
 
-<section id="philosophy" class="section">
+<section
+    id="philosophy"
+    class="section"
+>
+
 
 <div class="container philosophy-inner">
 
+
     <p class="section-eyebrow">
+
         Philosophy
+
     </p>
+
 
     <h2 class="philosophy-title">
 
-        기억은 사라질 수 있습니다.<br>
+        기억은 사라질 수 있습니다.
 
-        하지만 기록은<br>
+        <br>
+
+        하지만 기록은
+
+        <br>
 
         세대를 이어갑니다.
 
     </h2>
 
+
     <div class="gold-line"></div>
+
 
     <p class="fade philosophy-description">
 
-        헤리티지 아뜰리에는 단순히 책을 만드는 브랜드가 아닙니다.<br><br>
+        헤리티지 아뜰리에는
+        단순히 책을 만드는 브랜드가 아닙니다.
 
-        한 사람의 삶과 가치관, 가족의 역사,
-        그리고 다음 세대에게 전하고 싶은 마음을
+        <br><br>
+
+        한 사람의 삶과 가치관,
+        가족의 역사,
+
+        <br class="mobile-br">
+
+        그리고 다음 세대에게
+        전하고 싶은 마음을
+
+        <br class="mobile-br">
+
         가장 아름다운 형태로 기록합니다.
 
     </p>
 
+
 </div>
+
 
 </section>
 
@@ -1581,9 +3074,14 @@ footer p {
      STORY
 ========================================================= -->
 
-<section id="story" class="section">
+<section
+    id="story"
+    class="section"
+>
+
 
 <div class="container">
+
 
 <div class="story-grid">
 
@@ -1595,7 +3093,8 @@ footer p {
         <img
             src="1783436855287.jpg"
             alt="헤리티지 아뜰리에 대표 김라희"
-            loading="lazy">
+            loading="lazy"
+        >
 
     </div>
 
@@ -1604,35 +3103,56 @@ footer p {
 
 <div class="story-text">
 
+
     <p class="section-eyebrow">
+
         Our Story
+
     </p>
 
+
     <h2 class="story-title">
+
         이야기의 시작
+
     </h2>
+
 
     <div class="gold-line"></div>
 
+
     <p class="fade">
-        어느 날, 어머니께서 인체조직기증 약정서를
+
+        어느 날,
+        어머니께서 인체조직기증 약정서를
         작성하셨다는 이야기를 들었습니다.
+
     </p>
+
 
     <p class="fade">
 
         그 순간 문득 깨달았습니다.
 
+        <br><br>
+
         언젠가 어머니의 목소리도,
         웃음도,
         손끝의 온기도
-        시간이 흐르면 희미해질 수 있다는 사실을.
+
+        <br class="mobile-br">
+
+        시간이 흐르면
+        희미해질 수 있다는 사실을.
 
     </p>
+
 
     <p class="fade">
 
         그래서 결심했습니다.
+
+        <br><br>
 
         살아 계신 지금,
         가장 아름다운 순간을
@@ -1640,22 +3160,31 @@ footer p {
 
     </p>
 
+
     <p class="fade">
 
         헤리티지 아뜰리에는
         책을 만드는 회사가 아니라,
 
+        <br><br>
+
         한 사람의 삶을
         가문의 유산으로 남기는
+
+        <br class="mobile-br">
+
         프리미엄 라이프 헤리티지 브랜드입니다.
 
     </p>
 
+
 </div>
+
 
 </div>
 
 </div>
+
 
 </section>
 
@@ -1664,29 +3193,49 @@ footer p {
      SERVICES
 ========================================================= -->
 
-<section id="services" class="section">
+<section
+    id="services"
+    class="section"
+>
+
 
 <div class="container">
 
+
 <div class="services-heading">
 
+
     <p class="section-eyebrow">
+
         Signature Collections
+
     </p>
 
+
     <h2 class="services-title">
+
         우리가<br>
+
         기록하는 것
+
     </h2>
+
 
     <div class="gold-line"></div>
 
+
     <p class="fade">
 
-        한 사람의 삶은 하나의 방식으로만 기록되지 않습니다.
-        가장 잘 어울리는 형태를 함께 설계합니다.
+        한 사람의 삶은
+        하나의 방식으로만 기록되지 않습니다.
+
+        <br class="mobile-br">
+
+        가장 잘 어울리는 형태를
+        함께 설계합니다.
 
     </p>
+
 
 </div>
 
@@ -1697,13 +3246,22 @@ footer p {
 <div class="service-row">
 
     <div>
-        <span class="service-number">01</span>
-        <h3>Legacy Biography</h3>
+
+        <span class="service-number">
+            01
+        </span>
+
+        <h3>
+            Legacy Biography
+        </h3>
+
     </div>
 
     <p>
+
         한 사람의 삶과 가치관을
         아름다운 한 권의 전기로 기록합니다.
+
     </p>
 
 </div>
@@ -1712,13 +3270,22 @@ footer p {
 <div class="service-row">
 
     <div>
-        <span class="service-number">02</span>
-        <h3>Family Documentary</h3>
+
+        <span class="service-number">
+            02
+        </span>
+
+        <h3>
+            Family Documentary
+        </h3>
+
     </div>
 
     <p>
+
         가족의 목소리와 시간을
         다큐멘터리 영상으로 남깁니다.
+
     </p>
 
 </div>
@@ -1727,13 +3294,22 @@ footer p {
 <div class="service-row">
 
     <div>
-        <span class="service-number">03</span>
-        <h3>Animation Story</h3>
+
+        <span class="service-number">
+            03
+        </span>
+
+        <h3>
+            Animation Story
+        </h3>
+
     </div>
 
     <p>
+
         추억을 따뜻한 애니메이션으로
         다음 세대에게 전합니다.
+
     </p>
 
 </div>
@@ -1742,13 +3318,22 @@ footer p {
 <div class="service-row">
 
     <div>
-        <span class="service-number">04</span>
-        <h3>Business Heritage</h3>
+
+        <span class="service-number">
+            04
+        </span>
+
+        <h3>
+            Business Heritage
+        </h3>
+
     </div>
 
     <p>
+
         기업과 창업자의 철학을
         백서와 기록물로 영원히 보존합니다.
+
     </p>
 
 </div>
@@ -1757,13 +3342,22 @@ footer p {
 <div class="service-row">
 
     <div>
-        <span class="service-number">05</span>
-        <h3>Private Digital Archive</h3>
+
+        <span class="service-number">
+            05
+        </span>
+
+        <h3>
+            Private Digital Archive
+        </h3>
+
     </div>
 
     <p>
+
         책과 영상을
         가문만을 위한 프라이빗 페이지에 보관합니다.
+
     </p>
 
 </div>
@@ -1771,7 +3365,9 @@ footer p {
 
 </div>
 
+
 </div>
+
 
 </section>
 
@@ -1780,28 +3376,45 @@ footer p {
      WHY
 ========================================================= -->
 
-<section id="why" class="section">
+<section
+    id="why"
+    class="section"
+>
+
 
 <div class="container">
 
+
 <div class="why-heading">
 
+
     <p class="section-eyebrow">
+
         Why Heritage Atelier
+
     </p>
 
+
     <h2 class="why-title">
+
         왜 헤리티지 아뜰리에인가
+
     </h2>
 
+
     <div class="gold-line"></div>
+
 
     <p class="fade">
 
         우리는 단순히 책을 제작하지 않습니다.
+
+        <br class="mobile-br">
+
         한 사람의 삶을 작품으로 남깁니다.
 
     </p>
+
 
 </div>
 
@@ -1813,12 +3426,16 @@ footer p {
 
     <span>01</span>
 
-    <h3>Interview First</h3>
+    <h3>
+        Interview First
+    </h3>
 
     <p>
+
         깊이 있는 인터뷰를 통해
         의뢰인의 삶과 가치관을
         가장 진정성 있게 기록합니다.
+
     </p>
 
 </div>
@@ -1828,12 +3445,16 @@ footer p {
 
     <span>02</span>
 
-    <h3>Bespoke Design</h3>
+    <h3>
+        Bespoke Design
+    </h3>
 
     <p>
+
         모든 프로젝트는
         단 한 사람만을 위해
         처음부터 새롭게 설계됩니다.
+
     </p>
 
 </div>
@@ -1843,12 +3464,16 @@ footer p {
 
     <span>03</span>
 
-    <h3>Timeless Heritage</h3>
+    <h3>
+        Timeless Heritage
+    </h3>
 
     <p>
+
         시간이 흘러도
         가문의 유산으로
         오래도록 이어질 수 있도록 제작합니다.
+
     </p>
 
 </div>
@@ -1858,11 +3483,16 @@ footer p {
 
     <span>04</span>
 
-    <h3>Quiet Luxury</h3>
+    <h3>
+        Quiet Luxury
+    </h3>
 
     <p>
+
         화려함보다
+        오래 바라볼수록 깊어지는
         품격 있는 아름다움을 추구합니다.
+
     </p>
 
 </div>
@@ -1870,7 +3500,9 @@ footer p {
 
 </div>
 
+
 </div>
+
 
 </section>
 
@@ -1879,21 +3511,34 @@ footer p {
      PROCESS
 ========================================================= -->
 
-<section id="process" class="section">
+<section
+    id="process"
+    class="section"
+>
+
 
 <div class="container">
 
+
 <div class="process-heading">
 
+
     <p class="section-eyebrow">
+
         Atelier Process
+
     </p>
 
+
     <h2 class="process-title">
+
         기록이 완성되는 과정
+
     </h2>
 
+
     <div class="gold-line"></div>
+
 
 </div>
 
@@ -1902,9 +3547,19 @@ footer p {
 
 
 <div class="process-item">
-    <div class="circle">01</div>
-    <h4>Consultation</h4>
-    <p>상담</p>
+
+    <div class="circle">
+        01
+    </div>
+
+    <h4>
+        Consultation
+    </h4>
+
+    <p>
+        상담
+    </p>
+
 </div>
 
 
@@ -1912,9 +3567,19 @@ footer p {
 
 
 <div class="process-item">
-    <div class="circle">02</div>
-    <h4>Planning</h4>
-    <p>기획</p>
+
+    <div class="circle">
+        02
+    </div>
+
+    <h4>
+        Planning
+    </h4>
+
+    <p>
+        기획
+    </p>
+
 </div>
 
 
@@ -1922,9 +3587,19 @@ footer p {
 
 
 <div class="process-item">
-    <div class="circle">03</div>
-    <h4>Interview</h4>
-    <p>인터뷰</p>
+
+    <div class="circle">
+        03
+    </div>
+
+    <h4>
+        Interview
+    </h4>
+
+    <p>
+        인터뷰
+    </p>
+
 </div>
 
 
@@ -1932,9 +3607,19 @@ footer p {
 
 
 <div class="process-item">
-    <div class="circle">04</div>
-    <h4>Creation</h4>
-    <p>제작</p>
+
+    <div class="circle">
+        04
+    </div>
+
+    <h4>
+        Creation
+    </h4>
+
+    <p>
+        제작
+    </p>
+
 </div>
 
 
@@ -1942,15 +3627,27 @@ footer p {
 
 
 <div class="process-item">
-    <div class="circle">05</div>
-    <h4>Delivery</h4>
-    <p>전달</p>
+
+    <div class="circle">
+        05
+    </div>
+
+    <h4>
+        Delivery
+    </h4>
+
+    <p>
+        전달
+    </p>
+
 </div>
 
 
 </div>
 
+
 </div>
+
 
 </section>
 
@@ -1959,365 +3656,489 @@ footer p {
      CONTACT
 ========================================================= -->
 
-<section id="contact" class="section">
+<section
+    id="contact"
+    class="section"
+>
+
 
 <div class="container contact-container">
 
 
 <div class="contact-heading">
 
+
     <p class="section-eyebrow">
+
         Consultation
+
     </p>
 
+
     <h2 class="contact-title">
+
         상담 신청
+
     </h2>
+
 
     <div class="gold-line"></div>
 
-    <p class="fade">
 
-        당신의 삶이 하나의 유산이 될 수 있도록
-        헤리티지 아뜰리에가 함께하겠습니다.
+    <p class="fade contact-intro">
+
+        당신의 삶이
+        하나의 유산이 될 수 있도록,
+
+        <br class="mobile-br">
+
+        헤리티지 아뜰리에가
+        함께하겠습니다.
 
     </p>
 
+
 </div>
+
+
+<div class="form-panel">
 
 
 <form
     id="contact-form"
     action="https://formspree.io/f/mgavgjbb"
-    method="POST">
+    method="POST"
+>
 
+
+<input
+    type="hidden"
+    name="_subject"
+    value="Heritage Atelier 새로운 상담 신청"
+>
+
+
+<!-- NAME / PHONE -->
+
+<div class="form-grid">
+
+
+<div class="form-field">
+
+    <label for="name">
+
+        성함
+
+    </label>
 
     <input
-        type="hidden"
-        name="_subject"
-        value="Heritage Atelier 새로운 상담 신청">
+        id="name"
+        type="text"
+        name="성함"
+        autocomplete="name"
+        placeholder="성함을 입력해주세요"
+        required
+    >
+
+</div>
 
 
-    <div class="form-grid">
+<div class="form-field">
 
-        <div class="form-field">
+    <label for="phone">
 
-            <label for="name">
-                성함
-            </label>
+        연락처
 
-            <input
-                id="name"
-                type="text"
-                name="성함"
-                autocomplete="name"
-                required>
+    </label>
 
-        </div>
+    <input
+        id="phone"
+        type="tel"
+        name="연락처"
+        autocomplete="tel"
+        inputmode="tel"
+        placeholder="010-0000-0000"
+        required
+    >
+
+</div>
 
 
-        <div class="form-field">
+</div>
 
-            <label for="phone">
-                연락처
-            </label>
 
-            <input
-                id="phone"
-                type="tel"
-                name="연락처"
-                autocomplete="tel"
-                inputmode="tel"
-                required>
+<!-- EMAIL -->
 
-        </div>
+<div class="form-field">
+
+    <label for="email">
+
+        이메일
+
+    </label>
+
+    <input
+        id="email"
+        type="email"
+        name="email"
+        autocomplete="email"
+        placeholder="example@email.com"
+        required
+    >
+
+</div>
+
+
+<!-- SERVICE -->
+
+<div class="form-field">
+
+
+    <div class="form-label">
+
+        희망 서비스
+
+        <span class="form-note">
+
+            복수 선택 가능
+
+        </span>
 
     </div>
 
 
-    <div class="form-field">
+    <div class="service-check-list">
 
-        <label for="email">
-            이메일
-        </label>
-
-        <input
-            id="email"
-            type="email"
-            name="email"
-            autocomplete="email"
-            required>
-
-    </div>
-
-
-    <!-- SERVICE -->
-
-    <div class="form-field">
 
         <label>
 
-            희망 서비스
+            <input
+                type="checkbox"
+                name="희망 서비스"
+                value="Legacy Biography"
+            >
 
-            <span class="service-note">
-                (복수 선택 가능)
+            <span>
+                Legacy Biography
             </span>
 
         </label>
 
 
-        <div class="service-check-list">
+        <label>
 
+            <input
+                type="checkbox"
+                name="희망 서비스"
+                value="Family Documentary"
+            >
 
-            <label>
+            <span>
+                Family Documentary
+            </span>
 
-                <input
-                    type="checkbox"
-                    name="희망 서비스"
-                    value="Legacy Biography">
-
-                <span>
-                    Legacy Biography
-                </span>
-
-            </label>
-
-
-            <label>
-
-                <input
-                    type="checkbox"
-                    name="희망 서비스"
-                    value="Family Documentary">
-
-                <span>
-                    Family Documentary
-                </span>
-
-            </label>
-
-
-            <label>
-
-                <input
-                    type="checkbox"
-                    name="희망 서비스"
-                    value="Animation Story">
-
-                <span>
-                    Animation Story
-                </span>
-
-            </label>
-
-
-            <label>
-
-                <input
-                    type="checkbox"
-                    name="희망 서비스"
-                    value="Business Heritage">
-
-                <span>
-                    Business Heritage
-                </span>
-
-            </label>
-
-
-            <label>
-
-                <input
-                    type="checkbox"
-                    name="희망 서비스"
-                    value="Private Digital Archive">
-
-                <span>
-                    Private Digital Archive
-                </span>
-
-            </label>
-
-
-        </div>
-
-    </div>
-
-
-    <!-- PURPOSE -->
-
-    <div class="form-field">
-
-        <label for="purpose">
-            상담 목적
         </label>
 
-        <input
-            id="purpose"
-            type="text"
-            name="상담 목적"
-            placeholder="예: 부모님 칠순 기념">
-
-    </div>
-
-
-    <!-- =====================================================
-         SCHEDULE
-    ====================================================== -->
-
-    <div class="form-field schedule-field">
 
         <label>
-            희망 일정
+
+            <input
+                type="checkbox"
+                name="희망 서비스"
+                value="Animation Story"
+            >
+
+            <span>
+                Animation Story
+            </span>
+
         </label>
 
 
-        <div class="date-selects">
+        <label>
+
+            <input
+                type="checkbox"
+                name="희망 서비스"
+                value="Business Heritage"
+            >
+
+            <span>
+                Business Heritage
+            </span>
+
+        </label>
 
 
-            <select
-                id="schedule-year"
-                aria-label="희망 일정 연도">
+        <label>
 
-                <option value="">
-                    연도 선택
-                </option>
+            <input
+                type="checkbox"
+                name="희망 서비스"
+                value="Private Digital Archive"
+            >
 
-            </select>
+            <span>
+                Private Digital Archive
+            </span>
 
-
-            <select
-                id="schedule-month"
-                aria-label="희망 일정 월">
-
-                <option value="">
-                    월 선택
-                </option>
-
-                <option value="01">1월</option>
-                <option value="02">2월</option>
-                <option value="03">3월</option>
-                <option value="04">4월</option>
-                <option value="05">5월</option>
-                <option value="06">6월</option>
-                <option value="07">7월</option>
-                <option value="08">8월</option>
-                <option value="09">9월</option>
-                <option value="10">10월</option>
-                <option value="11">11월</option>
-                <option value="12">12월</option>
-
-            </select>
+        </label>
 
 
-            <select
-                id="schedule-day"
-                aria-label="희망 일정 일">
+    </div>
 
-                <option value="">
-                    일 선택
-                </option>
 
-            </select>
+</div>
+
+
+<!-- PURPOSE -->
+
+<div class="form-field">
+
+    <label for="purpose">
+
+        상담 목적
+
+    </label>
+
+    <input
+        id="purpose"
+        type="text"
+        name="상담 목적"
+        placeholder="예: 부모님 칠순 기념"
+    >
+
+</div>
+
+
+<!-- =========================================================
+     CUSTOM DATE PICKER
+========================================================= -->
+
+<div class="form-field">
+
+
+    <div class="form-label">
+
+        희망 일정
+
+        <span class="form-note">
+
+            선택 사항
+
+        </span>
+
+    </div>
+
+
+    <div
+        class="date-picker"
+        id="datePicker"
+    >
+
+
+        <button
+            type="button"
+            class="date-trigger"
+            id="dateTrigger"
+            aria-haspopup="dialog"
+            aria-expanded="false"
+        >
+
+            <span
+                class="date-trigger-text"
+                id="dateTriggerText"
+            >
+
+                날짜를 선택해 주세요
+
+            </span>
+
+
+            <span
+                class="date-icon"
+                aria-hidden="true"
+            ></span>
+
+
+        </button>
+
+
+        <div
+            class="calendar"
+            id="calendar"
+            role="dialog"
+            aria-label="희망 일정 선택"
+        >
+
+
+            <div class="calendar-header">
+
+
+                <button
+                    type="button"
+                    class="calendar-nav"
+                    id="calendarPrev"
+                    aria-label="이전 달"
+                >
+                    ‹
+                </button>
+
+
+                <div
+                    class="calendar-title"
+                    id="calendarTitle"
+                ></div>
+
+
+                <button
+                    type="button"
+                    class="calendar-nav"
+                    id="calendarNext"
+                    aria-label="다음 달"
+                >
+                    ›
+                </button>
+
+
+            </div>
+
+
+            <div class="calendar-weekdays">
+
+                <span>일</span>
+                <span>월</span>
+                <span>화</span>
+                <span>수</span>
+                <span>목</span>
+                <span>금</span>
+                <span>토</span>
+
+            </div>
+
+
+            <div
+                class="calendar-days"
+                id="calendarDays"
+            ></div>
 
 
         </div>
 
-
-        <!-- 실제 Formspree로 전송되는 날짜 -->
 
         <input
             type="hidden"
             id="schedule"
             name="희망 일정"
-            value="">
+            value=""
+        >
 
 
     </div>
 
 
-    <!-- MESSAGE -->
-
-    <div class="form-field">
-
-        <label for="message">
-            문의 내용
-        </label>
-
-        <textarea
-            id="message"
-            name="문의 내용"
-            rows="6"
-            placeholder="상담받고 싶은 내용을 자유롭게 작성해주세요."></textarea>
-
-    </div>
+</div>
 
 
-    <!-- PRIVACY -->
+<!-- MESSAGE -->
 
-    <div class="agree">
+<div class="form-field">
 
-        <input
-            id="agree"
-            type="checkbox"
-            name="개인정보 수집 동의"
-            value="동의"
-            required>
+    <label for="message">
 
+        문의 내용
 
-        <label for="agree">
+    </label>
 
-            개인정보 수집 및 이용에 동의합니다.
+    <textarea
+        id="message"
+        name="문의 내용"
+        rows="5"
+        placeholder="상담받고 싶은 내용을 자유롭게 작성해주세요."
+    ></textarea>
 
-        </label>
-
-    </div>
-
-
-    <!-- SUBMIT -->
-
-    <button
-        id="submit-btn"
-        type="submit"
-        class="submit-btn">
-
-        상담 신청하기
-
-    </button>
+</div>
 
 
-    <!-- SUCCESS -->
+<!-- PRIVACY -->
 
-    <div
-        id="form-success"
-        class="form-message form-success"
-        role="status"
-        aria-live="polite"
-        hidden>
+<div class="agree">
 
-        상담 신청이 완료되었습니다.<br>
-        확인 후 연락드리겠습니다.
+    <input
+        id="agree"
+        type="checkbox"
+        name="개인정보 수집 동의"
+        value="동의"
+        required
+    >
 
-    </div>
+    <label for="agree">
+
+        개인정보 수집 및 이용에 동의합니다.
+
+    </label>
+
+</div>
 
 
-    <!-- ERROR -->
+<!-- SUBMIT -->
 
-    <div
-        id="form-error"
-        class="form-message form-error"
-        role="alert"
-        hidden>
+<button
+    id="submit-btn"
+    type="submit"
+    class="submit-btn"
+>
 
-        전송 중 문제가 발생했습니다.<br>
-        잠시 후 다시 시도해주세요.
+    상담 신청하기
 
-    </div>
+</button>
+
+
+<!-- SUCCESS -->
+
+<div
+    id="form-success"
+    class="form-message form-success"
+    role="status"
+    aria-live="polite"
+    hidden
+>
+
+    상담 신청이 완료되었습니다.
+
+    <br>
+
+    확인 후 정성껏 연락드리겠습니다.
+
+</div>
+
+
+<!-- ERROR -->
+
+<div
+    id="form-error"
+    class="form-message form-error"
+    role="alert"
+    hidden
+>
+
+    전송 중 문제가 발생했습니다.
+
+    <br>
+
+    잠시 후 다시 시도해 주세요.
+
+</div>
 
 
 </form>
 
+
 </div>
+
+
+</div>
+
 
 </section>
 
@@ -2328,40 +4149,63 @@ footer p {
 
 <footer>
 
+
 <div class="container">
 
+
 <h2>
+
     HERITAGE ATELIER
+
 </h2>
+
 
 <div class="gold-line"></div>
 
+
 <p>
+
     대표 김라희
+
 </p>
 
+
 <p>
+
     사업자등록번호 841-17-03099
+
 </p>
 
+
 <p>
+
     서울특별시 서초구 서초중앙로 45, 405호
+
 </p>
 
+
 <p>
+
     010-4877-1258
+
 </p>
 
+
 <p>
+
     rhk1258@gmail.com
+
 </p>
+
 
 </div>
+
 
 </footer>
 
 
 <script>
+
 
 /* =========================================================
    MOBILE MENU
@@ -2376,9 +4220,13 @@ const mobileMenu =
 
 function closeMobileMenu() {
 
-    mobileMenu.classList.remove("show");
+    mobileMenu.classList.remove(
+        "show"
+    );
 
-    mobileBtn.classList.remove("open");
+    mobileBtn.classList.remove(
+        "open"
+    );
 
     mobileBtn.setAttribute(
         "aria-expanded",
@@ -2393,7 +4241,9 @@ mobileBtn.addEventListener(
     function () {
 
         const isOpen =
-            mobileMenu.classList.toggle("show");
+            mobileMenu.classList.toggle(
+                "show"
+            );
 
         mobileBtn.classList.toggle(
             "open",
@@ -2402,7 +4252,9 @@ mobileBtn.addEventListener(
 
         mobileBtn.setAttribute(
             "aria-expanded",
-            isOpen ? "true" : "false"
+            isOpen
+                ? "true"
+                : "false"
         );
 
     }
@@ -2410,23 +4262,31 @@ mobileBtn.addEventListener(
 
 
 document
-.querySelectorAll(".mobile-menu a")
-.forEach(function (link) {
+.querySelectorAll(
+    ".mobile-menu a"
+)
+.forEach(
+    function (link) {
 
-    link.addEventListener(
-        "click",
-        closeMobileMenu
-    );
+        link.addEventListener(
+            "click",
+            closeMobileMenu
+        );
 
-});
+    }
+);
 
 
 window.addEventListener(
     "resize",
     function () {
 
-        if (window.innerWidth > 900) {
+        if (
+            window.innerWidth > 900
+        ) {
+
             closeMobileMenu();
+
         }
 
     }
@@ -2434,11 +4294,13 @@ window.addEventListener(
 
 
 /* =========================================================
-   ACTIVE MENU
+   ACTIVE NAVIGATION
 ========================================================= */
 
 const sections =
-    document.querySelectorAll("section[id]");
+    document.querySelectorAll(
+        "section[id]"
+    );
 
 const navLinks =
     document.querySelectorAll(
@@ -2461,7 +4323,8 @@ function updateNavigation() {
                 section.offsetTop;
 
             const bottom =
-                top + section.offsetHeight;
+                top +
+                section.offsetHeight;
 
 
             if (
@@ -2483,14 +4346,18 @@ function updateNavigation() {
         current === "story"
     ) {
 
-        current = "story";
+        current =
+            "story";
 
     }
 
 
-    if (current === "why") {
+    if (
+        current === "why"
+    ) {
 
-        current = "services";
+        current =
+            "services";
 
     }
 
@@ -2504,7 +4371,9 @@ function updateNavigation() {
 
 
             if (
-                link.getAttribute("href") ===
+                link.getAttribute(
+                    "href"
+                ) ===
                 "#" + current
             ) {
 
@@ -2523,8 +4392,11 @@ function updateNavigation() {
 window.addEventListener(
     "scroll",
     updateNavigation,
-    { passive:true }
+    {
+        passive:true
+    }
 );
+
 
 window.addEventListener(
     "load",
@@ -2533,84 +4405,191 @@ window.addEventListener(
 
 
 /* =========================================================
-   SCHEDULE SELECT
+   CUSTOM CALENDAR
 ========================================================= */
 
-const scheduleYear =
-    document.getElementById("schedule-year");
+const datePicker =
+    document.getElementById(
+        "datePicker"
+    );
 
-const scheduleMonth =
-    document.getElementById("schedule-month");
+const dateTrigger =
+    document.getElementById(
+        "dateTrigger"
+    );
 
-const scheduleDay =
-    document.getElementById("schedule-day");
+const dateTriggerText =
+    document.getElementById(
+        "dateTriggerText"
+    );
 
-const scheduleHidden =
-    document.getElementById("schedule");
+const calendar =
+    document.getElementById(
+        "calendar"
+    );
+
+const calendarTitle =
+    document.getElementById(
+        "calendarTitle"
+    );
+
+const calendarDays =
+    document.getElementById(
+        "calendarDays"
+    );
+
+const calendarPrev =
+    document.getElementById(
+        "calendarPrev"
+    );
+
+const calendarNext =
+    document.getElementById(
+        "calendarNext"
+    );
+
+const scheduleInput =
+    document.getElementById(
+        "schedule"
+    );
 
 
-/* 현재 연도부터 5년 후까지 자동 생성 */
+/* 오늘 */
 
-const currentYear =
-    new Date().getFullYear();
+const today =
+    new Date();
+
+today.setHours(
+    0,
+    0,
+    0,
+    0
+);
 
 
-for (
-    let year = currentYear;
-    year <= currentYear + 5;
-    year++
+/* 현재 표시 중인 달 */
+
+let viewYear =
+    today.getFullYear();
+
+let viewMonth =
+    today.getMonth();
+
+
+/* 선택된 날짜 */
+
+let selectedDate =
+    null;
+
+
+/* =========================================================
+   DATE HELPERS
+========================================================= */
+
+function padNumber(number) {
+
+    return String(number)
+        .padStart(
+            2,
+            "0"
+        );
+
+}
+
+
+function sameDate(
+    dateA,
+    dateB
 ) {
 
-    const option =
-        document.createElement("option");
+    if (
+        !dateA ||
+        !dateB
+    ) {
 
-    option.value =
-        String(year);
+        return false;
 
-    option.textContent =
-        year + "년";
+    }
 
-    scheduleYear.appendChild(
-        option
+
+    return (
+
+        dateA.getFullYear() ===
+        dateB.getFullYear()
+
+        &&
+
+        dateA.getMonth() ===
+        dateB.getMonth()
+
+        &&
+
+        dateA.getDate() ===
+        dateB.getDate()
+
     );
 
 }
 
 
-/* 월에 맞는 날짜 생성 */
+/* =========================================================
+   RENDER CALENDAR
+========================================================= */
 
-function updateDays() {
+function renderCalendar() {
 
-    const previousDay =
-        scheduleDay.value;
-
-    const year =
-        parseInt(scheduleYear.value);
-
-    const month =
-        parseInt(scheduleMonth.value);
+    calendarDays.innerHTML =
+        "";
 
 
-    scheduleDay.innerHTML =
-        '<option value="">일 선택</option>';
+    calendarTitle.textContent =
+        viewYear +
+        ". " +
+        padNumber(
+            viewMonth + 1
+        );
 
 
-    if (!year || !month) {
-
-        updateScheduleValue();
-
-        return;
-
-    }
+    const firstDay =
+        new Date(
+            viewYear,
+            viewMonth,
+            1
+        ).getDay();
 
 
     const daysInMonth =
         new Date(
-            year,
-            month,
+            viewYear,
+            viewMonth + 1,
             0
         ).getDate();
 
+
+    /* 앞쪽 빈 칸 */
+
+    for (
+        let i = 0;
+        i < firstDay;
+        i++
+    ) {
+
+        const empty =
+            document.createElement(
+                "span"
+            );
+
+        empty.className =
+            "calendar-empty";
+
+        calendarDays.appendChild(
+            empty
+        );
+
+    }
+
+
+    /* 날짜 */
 
     for (
         let day = 1;
@@ -2618,130 +4597,433 @@ function updateDays() {
         day++
     ) {
 
-        const option =
-            document.createElement("option");
-
-
-        option.value =
-            String(day).padStart(
-                2,
-                "0"
+        const date =
+            new Date(
+                viewYear,
+                viewMonth,
+                day
             );
 
 
-        option.textContent =
-            day + "일";
+        const button =
+            document.createElement(
+                "button"
+            );
 
 
-        scheduleDay.appendChild(
-            option
+        button.type =
+            "button";
+
+
+        button.className =
+            "calendar-day";
+
+
+        button.textContent =
+            day;
+
+
+        button.setAttribute(
+            "aria-label",
+            viewYear +
+            "년 " +
+            (viewMonth + 1) +
+            "월 " +
+            day +
+            "일"
+        );
+
+
+        /* 과거 날짜 */
+
+        if (
+            date < today
+        ) {
+
+            button.disabled =
+                true;
+
+        }
+
+
+        /* 오늘 */
+
+        if (
+            sameDate(
+                date,
+                today
+            )
+        ) {
+
+            button.classList.add(
+                "today"
+            );
+
+        }
+
+
+        /* 선택 날짜 */
+
+        if (
+            sameDate(
+                date,
+                selectedDate
+            )
+        ) {
+
+            button.classList.add(
+                "selected"
+            );
+
+        }
+
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                selectDate(
+                    date
+                );
+
+            }
+        );
+
+
+        calendarDays.appendChild(
+            button
         );
 
     }
 
 
-    /* 기존에 선택한 날짜가 존재하면 유지 */
+    /* 현재 달보다 이전으로 못 가게 */
 
-    if (
-        previousDay &&
-        parseInt(previousDay) <= daysInMonth
-    ) {
+    const isCurrentMonth =
 
-        scheduleDay.value =
-            previousDay;
+        viewYear ===
+        today.getFullYear()
 
-    }
+        &&
+
+        viewMonth ===
+        today.getMonth();
 
 
-    updateScheduleValue();
+    calendarPrev.disabled =
+        isCurrentMonth;
+
+
+    calendarPrev.style.opacity =
+        isCurrentMonth
+            ? ".25"
+            : "1";
+
+
+    calendarPrev.style.cursor =
+        isCurrentMonth
+            ? "default"
+            : "pointer";
 
 }
 
 
-/* 숨겨진 input에 YYYY-MM-DD 저장 */
+/* =========================================================
+   SELECT DATE
+========================================================= */
 
-function updateScheduleValue() {
+function selectDate(date) {
+
+    selectedDate =
+        new Date(
+            date.getFullYear(),
+            date.getMonth(),
+            date.getDate()
+        );
+
 
     const year =
-        scheduleYear.value;
+        selectedDate.getFullYear();
 
     const month =
-        scheduleMonth.value;
+        padNumber(
+            selectedDate.getMonth() + 1
+        );
 
     const day =
-        scheduleDay.value;
+        padNumber(
+            selectedDate.getDate()
+        );
 
 
-    if (
-        year &&
-        month &&
-        day
-    ) {
+    /* Formspree 전송 값 */
 
-        scheduleHidden.value =
-            year +
-            "-" +
-            month +
-            "-" +
-            day;
+    scheduleInput.value =
+        year +
+        "-" +
+        month +
+        "-" +
+        day;
 
-    }
 
-    else {
+    /* 화면 표시 */
 
-        scheduleHidden.value =
-            "";
+    dateTriggerText.textContent =
+        year +
+        "년 " +
+        Number(month) +
+        "월 " +
+        Number(day) +
+        "일";
 
-    }
+
+    dateTrigger.classList.add(
+        "has-value"
+    );
+
+
+    renderCalendar();
+
+    closeCalendar();
 
 }
 
 
-scheduleYear.addEventListener(
-    "change",
-    updateDays
-);
+/* =========================================================
+   OPEN / CLOSE CALENDAR
+========================================================= */
+
+function openCalendar() {
+
+    calendar.classList.add(
+        "open"
+    );
+
+    dateTrigger.classList.add(
+        "active"
+    );
+
+    dateTrigger.setAttribute(
+        "aria-expanded",
+        "true"
+    );
+
+}
 
 
-scheduleMonth.addEventListener(
-    "change",
-    updateDays
-);
+function closeCalendar() {
+
+    calendar.classList.remove(
+        "open"
+    );
+
+    dateTrigger.classList.remove(
+        "active"
+    );
+
+    dateTrigger.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+}
 
 
-scheduleDay.addEventListener(
-    "change",
-    updateScheduleValue
+dateTrigger.addEventListener(
+    "click",
+    function () {
+
+        const isOpen =
+            calendar.classList.contains(
+                "open"
+            );
+
+
+        if (
+            isOpen
+        ) {
+
+            closeCalendar();
+
+        }
+
+        else {
+
+            openCalendar();
+
+        }
+
+    }
 );
 
 
 /* =========================================================
-   CONTACT FORM → FORMSPREE
+   PREVIOUS MONTH
+========================================================= */
+
+calendarPrev.addEventListener(
+    "click",
+    function () {
+
+        const currentMonthIndex =
+
+            today.getFullYear() *
+            12 +
+
+            today.getMonth();
+
+
+        const viewMonthIndex =
+
+            viewYear *
+            12 +
+
+            viewMonth;
+
+
+        if (
+            viewMonthIndex <=
+            currentMonthIndex
+        ) {
+
+            return;
+
+        }
+
+
+        viewMonth--;
+
+
+        if (
+            viewMonth < 0
+        ) {
+
+            viewMonth =
+                11;
+
+            viewYear--;
+
+        }
+
+
+        renderCalendar();
+
+    }
+);
+
+
+/* =========================================================
+   NEXT MONTH
+========================================================= */
+
+calendarNext.addEventListener(
+    "click",
+    function () {
+
+        viewMonth++;
+
+
+        if (
+            viewMonth > 11
+        ) {
+
+            viewMonth =
+                0;
+
+            viewYear++;
+
+        }
+
+
+        renderCalendar();
+
+    }
+);
+
+
+/* =========================================================
+   CLICK OUTSIDE
+========================================================= */
+
+document.addEventListener(
+    "click",
+    function (event) {
+
+        if (
+            !datePicker.contains(
+                event.target
+            )
+        ) {
+
+            closeCalendar();
+
+        }
+
+    }
+);
+
+
+/* ESC */
+
+document.addEventListener(
+    "keydown",
+    function (event) {
+
+        if (
+            event.key ===
+            "Escape"
+        ) {
+
+            closeCalendar();
+
+        }
+
+    }
+);
+
+
+/* 첫 렌더 */
+
+renderCalendar();
+
+
+/* =========================================================
+   FORMSPREE
 ========================================================= */
 
 const contactForm =
-    document.getElementById("contact-form");
+    document.getElementById(
+        "contact-form"
+    );
 
 const submitButton =
-    document.getElementById("submit-btn");
+    document.getElementById(
+        "submit-btn"
+    );
 
 const successMessage =
-    document.getElementById("form-success");
+    document.getElementById(
+        "form-success"
+    );
 
 const errorMessage =
-    document.getElementById("form-error");
+    document.getElementById(
+        "form-error"
+    );
 
 
 contactForm.addEventListener(
     "submit",
-    async function(event) {
+    async function (event) {
 
         event.preventDefault();
 
 
-        /* 기본 필수 입력 확인 */
+        /* 기본 필수값 */
 
-        if (!contactForm.checkValidity()) {
+        if (
+            !contactForm.checkValidity()
+        ) {
 
             contactForm.reportValidity();
 
@@ -2750,7 +5032,7 @@ contactForm.addEventListener(
         }
 
 
-        /* 희망 서비스 최소 1개 */
+        /* 서비스 하나 이상 */
 
         const selectedServices =
             contactForm.querySelectorAll(
@@ -2759,11 +5041,12 @@ contactForm.addEventListener(
 
 
         if (
-            selectedServices.length === 0
+            selectedServices.length ===
+            0
         ) {
 
             alert(
-                "희망 서비스를 하나 이상 선택해주세요."
+                "희망 서비스를 하나 이상 선택해 주세요."
             );
 
             return;
@@ -2771,62 +5054,15 @@ contactForm.addEventListener(
         }
 
 
-        /*
-        일정은 선택 사항.
-        하지만 연/월/일 중 일부만 선택한 경우
-        완전히 선택하도록 안내.
-        */
+        successMessage.hidden =
+            true;
 
-        const yearSelected =
-            scheduleYear.value;
-
-        const monthSelected =
-            scheduleMonth.value;
-
-        const daySelected =
-            scheduleDay.value;
+        errorMessage.hidden =
+            true;
 
 
-        const hasPartialDate =
-            yearSelected ||
-            monthSelected ||
-            daySelected;
-
-
-        const hasCompleteDate =
-            yearSelected &&
-            monthSelected &&
-            daySelected;
-
-
-        if (
-            hasPartialDate &&
-            !hasCompleteDate
-        ) {
-
-            alert(
-                "희망 일정의 연도, 월, 일을 모두 선택해주세요."
-            );
-
-            return;
-
-        }
-
-
-        /* 날짜 최종 저장 */
-
-        updateScheduleValue();
-
-
-        /* 메시지 초기화 */
-
-        successMessage.hidden = true;
-        errorMessage.hidden = true;
-
-
-        /* 중복 전송 방지 */
-
-        submitButton.disabled = true;
+        submitButton.disabled =
+            true;
 
         submitButton.textContent =
             "전송 중...";
@@ -2835,7 +5071,9 @@ contactForm.addEventListener(
         try {
 
             const formData =
-                new FormData(contactForm);
+                new FormData(
+                    contactForm
+                );
 
 
             const response =
@@ -2843,54 +5081,83 @@ contactForm.addEventListener(
                     "https://formspree.io/f/mgavgjbb",
                     {
 
-                        method:"POST",
+                        method:
+                            "POST",
 
-                        body:formData,
+                        body:
+                            formData,
 
                         headers:{
-                            "Accept":"application/json"
+                            "Accept":
+                                "application/json"
                         }
 
                     }
                 );
 
 
-            if (response.ok) {
-
-                contactForm.reset();
-
-                /* reset 후 숨겨진 날짜도 초기화 */
-
-                scheduleHidden.value = "";
-
-                scheduleDay.innerHTML =
-                    '<option value="">일 선택</option>';
-
-
-                successMessage.hidden =
-                    false;
-
-
-                successMessage.scrollIntoView({
-                    behavior:"smooth",
-                    block:"center"
-                });
-
-            }
-
-            else {
+            if (
+                !response.ok
+            ) {
 
                 throw new Error(
-                    "Form submission failed."
+                    "Form submission failed"
                 );
 
             }
 
+
+            /* 초기화 */
+
+            contactForm.reset();
+
+
+            selectedDate =
+                null;
+
+
+            scheduleInput.value =
+                "";
+
+
+            dateTriggerText.textContent =
+                "날짜를 선택해 주세요";
+
+
+            dateTrigger.classList.remove(
+                "has-value"
+            );
+
+
+            viewYear =
+                today.getFullYear();
+
+
+            viewMonth =
+                today.getMonth();
+
+
+            renderCalendar();
+
+
+            successMessage.hidden =
+                false;
+
+
+            successMessage.scrollIntoView({
+                behavior:"smooth",
+                block:"center"
+            });
+
+
         }
 
-        catch(error) {
+        catch (error) {
 
-            console.error(error);
+            console.error(
+                error
+            );
+
 
             errorMessage.hidden =
                 false;
@@ -2902,6 +5169,7 @@ contactForm.addEventListener(
             submitButton.disabled =
                 false;
 
+
             submitButton.textContent =
                 "상담 신청하기";
 
@@ -2910,7 +5178,10 @@ contactForm.addEventListener(
     }
 );
 
+
 </script>
 
+
 </body>
+
 </html>
