@@ -1,12 +1,10 @@
 <!doctype html>
 <html lang="ko">
-
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-<meta name="naver-site-verification" content="c3c35e6756ad3a8ca7048bcf78173a666c7b376b"/>
+<meta name="naver-site-verification" content="c3c35e6756ad3a8ca7048bcf78173a666c7b376b">
 
 <title>Heritage Atelier | Every Life Deserves To Be Remembered.</title>
 
@@ -18,306 +16,1874 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-.menu a.active,
-.mobile-menu a.active {
-    color: #c9a96e;
-}
 
-.menu a.active::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    background: #c9a96e;
-    margin-top: 6px;
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+    --gold:#c9a96e;
+    --gold-soft:rgba(201,169,110,.18);
+    --bg:#090807;
+    --bg2:#11100e;
+    --text:#f4efe8;
+    --muted:rgba(244,239,232,.78);
 }
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
+    scroll-padding-top:80px;
 }
 
 body{
-
-font-family:'Noto Serif KR',serif;
-
-background:#090807;
-
-color:#f4efe8;
-
-overflow-x:hidden;
-
-}
-
-h1,h2,h3{
-
-font-family:'Playfair Display',serif;
-
-font-weight:400;
-
+    width:100%;
+    overflow-x:hidden;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Noto Serif KR',serif;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
 }
 
 img{
-
-display:block;
-
-max-width:100%;
-
+    display:block;
+    max-width:100%;
 }
 
 a{
-
-text-decoration:none;
-
+    color:inherit;
+    text-decoration:none;
 }
 
-:root{
-
---gold:#c9a96e;
-
---bg:#090807;
-
---bg2:#15110f;
-
---text:#f4efe8;
-
+button,
+input,
+textarea,
+select{
+    font:inherit;
 }
 
-.section{
+button{
+    border:0;
+}
 
-padding:140px 24px;
+h1,
+h2,
+h3{
+    font-weight:400;
+}
 
+.en-title{
+    font-family:'Playfair Display',serif;
 }
 
 .container{
-
-max-width:1280px;
-
-margin:auto;
-
+    width:100%;
+    max-width:1280px;
+    margin:0 auto;
 }
 
-.gold-line{
+.section{
+    padding:140px 24px;
+}
 
-width:80px;
+.section-eyebrow{
+    color:var(--gold);
+    letter-spacing:.4em;
+    text-transform:uppercase;
+    font-size:12px;
+    margin-bottom:24px;
+}
 
-height:1px;
+.section-title{
+    font-size:52px;
+    line-height:1.35;
+    letter-spacing:-.025em;
+}
 
-background:var(--gold);
-
-margin:24px auto;
-
+.text-center{
+    text-align:center;
 }
 
 .fade{
-
-opacity:.88;
-
-line-height:2;
-
+    opacity:.82;
+    line-height:2;
+    word-break:keep-all;
 }
 
+.gold-line{
+    width:80px;
+    height:1px;
+    background:var(--gold);
+    margin:26px auto;
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
 nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
 
-position:fixed;
+    background:rgba(9,8,7,.72);
 
-top:0;
+    -webkit-backdrop-filter:blur(18px);
+    backdrop-filter:blur(18px);
 
-left:0;
-
-width:100%;
-
-z-index:999;
-
-background:rgba(9,8,7,.72);
-
-backdrop-filter:blur(18px);
-
-border-bottom:1px solid rgba(201,169,110,.15);
-
-transition:.35s;
-
+    border-bottom:1px solid rgba(201,169,110,.15);
 }
 
 .nav-inner{
+    max-width:1280px;
+    height:78px;
+    margin:auto;
 
-max-width:1280px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-margin:auto;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:22px 32px;
-
+    padding:0 32px;
 }
 
 .logo{
-
-font-family:'Playfair Display';
-
-font-size:22px;
-
-letter-spacing:.12em;
-
-color:var(--gold);
-
+    font-family:'Playfair Display',serif;
+    font-size:22px;
+    letter-spacing:.12em;
+    color:var(--gold);
+    white-space:nowrap;
 }
 
 .menu{
-
-display:flex;
-
-gap:42px;
-
+    display:flex;
+    gap:42px;
 }
 
 .menu a{
+    position:relative;
 
-color:white;
+    color:#fff;
 
-font-size:14px;
+    font-size:13px;
+    letter-spacing:.12em;
 
-letter-spacing:.12em;
-
-transition:.35s;
-
+    transition:.3s;
 }
 
-.menu a:hover{
-
-color:var(--gold);
-
+.menu a:hover,
+.menu a.active,
+.mobile-menu a.active{
+    color:var(--gold);
 }
+
+.menu a.active::after{
+    content:"";
+
+    position:absolute;
+    left:0;
+    bottom:-8px;
+
+    width:100%;
+    height:1px;
+
+    background:var(--gold);
+}
+
+/* mobile button */
 
 .mobile-btn{
+    display:none;
 
-display:none;
+    width:42px;
+    height:42px;
 
-font-size:28px;
+    position:relative;
 
-color:white;
-
-cursor:pointer;
-
+    background:transparent;
+    cursor:pointer;
 }
+
+.mobile-btn span{
+    position:absolute;
+    right:5px;
+
+    display:block;
+
+    height:1px;
+
+    background:var(--text);
+
+    transition:
+        transform .3s ease,
+        opacity .3s ease,
+        width .3s ease;
+}
+
+.mobile-btn span:nth-child(1){
+    top:13px;
+    width:27px;
+}
+
+.mobile-btn span:nth-child(2){
+    top:21px;
+    width:21px;
+}
+
+.mobile-btn span:nth-child(3){
+    top:29px;
+    width:27px;
+}
+
+.mobile-btn.open span:nth-child(1){
+    top:21px;
+    transform:rotate(45deg);
+}
+
+.mobile-btn.open span:nth-child(2){
+    opacity:0;
+}
+
+.mobile-btn.open span:nth-child(3){
+    top:21px;
+    transform:rotate(-45deg);
+}
+
+/* mobile menu */
 
 .mobile-menu{
+    display:none;
 
-display:none;
+    padding:4px 22px 22px;
 
-background:#090807;
+    background:rgba(9,8,7,.97);
 
-padding:20px;
+    border-top:1px solid rgba(255,255,255,.05);
 
-border-top:1px solid rgba(255,255,255,.08);
-
-}
-
-.mobile-menu a{
-
-display:block;
-
-padding:16px 0;
-
-color:white;
-
-border-bottom:1px solid rgba(255,255,255,.06);
-
-}
-
-@media(max-width:900px){
-
-.menu{
-
-display:none;
-
-}
-
-.mobile-btn{
-
-display:block;
-
+    -webkit-backdrop-filter:blur(20px);
+    backdrop-filter:blur(20px);
 }
 
 .mobile-menu.show{
+    display:block;
+}
 
-display:block;
+.mobile-menu a{
+    display:block;
+
+    padding:18px 2px;
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+    font-family:'Playfair Display',serif;
+
+    font-size:15px;
+    letter-spacing:.15em;
+
+    color:white;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+#hero{
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+    min-height:100svh;
+
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+}
+
+.hero-background{
+    position:absolute;
+    inset:0;
+}
+
+.hero-image{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+    object-position:center;
+
+    filter:brightness(.78);
+
+    animation:heroZoom 18s ease-in-out infinite alternate;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+
+    background:rgba(0,0,0,.38);
+}
+
+.hero-gradient{
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        rgba(9,8,7,.9) 0%,
+        rgba(9,8,7,.65) 35%,
+        rgba(9,8,7,.18) 70%,
+        rgba(9,8,7,0) 100%
+    );
+}
+
+.hero-content{
+    position:relative;
+    z-index:10;
+
+    padding:120px 24px 80px;
+}
+
+.hero-text{
+    max-width:700px;
+}
+
+.hero-subtitle{
+    color:var(--gold);
+
+    letter-spacing:.45em;
+
+    font-size:13px;
+
+    margin-bottom:30px;
+}
+
+.hero-text h1{
+    font-size:62px;
+    line-height:1.3;
+
+    letter-spacing:-.04em;
+
+    margin-bottom:34px;
+
+    word-break:keep-all;
+}
+
+.hero-description{
+    font-size:18px;
+
+    line-height:2;
+
+    opacity:.88;
+
+    margin-bottom:52px;
+
+    word-break:keep-all;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+
+    gap:16px;
+}
+
+.gold-btn,
+.line-btn{
+    min-width:180px;
+
+    padding:17px 36px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:14px;
+
+    letter-spacing:.08em;
+
+    transition:.3s;
+}
+
+.gold-btn{
+    background:var(--gold);
+    color:var(--bg);
+}
+
+.line-btn{
+    border:1px solid var(--gold);
+
+    color:var(--gold);
+}
+
+.gold-btn:hover{
+    transform:translateY(-2px);
+    opacity:.92;
+}
+
+.line-btn:hover{
+    background:var(--gold);
+    color:var(--bg);
+}
+
+.scroll-down{
+    position:absolute;
+
+    left:50%;
+    bottom:36px;
+
+    z-index:20;
+
+    transform:translateX(-50%);
+}
+
+.scroll-down span{
+    display:block;
+
+    width:1px;
+    height:65px;
+
+    background:rgba(255,255,255,.45);
+
+    animation:scrollLine 2s infinite;
+}
+
+@keyframes heroZoom{
+    from{transform:scale(1);}
+    to{transform:scale(1.07);}
+}
+
+@keyframes scrollLine{
+    0%{
+        opacity:0;
+        transform:translateY(-10px);
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+        transform:translateY(10px);
+    }
+}
+
+/* =========================================================
+   PHILOSOPHY
+========================================================= */
+
+#philosophy{
+    background:var(--bg2);
+}
+
+.philosophy-inner{
+    max-width:900px;
+    margin:auto;
+
+    text-align:center;
+}
+
+.philosophy-title{
+    font-size:54px;
+    line-height:1.45;
+
+    letter-spacing:-.035em;
+
+    margin-bottom:30px;
+
+    word-break:keep-all;
+}
+
+.philosophy-description{
+    max-width:780px;
+
+    margin:auto;
+
+    font-size:17px;
+}
+
+/* =========================================================
+   STORY
+========================================================= */
+
+#story{
+    background:var(--bg);
+}
+
+.story-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+}
+
+.story-photo-wrap{
+    position:relative;
+}
+
+.photo-fade{
+    overflow:hidden;
+}
+
+.photo-fade img{
+    width:100%;
+
+    object-fit:cover;
+
+    transition:transform 1.2s ease;
+
+    -webkit-mask-image:radial-gradient(
+        ellipse at center,
+        black 35%,
+        rgba(0,0,0,.8) 55%,
+        rgba(0,0,0,.45) 72%,
+        rgba(0,0,0,.15) 86%,
+        transparent 100%
+    );
+
+    mask-image:radial-gradient(
+        ellipse at center,
+        black 35%,
+        rgba(0,0,0,.8) 55%,
+        rgba(0,0,0,.45) 72%,
+        rgba(0,0,0,.15) 86%,
+        transparent 100%
+    );
+}
+
+.photo-fade img:hover{
+    transform:scale(1.02);
+}
+
+.story-frame{
+    position:absolute;
+
+    right:-30px;
+    bottom:-30px;
+
+    width:140px;
+    height:140px;
+
+    border:1px solid rgba(201,169,110,.4);
+
+    z-index:-1;
+}
+
+.story-title{
+    font-size:50px;
+
+    margin-bottom:24px;
+}
+
+.story-text p{
+    margin-bottom:25px;
+}
+
+.story-text p:last-child{
+    margin-bottom:0;
+}
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+#services{
+    background:var(--bg2);
+}
+
+.services-heading{
+    max-width:800px;
+
+    margin:0 auto 85px;
+
+    text-align:center;
+}
+
+.services-title{
+    font-size:50px;
+
+    line-height:1.35;
+
+    margin-bottom:18px;
+}
+
+.service-row{
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    gap:60px;
+
+    padding:46px 0;
+
+    border-bottom:1px solid rgba(201,169,110,.18);
+
+    transition:.3s;
+}
+
+.service-row:first-child{
+    border-top:1px solid rgba(201,169,110,.18);
+}
+
+.service-row:hover{
+    padding-left:10px;
+}
+
+.service-number{
+    display:block;
+
+    color:var(--gold);
+
+    font-size:11px;
+
+    letter-spacing:.4em;
+
+    margin-bottom:15px;
+}
+
+.service-row h3{
+    font-family:'Playfair Display',serif;
+
+    font-size:34px;
+}
+
+.service-row p{
+    width:100%;
+    max-width:480px;
+
+    opacity:.8;
+
+    line-height:2;
+
+    word-break:keep-all;
+}
+
+/* =========================================================
+   WHY
+========================================================= */
+
+#why{
+    background:var(--bg);
+}
+
+.why-heading{
+    max-width:800px;
+
+    margin:0 auto 80px;
+
+    text-align:center;
+}
+
+.why-title{
+    font-size:50px;
+
+    margin-bottom:20px;
+
+    word-break:keep-all;
+}
+
+.why-grid{
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:28px;
+}
+
+.why-card{
+    padding:46px;
+
+    border:1px solid rgba(201,169,110,.15);
+
+    background:var(--bg2);
+
+    transition:.35s;
+}
+
+.why-card:hover{
+    transform:translateY(-6px);
+
+    border-color:rgba(201,169,110,.42);
+}
+
+.why-card span{
+    display:block;
+
+    color:var(--gold);
+
+    letter-spacing:.4em;
+
+    font-size:11px;
+
+    margin-bottom:17px;
+}
+
+.why-card h3{
+    font-family:'Playfair Display',serif;
+
+    font-size:29px;
+
+    margin-bottom:20px;
+}
+
+.why-card p{
+    opacity:.8;
+
+    line-height:2;
+
+    word-break:keep-all;
+}
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+#process{
+    background:var(--bg2);
+}
+
+.process-heading{
+    text-align:center;
+
+    margin-bottom:80px;
+}
+
+.process-title{
+    font-size:50px;
+
+    word-break:keep-all;
+}
+
+.process-line{
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+}
+
+.process-item{
+    width:160px;
+
+    text-align:center;
+}
+
+.circle{
+    width:70px;
+    height:70px;
+
+    margin:0 auto 22px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    color:var(--bg);
+
+    font-size:13px;
+
+    font-weight:700;
+}
+
+.process-item h4{
+    font-family:'Playfair Display',serif;
+
+    font-size:20px;
+
+    margin-bottom:8px;
+}
+
+.process-item p{
+    font-size:13px;
+
+    opacity:.7;
+}
+
+.process-connector{
+    flex:1;
+
+    height:1px;
+
+    margin:0 18px;
+
+    background:rgba(201,169,110,.3);
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+#contact{
+    background:var(--bg);
+}
+
+.contact-container{
+    max-width:850px;
+}
+
+.contact-heading{
+    text-align:center;
+
+    margin-bottom:80px;
+}
+
+.contact-title{
+    font-size:52px;
+
+    margin-bottom:24px;
+}
+
+#contact-form{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:27px;
+}
+
+.form-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:28px;
+}
+
+.form-field label,
+#contact-form > label{
+    display:block;
+
+    color:var(--gold);
+
+    font-size:12px;
+
+    letter-spacing:.15em;
+
+    margin-bottom:8px;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+
+    padding:16px 0;
+
+    color:white;
+
+    background:transparent;
+
+    border:0;
+
+    border-bottom:1px solid rgba(201,169,110,.25);
+
+    border-radius:0;
+
+    outline:none;
+
+    font-size:16px;
+
+    transition:.3s;
+}
+
+select{
+    color:#f4efe8;
+}
+
+select option{
+    background:#15110f;
+    color:#f4efe8;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    border-color:var(--gold);
+}
+
+textarea{
+    min-height:140px;
+
+    resize:vertical;
+}
+
+.agree{
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+}
+
+.agree input{
+    width:auto;
+
+    margin-top:4px;
+
+    accent-color:var(--gold);
+}
+
+.agree label{
+    color:rgba(244,239,232,.7);
+
+    font-size:12px;
+
+    line-height:1.7;
+
+    letter-spacing:.02em;
+
+    margin:0;
+}
+
+.submit-btn{
+    min-height:56px;
+
+    margin-top:8px;
+
+    padding:17px;
+
+    background:var(--gold);
+
+    color:var(--bg);
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    letter-spacing:.14em;
+
+    transition:.3s;
+}
+
+.submit-btn:hover{
+    opacity:.92;
+
+    transform:translateY(-2px);
+}
+
+#success-msg{
+    display:none;
+
+    padding:70px 0;
+
+    text-align:center;
+}
+
+#success-msg h3{
+    color:var(--gold);
+
+    font-size:30px;
+
+    margin-bottom:18px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    padding:78px 24px;
+
+    border-top:1px solid rgba(201,169,110,.15);
+
+    text-align:center;
+}
+
+footer h2{
+    font-family:'Playfair Display',serif;
+
+    color:var(--gold);
+
+    letter-spacing:.25em;
+
+    font-size:27px;
+
+    margin-bottom:18px;
+}
+
+footer p{
+    opacity:.65;
+
+    line-height:2;
+
+    font-size:13px;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width:900px){
+
+    .menu{
+        display:none;
+    }
+
+    .mobile-btn{
+        display:block;
+    }
+
+    .section{
+        padding:105px 28px;
+    }
+
+    .story-grid{
+        grid-template-columns:1fr;
+
+        gap:55px;
+    }
+
+    .story-frame{
+        display:none;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
 
 }
 
+/* =========================================================
+   MOBILE PORTRAIT
+========================================================= */
+
+@media (max-width:767px){
+
+    html{
+        scroll-padding-top:68px;
+    }
+
+    /* navigation */
+
+    .nav-inner{
+        height:68px;
+
+        padding:0 20px;
+    }
+
+    .logo{
+        font-size:15px;
+
+        letter-spacing:.13em;
+    }
+
+    /* sections */
+
+    .section{
+        padding:92px 22px;
+    }
+
+    .section-eyebrow{
+        font-size:10px;
+
+        letter-spacing:.35em;
+
+        margin-bottom:18px;
+    }
+
+    .fade{
+        font-size:14px;
+
+        line-height:2;
+    }
+
+    .gold-line{
+        width:48px;
+
+        margin:22px auto 28px;
+    }
+
+    /* HERO */
+
+    #hero{
+        min-height:100vh;
+        min-height:100svh;
+
+        align-items:flex-end;
+    }
+
+    .hero-image{
+        object-position:center center;
+
+        animation:none;
+
+        filter:brightness(.86);
+    }
+
+    .hero-overlay{
+        background:rgba(0,0,0,.15);
+    }
+
+    .hero-gradient{
+        background:linear-gradient(
+            180deg,
+            rgba(9,8,7,.03) 0%,
+            rgba(9,8,7,.05) 30%,
+            rgba(9,8,7,.38) 56%,
+            rgba(9,8,7,.88) 86%,
+            rgba(9,8,7,.97) 100%
+        );
+    }
+
+    .hero-content{
+        width:100%;
+
+        padding:105px 22px 52px;
+    }
+
+    .hero-text{
+        width:100%;
+
+        max-width:430px;
+
+        text-align:left;
+    }
+
+    .hero-subtitle{
+        font-size:10px;
+
+        letter-spacing:.4em;
+
+        margin-bottom:17px;
+    }
+
+    .hero-text h1{
+        font-size:clamp(32px,9.2vw,42px);
+
+        line-height:1.42;
+
+        letter-spacing:-.055em;
+
+        margin-bottom:20px;
+    }
+
+    .hero-description{
+        max-width:320px;
+
+        font-size:13px;
+
+        line-height:1.85;
+
+        margin-bottom:28px;
+
+        opacity:.8;
+    }
+
+    .hero-buttons{
+        display:grid;
+
+        grid-template-columns:1fr 1fr;
+
+        gap:9px;
+
+        width:100%;
+    }
+
+    .gold-btn,
+    .line-btn{
+        min-width:0;
+
+        width:100%;
+
+        padding:14px 6px;
+
+        font-size:11px;
+
+        letter-spacing:.04em;
+
+        white-space:nowrap;
+    }
+
+    .scroll-down{
+        display:none;
+    }
+
+    /* PHILOSOPHY */
+
+    #philosophy{
+        padding-top:100px;
+
+        padding-bottom:100px;
+    }
+
+    .philosophy-inner{
+        max-width:390px;
+    }
+
+    .philosophy-title{
+        font-size:29px;
+
+        line-height:1.55;
+
+        letter-spacing:-.04em;
+
+        margin-bottom:20px;
+    }
+
+    .philosophy-description{
+        font-size:14px;
+
+        line-height:2.05;
+    }
+
+    /* STORY */
+
+    #story{
+        padding-top:88px;
+
+        padding-bottom:105px;
+    }
+
+    .story-grid{
+        display:flex;
+
+        flex-direction:column;
+
+        gap:48px;
+    }
+
+    .photo-fade{
+        width:calc(100% + 8px);
+
+        margin-left:-4px;
+    }
+
+    .photo-fade img{
+        width:100%;
+
+        max-height:500px;
+
+        object-fit:cover;
+
+        object-position:center top;
+
+        -webkit-mask-image:linear-gradient(
+            to bottom,
+            black 0%,
+            black 78%,
+            rgba(0,0,0,.65) 88%,
+            transparent 100%
+        );
+
+        mask-image:linear-gradient(
+            to bottom,
+            black 0%,
+            black 78%,
+            rgba(0,0,0,.65) 88%,
+            transparent 100%
+        );
+    }
+
+    .story-title{
+        font-size:34px;
+
+        letter-spacing:-.035em;
+
+        margin-bottom:18px;
+    }
+
+    .story-text .gold-line{
+        margin-left:0;
+
+        margin-bottom:28px;
+    }
+
+    .story-text p{
+        margin-bottom:21px;
+
+        font-size:14px;
+
+        line-height:2.05;
+    }
+
+    /* SERVICES */
+
+    #services{
+        padding-top:100px;
+
+        padding-bottom:100px;
+    }
+
+    .services-heading{
+        margin-bottom:48px;
+    }
+
+    .services-title{
+        font-size:34px;
+
+        line-height:1.45;
+
+        letter-spacing:-.04em;
+    }
+
+    .service-row{
+        display:block;
+
+        padding:30px 2px 32px;
+    }
+
+    .service-row:hover{
+        padding-left:2px;
+    }
+
+    .service-number{
+        font-size:9px;
+
+        margin-bottom:11px;
+    }
+
+    .service-row h3{
+        font-size:25px;
+
+        line-height:1.3;
+
+        margin-bottom:14px;
+    }
+
+    .service-row p{
+        max-width:320px;
+
+        font-size:13px;
+
+        line-height:1.9;
+
+        opacity:.72;
+    }
+
+    /* WHY */
+
+    #why{
+        padding-top:100px;
+
+        padding-bottom:100px;
+    }
+
+    .why-heading{
+        margin-bottom:48px;
+    }
+
+    .why-title{
+        font-size:30px;
+
+        line-height:1.5;
+
+        letter-spacing:-.04em;
+    }
+
+    .why-grid{
+        gap:12px;
+    }
+
+    .why-card{
+        padding:29px 23px;
+
+        background:
+            linear-gradient(
+                135deg,
+                rgba(201,169,110,.035),
+                transparent
+            ),
+            var(--bg2);
+    }
+
+    .why-card:hover{
+        transform:none;
+    }
+
+    .why-card span{
+        font-size:9px;
+
+        margin-bottom:12px;
+    }
+
+    .why-card h3{
+        font-size:23px;
+
+        margin-bottom:12px;
+    }
+
+    .why-card p{
+        font-size:13px;
+
+        line-height:1.9;
+    }
+
+    /* PROCESS */
+
+    #process{
+        padding-top:100px;
+
+        padding-bottom:100px;
+    }
+
+    .process-heading{
+        margin-bottom:55px;
+    }
+
+    .process-title{
+        font-size:31px;
+
+        line-height:1.5;
+
+        letter-spacing:-.04em;
+    }
+
+    .process-line{
+        display:block;
+
+        max-width:320px;
+
+        margin:0 auto;
+    }
+
+    .process-item{
+        width:100%;
+
+        min-height:90px;
+
+        display:grid;
+
+        grid-template-columns:58px 1fr;
+
+        grid-template-rows:1fr 1fr;
+
+        column-gap:18px;
+
+        text-align:left;
+
+        align-items:center;
+    }
+
+    .circle{
+        grid-row:1 / 3;
+
+        width:52px;
+        height:52px;
+
+        margin:0;
+
+        font-size:11px;
+    }
+
+    .process-item h4{
+        align-self:end;
+
+        font-size:19px;
+
+        margin:0 0 3px;
+    }
+
+    .process-item p{
+        align-self:start;
+
+        font-size:11px;
+    }
+
+    .process-connector{
+        width:1px;
+        height:42px;
+
+        margin:-21px 0 -21px 26px;
+    }
+
+    /* CONTACT */
+
+    #contact{
+        padding-top:100px;
+
+        padding-bottom:92px;
+    }
+
+    .contact-heading{
+        margin-bottom:55px;
+    }
+
+    .contact-title{
+        font-size:35px;
+
+        letter-spacing:-.035em;
+
+        margin-bottom:20px;
+    }
+
+    .contact-heading .fade{
+        max-width:320px;
+
+        margin-left:auto;
+
+        margin-right:auto;
+    }
+
+    #contact-form{
+        gap:23px;
+    }
+
+    .form-grid{
+        gap:23px;
+    }
+
+    .form-field label,
+    #contact-form > label{
+        font-size:10px;
+    }
+
+    input,
+    textarea,
+    select{
+        /*
+        iPhone Safari 자동 확대 방지
+        */
+        font-size:16px;
+
+        padding:14px 0;
+    }
+
+    textarea{
+        min-height:125px;
+    }
+
+    .submit-btn{
+        width:100%;
+
+        min-height:54px;
+    }
+
+    /* FOOTER */
+
+    footer{
+        padding:62px 22px 52px;
+    }
+
+    footer h2{
+        font-size:19px;
+
+        letter-spacing:.18em;
+
+        line-height:1.5;
+    }
+
+    footer .gold-line{
+        width:38px;
+    }
+
+    footer p{
+        font-size:11px;
+
+        line-height:2;
+    }
+
 }
 
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width:380px){
+
+    .section{
+        padding-left:18px;
+
+        padding-right:18px;
+    }
+
+    .nav-inner{
+        padding-left:18px;
+
+        padding-right:18px;
+    }
+
+    .logo{
+        font-size:14px;
+    }
+
+    .hero-content{
+        padding-left:18px;
+
+        padding-right:18px;
+    }
+
+    .hero-text h1{
+        font-size:30px;
+    }
+
+    .hero-description{
+        font-size:12px;
+    }
+
+    .philosophy-title{
+        font-size:26px;
+    }
+
+    .services-title,
+    .story-title,
+    .process-title{
+        font-size:29px;
+    }
+
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion:reduce){
+
+    html{
+        scroll-behavior:auto;
+    }
+
+    *,
+    *::before,
+    *::after{
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        transition-duration:.01ms !important;
+    }
+
+}
+/* =========================================================
+   HERITAGE ATELIER
+   TYPOGRAPHY — ALL MYEONGJO
+========================================================= */
+
+html,
+body {
+    font-family:
+        'Noto Serif KR',
+        'Batang',
+        '바탕',
+        serif;
+}
+
+*,
+*::before,
+*::after {
+    font-family:
+        'Noto Serif KR',
+        'Batang',
+        '바탕',
+        serif !important;
+}
+
+button,
+input,
+textarea,
+select,
+option {
+    font-family:
+        'Noto Serif KR',
+        'Batang',
+        '바탕',
+        serif !important;
+}
+
+/* 로고 */
+.logo {
+    font-family:
+        'Noto Serif KR',
+        'Batang',
+        '바탕',
+        serif !important;
+
+    font-weight:500;
+}
+
+/* PC 메뉴 */
+.menu a {
+    font-family:
+        'Noto Serif KR',
+        'Batang',
+        '바탕',
+        serif !important;
+}
+
+/* 모바일 메뉴 */
+.mobile-menu a {
+    font-family:
+        'Noto Serif KR',
+        'Batang',
+        '바탕',
+        serif !important;
+}
+
+/* 모든 제목 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family:
+        'Noto Serif KR',
+        'Batang',
+        '바탕',
+        serif !important;
+}
+
+/* 영문 제목 */
+.en-title {
+    font-family:
+        'Noto Serif KR',
+        'Batang',
+        '바탕',
+        serif !important;
+}
+
+/* Hero */
+.hero-subtitle,
+.hero-text h1,
+.hero-description {
+    font-family:
+        'Noto Serif KR',
+        'Batang',
+        '바탕',
+        serif !important;
+}
+
+/* 섹션 소제목 */
+.section-eyebrow {
+    font-family:
+        'Noto Serif KR',
+        'Batang',
+        '바탕',
+        serif !important;
+
+    font-weight:400;
+}
+
+/* 서비스 */
+.service-row h3,
+.service-number {
+    font-family:
+        'Noto Serif KR',
+        'Batang',
+        '바탕',
+        serif !important;
+}
+
+/* WHY */
+.why-card h3,
+.why-card span {
+    font-family:
+        'Noto Serif KR',
+        'Batang',
+        '바탕',
+        serif !important;
+}
+
+/* PROCESS */
+.process-item h4,
+.circle {
+    font-family:
+        'Noto Serif KR',
+        'Batang',
+        '바탕',
+        serif !important;
+}
+
+/* 버튼 */
+.gold-btn,
+.line-btn,
+.submit-btn {
+    font-family:
+        'Noto Serif KR',
+        'Batang',
+        '바탕',
+        serif !important;
+
+    font-weight:500;
+}
+
+/* Footer */
+footer,
+footer h2,
+footer p {
+    font-family:
+        'Noto Serif KR',
+        'Batang',
+        '바탕',
+        serif !important;
+}
 </style>
-
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
+
 <nav>
 
-<div class="nav-inner">
+    <div class="nav-inner">
 
-<a href="#hero" class="logo">
-HERITAGE ATELIER
-</a>
+        <a href="#hero" class="logo">
+            HERITAGE ATELIER
+        </a>
 
-<div class="menu">
+        <div class="menu">
+            <a href="#story">ABOUT</a>
+            <a href="#services">SERVICES</a>
+            <a href="#process">PROCESS</a>
+            <a href="#contact">CONTACT</a>
+        </div>
 
-<a href="#story">ABOUT</a>
+        <button
+            id="mobileBtn"
+            class="mobile-btn"
+            type="button"
+            aria-label="메뉴 열기"
+            aria-expanded="false"
+            aria-controls="mobileMenu">
 
-<a href="#services">SERVICES</a>
+            <span></span>
+            <span></span>
+            <span></span>
 
-<a href="#process">PROCESS</a>
+        </button>
 
-<a href="#contact">CONTACT</a>
+    </div>
 
-</div>
+    <div id="mobileMenu" class="mobile-menu">
 
-<div class="mobile-btn" onclick="toggleMenu()">
+        <a href="#story">ABOUT</a>
+        <a href="#services">SERVICES</a>
+        <a href="#process">PROCESS</a>
+        <a href="#contact">CONTACT</a>
 
-☰
-
-</div>
-
-</div>
-
-<div id="mobileMenu" class="mobile-menu">
-
-<a href="#story">ABOUT</a>
-
-<a href="#services">SERVICES</a>
-
-<a href="#process">PROCESS</a>
-
-<a href="#contact">CONTACT</a>
-
-</div>
+    </div>
 
 </nav>
 
-<!-- =========================
- HERO
-========================= -->
 
-<section id="hero" class="relative min-h-screen overflow-hidden flex items-center">
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-    <!-- Background -->
-    <div class="absolute inset-0 overflow-hidden">
+<section id="hero">
+
+    <div class="hero-background">
 
         <img
             src="file_000000004570720697baccdfa882ce64.png"
@@ -326,30 +1892,22 @@ HERITAGE ATELIER
 
     </div>
 
-    <!-- Dark Overlay -->
-    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="hero-overlay"></div>
 
-    <!-- Left Gradient -->
-    <div class="absolute inset-0 hero-gradient"></div>
-
-    <!-- Content -->
+    <div class="hero-gradient"></div>
 
     <div class="container hero-content">
 
         <div class="hero-text">
 
             <p class="hero-subtitle">
-
                 HERITAGE ATELIER
-
             </p>
 
             <h1>
-
                 살아 있는 순간을<br>
-
-                가장 깊고<br>아름답게 기록합니다.
-
+                가장 깊고<br>
+                아름답게 기록합니다.
             </h1>
 
             <p class="hero-description">
@@ -364,15 +1922,11 @@ HERITAGE ATELIER
             <div class="hero-buttons">
 
                 <a href="#contact" class="gold-btn">
-
                     상담 신청하기
-
                 </a>
 
                 <a href="#services" class="line-btn">
-
                     서비스 보기
-
                 </a>
 
             </div>
@@ -381,303 +1935,26 @@ HERITAGE ATELIER
 
     </div>
 
-    <!-- Scroll -->
-
-    <div class="scroll-down">
-
+    <div class="scroll-down" aria-hidden="true">
         <span></span>
-
     </div>
 
 </section>
 
-<style>
 
-.hero-image{
+<!-- =====================================================
+     PHILOSOPHY
+===================================================== -->
 
-width:100%;
+<section id="philosophy" class="section">
 
-height:100%;
+    <div class="container philosophy-inner">
 
-object-fit:cover;
-
-animation:heroZoom 18s ease-in-out infinite alternate;
-
-filter:brightness(.78);
-
-}
-
-.hero-overlay{
-
-background:rgba(0,0,0,.42);
-
-}
-
-.hero-gradient{
-
-background:linear-gradient(
-
-90deg,
-
-rgba(9,8,7,.88) 0%,
-
-rgba(9,8,7,.62) 35%,
-
-rgba(9,8,7,.18) 70%,
-
-rgba(9,8,7,0) 100%
-
-);
-
-}
-
-.hero-content{
-
-position:relative;
-
-z-index:10;
-
-padding-top:120px;
-
-padding-bottom:80px;
-
-}
-
-.hero-text{
-
-max-width:680px;
-
-}
-
-.hero-subtitle{
-
-color:var(--gold);
-
-letter-spacing:.45em;
-
-font-size:13px;
-
-margin-bottom:30px;
-
-}
-
-.hero h1,
-
-.hero-text h1{
-
-font-size:64px;
-
-line-height:1.25;
-
-font-weight:400;
-
-margin-bottom:34px;
-
-}
-
-.hero-description{
-
-font-size:19px;
-
-opacity:.88;
-
-line-height:2;
-
-margin-bottom:60px;
-
-}
-
-.hero-buttons{
-
-display:flex;
-
-gap:20px;
-
-flex-wrap:wrap;
-
-}
-
-.gold-btn{
-
-padding:18px 42px;
-
-background:var(--gold);
-
-color:#090807;
-
-transition:.35s;
-
-letter-spacing:.08em;
-
-}
-
-.gold-btn:hover{
-
-transform:translateY(-2px);
-
-opacity:.92;
-
-}
-
-.line-btn{
-
-padding:18px 42px;
-
-border:1px solid var(--gold);
-
-color:var(--gold);
-
-transition:.35s;
-
-letter-spacing:.08em;
-
-}
-
-.line-btn:hover{
-
-background:var(--gold);
-
-color:#090807;
-
-}
-
-.scroll-down{
-
-position:absolute;
-
-bottom:40px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-z-index:20;
-
-}
-
-.scroll-down span{
-
-display:block;
-
-width:1px;
-
-height:70px;
-
-background:rgba(255,255,255,.45);
-
-animation:scrollLine 2s infinite;
-
-}
-
-@keyframes heroZoom{
-
-from{
-
-transform:scale(1);
-
-}
-
-to{
-
-transform:scale(1.08);
-
-}
-
-}
-
-@keyframes scrollLine{
-
-0%{
-
-opacity:0;
-
-transform:translateY(-12px);
-
-}
-
-50%{
-
-opacity:1;
-
-}
-
-100%{
-
-opacity:0;
-
-transform:translateY(12px);
-
-}
-
-}
-
-@media(max-width:900px){
-
-.hero-content{
-
-text-align:center;
-
-}
-
-.hero-text{
-
-max-width:100%;
-
-}
-
-.hero-gradient{
-
-background:rgba(9,8,7,.72);
-
-}
-
-.hero-text h1{
-
-font-size:40px;
-
-line-height:1.4;
-
-}
-
-.hero-description{
-
-font-size:16px;
-
-}
-
-.hero-buttons{
-
-justify-content:center;
-
-}
-
-.gold-btn,
-
-.line-btn{
-
-width:100%;
-
-text-align:center;
-
-}
-
-}
-
-</style>
-
-<!-- ======================================
- BRAND PHILOSOPHY
-======================================= -->
-
-<section id="philosophy" class="section bg-[#11100e]">
-
-    <div class="container text-center">
-
-        <p class="text-[#c9a96e] tracking-[0.4em] text-xs uppercase mb-6">
+        <p class="section-eyebrow">
             Philosophy
         </p>
 
-        <h2 class="text-4xl md:text-6xl leading-tight mb-10">
+        <h2 class="philosophy-title">
 
             기억은 사라질 수 있습니다.<br>
             하지만 기록은<br>
@@ -687,7 +1964,7 @@ text-align:center;
 
         <div class="gold-line"></div>
 
-        <p class="fade max-w-3xl mx-auto text-lg">
+        <p class="fade philosophy-description">
 
             헤리티지 아뜰리에는 단순히 책을 만드는 브랜드가 아닙니다.<br><br>
 
@@ -701,184 +1978,115 @@ text-align:center;
 
 </section>
 
-<!-- ======================================
- STORY
-======================================= -->
+
+<!-- =====================================================
+     STORY
+===================================================== -->
 
 <section id="story" class="section">
 
-<div class="container">
+    <div class="container">
 
-<div class="grid md:grid-cols-2 gap-20 items-center">
+        <div class="story-grid">
 
-    <!-- 사진 -->
+            <div class="story-photo-wrap">
 
-    <div class="relative">
+                <div class="photo-fade">
 
-        <div class="photo-fade">
+                    <img
+                        src="1783436855287.jpg"
+                        alt="헤리티지 아뜰리에 대표 김라희"
+                        loading="lazy">
 
-    <img
-        src="1783436855287.jpg"
-        alt="대표 김라희"
-        class="rounded-sm shadow-2xl w-full object-cover">
+                </div>
+
+                <div class="story-frame" aria-hidden="true"></div>
+
+            </div>
+
+            <div class="story-text">
+
+                <p class="section-eyebrow">
+                    Our Story
+                </p>
+
+                <h2 class="story-title">
+                    이야기의 시작
+                </h2>
+
+                <div class="gold-line"></div>
+
+                <p class="fade">
+
+                    어느 날, 어머니께서 인체조직기증 약정서를
+                    작성하셨다는 이야기를 들었습니다.
+
+                </p>
+
+                <p class="fade">
+
+                    그 순간 문득 깨달았습니다.
+
+                    언젠가 어머니의 목소리도,
+                    웃음도,
+                    손끝의 온기도
+                    시간이 흐르면 희미해질 수 있다는 사실을.
+
+                </p>
+
+                <p class="fade">
+
+                    그래서 결심했습니다.
+
+                    살아 계신 지금,
+                    가장 아름다운 순간을
+                    가장 품격 있게 기록하겠다고.
+
+                </p>
+
+                <p class="fade">
+
+                    헤리티지 아뜰리에는
+                    책을 만드는 회사가 아니라,
+                    한 사람의 삶을
+                    가문의 유산으로 남기는
+                    프리미엄 라이프 헤리티지 브랜드입니다.
+
+                </p>
+
+            </div>
 
         </div>
 
-        <div
-            class="absolute -bottom-8 -right-8 w-36 h-36 border border-[#c9a96e]/40 hidden lg:block">
-        </div>
-
     </div>
-
-    <!-- 텍스트 -->
-
-    <div>
-
-        <p class="text-[#c9a96e] tracking-[0.4em] uppercase text-xs mb-5">
-
-            Our Story
-
-        </p>
-
-        <h2 class="text-5xl mb-8 leading-tight">
-
-            이야기의 시작
-
-        </h2>
-
-        <div class="gold-line !mx-0 mb-10"></div>
-
-        <p class="fade mb-8">
-
-            어느 날, 어머니께서 인체조직기증 약정서를
-            작성하셨다는 이야기를 들었습니다.
-
-        </p>
-
-        <p class="fade mb-8">
-
-            그 순간 문득 깨달았습니다.
-
-            언젠가 어머니의 목소리도,
-            웃음도,
-            손끝의 온기도
-            시간이 흐르면 희미해질 수 있다는 사실을.
-
-        </p>
-
-        <p class="fade mb-8">
-
-            그래서 결심했습니다.
-
-            살아 계신 지금,
-            가장 아름다운 순간을
-            가장 품격 있게 기록하겠다고.
-
-        </p>
-
-        <p class="fade">
-
-            헤리티지 아뜰리에는
-
-            책을 만드는 회사가 아니라,
-
-            한 사람의 삶을
-            가문의 유산으로 남기는
-            프리미엄 라이프 헤리티지 브랜드입니다.
-
-        </p>
-
-    </div>
-
-</div>
-
-</div>
 
 </section>
 
-<style>
 
-#philosophy{
+<!-- =====================================================
+     SERVICES
+===================================================== -->
 
-background:#11100e;
-
-}
-
-#story{
-
-background:#090807;
-
-}
-
-#story img{
-
-transition:1.2s;
-
-}
-
-#story img:hover{
-
-transform:scale(1.02);
-
-}
-
-@media(max-width:900px){
-
-#philosophy{
-
-padding:110px 24px;
-
-}
-
-#philosophy h2{
-
-font-size:34px;
-
-line-height:1.45;
-
-}
-
-#story{
-
-padding:110px 24px;
-
-}
-
-#story h2{
-
-font-size:38px;
-
-}
-
-}
-
-</style>
-
-<!-- ======================================
-SIGNATURE COLLECTIONS
-====================================== -->
-
-<section id="services" class="section bg-[#11100e]">
+<section id="services" class="section">
 
     <div class="container">
 
-        <div class="text-center mb-24">
+        <div class="services-heading">
 
-            <p class="text-[#c9a96e] tracking-[0.4em] uppercase text-xs mb-5">
-
+            <p class="section-eyebrow">
                 Signature Collections
-
             </p>
 
-            <h2 class="text-5xl mb-6">
+            <h2 class="services-title">
 
-                우리가<br>기록하는 것
+                우리가<br>
+                기록하는 것
 
             </h2>
 
             <div class="gold-line"></div>
 
-            <p class="fade max-w-3xl mx-auto">
+            <p class="fade">
 
                 한 사람의 삶은 하나의 방식으로만 기록되지 않습니다.
                 가장 잘 어울리는 형태를 함께 설계합니다.
@@ -887,7 +2095,8 @@ SIGNATURE COLLECTIONS
 
         </div>
 
-        <div class="space-y-14">
+
+        <div class="services-list">
 
             <div class="service-row">
 
@@ -895,7 +2104,9 @@ SIGNATURE COLLECTIONS
 
                     <span class="service-number">01</span>
 
-                    <h3>Legacy Biography</h3>
+                    <h3>
+                        Legacy Biography
+                    </h3>
 
                 </div>
 
@@ -908,13 +2119,16 @@ SIGNATURE COLLECTIONS
 
             </div>
 
+
             <div class="service-row">
 
                 <div>
 
                     <span class="service-number">02</span>
 
-                    <h3>Family Documentary</h3>
+                    <h3>
+                        Family Documentary
+                    </h3>
 
                 </div>
 
@@ -927,13 +2141,16 @@ SIGNATURE COLLECTIONS
 
             </div>
 
+
             <div class="service-row">
 
                 <div>
 
                     <span class="service-number">03</span>
 
-                    <h3>Animation Story</h3>
+                    <h3>
+                        Animation Story
+                    </h3>
 
                 </div>
 
@@ -946,13 +2163,16 @@ SIGNATURE COLLECTIONS
 
             </div>
 
+
             <div class="service-row">
 
                 <div>
 
                     <span class="service-number">04</span>
 
-                    <h3>Business Heritage</h3>
+                    <h3>
+                        Business Heritage
+                    </h3>
 
                 </div>
 
@@ -965,13 +2185,16 @@ SIGNATURE COLLECTIONS
 
             </div>
 
+
             <div class="service-row">
 
                 <div>
 
                     <span class="service-number">05</span>
 
-                    <h3>Private Digital Archive</h3>
+                    <h3>
+                        Private Digital Archive
+                    </h3>
 
                 </div>
 
@@ -990,910 +2213,744 @@ SIGNATURE COLLECTIONS
 
 </section>
 
-<style>
 
-.service-row{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:48px 0;
-
-border-bottom:1px solid rgba(201,169,110,.18);
-
-gap:60px;
-
-transition:.35s;
-
-}
-
-.service-row:hover{
-
-padding-left:12px;
-
-}
-
-.service-number{
-
-display:block;
-
-font-size:12px;
-
-letter-spacing:.4em;
-
-color:var(--gold);
-
-margin-bottom:16px;
-
-}
-
-.service-row h3{
-
-font-size:34px;
-
-font-weight:400;
-
-}
-
-.service-row p{
-
-max-width:480px;
-
-line-height:2;
-
-opacity:.82;
-
-}
-
-@media(max-width:900px){
-
-.service-row{
-
-flex-direction:column;
-
-align-items:flex-start;
-
-gap:24px;
-
-padding:36px 0;
-
-}
-
-.service-row h3{
-
-font-size:28px;
-
-}
-
-.service-row p{
-
-max-width:100%;
-
-}
-
-}
-
-</style>
-
-<!-- ======================================
-WHY HERITAGE ATELIER
-====================================== -->
+<!-- =====================================================
+     WHY
+===================================================== -->
 
 <section id="why" class="section">
 
-<div class="container">
+    <div class="container">
 
-<div class="text-center mb-24">
+        <div class="why-heading">
 
-<p class="text-[#c9a96e] tracking-[0.4em] uppercase text-xs mb-6">
-Why Heritage Atelier
-</p>
+            <p class="section-eyebrow">
+                Why Heritage Atelier
+            </p>
 
-<h2 class="text-5xl mb-8">
+            <h2 class="why-title">
+                왜 헤리티지 아뜰리에인가
+            </h2>
 
-왜 헤리티지 아뜰리에인가
+            <div class="gold-line"></div>
 
-</h2>
+            <p class="fade">
 
-<div class="gold-line"></div>
+                우리는 단순히 책을 제작하지 않습니다.
+                한 사람의 삶을 작품으로 남깁니다.
 
-<p class="fade max-w-3xl mx-auto">
+            </p>
 
-우리는 단순히 책을 제작하지 않습니다.
-한 사람의 삶을 작품으로 남깁니다.
+        </div>
 
-</p>
 
-</div>
+        <div class="why-grid">
 
-<div class="why-grid">
+            <article class="why-card">
 
-<div class="why-card">
+                <span>01</span>
 
-<span>01</span>
+                <h3>
+                    Interview First
+                </h3>
 
-<h3>Interview First</h3>
+                <p>
 
-<p>
+                    깊이 있는 인터뷰를 통해
+                    의뢰인의 삶과 가치관을
+                    가장 진정성 있게 기록합니다.
 
-깊이 있는 인터뷰를 통해
-의뢰인의 삶과 가치관을
-가장 진정성 있게 기록합니다.
+                </p>
 
-</p>
+            </article>
 
-</div>
 
-<div class="why-card">
+            <article class="why-card">
 
-<span>02</span>
+                <span>02</span>
 
-<h3>Bespoke Design</h3>
+                <h3>
+                    Bespoke Design
+                </h3>
 
-<p>
+                <p>
 
-모든 프로젝트는
-단 한 사람만을 위해
-처음부터 새롭게 설계됩니다.
+                    모든 프로젝트는
+                    단 한 사람만을 위해
+                    처음부터 새롭게 설계됩니다.
 
-</p>
+                </p>
 
-</div>
+            </article>
 
-<div class="why-card">
 
-<span>03</span>
+            <article class="why-card">
 
-<h3>Timeless Heritage</h3>
+                <span>03</span>
 
-<p>
+                <h3>
+                    Timeless Heritage
+                </h3>
 
-시간이 흘러도
-가문의 유산으로
-오래도록 이어질 수 있도록 제작합니다.
+                <p>
 
-</p>
+                    시간이 흘러도
+                    가문의 유산으로
+                    오래도록 이어질 수 있도록 제작합니다.
 
-</div>
+                </p>
 
-<div class="why-card">
+            </article>
 
-<span>04</span>
 
-<h3>Quiet Luxury</h3>
+            <article class="why-card">
 
-<p>
+                <span>04</span>
 
-화려함보다
-품격 있는 아름다움을 추구합니다.
+                <h3>
+                    Quiet Luxury
+                </h3>
 
-</p>
+                <p>
 
-</div>
+                    화려함보다
+                    품격 있는 아름다움을 추구합니다.
 
-</div>
+                </p>
 
-</div>
+            </article>
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- ======================================
-PROCESS
-====================================== -->
 
-<section id="process" class="section bg-[#11100e]">
+<!-- =====================================================
+     PROCESS
+===================================================== -->
 
-<div class="container">
+<section id="process" class="section">
 
-<div class="text-center mb-24">
+    <div class="container">
 
-<p class="text-[#c9a96e] tracking-[0.4em] uppercase text-xs mb-6">
+        <div class="process-heading">
 
-Atelier Process
+            <p class="section-eyebrow">
+                Atelier Process
+            </p>
 
-</p>
+            <h2 class="process-title">
+                기록이 완성되는 과정
+            </h2>
 
-<h2 class="text-5xl mb-8">
+            <div class="gold-line"></div>
 
-기록이 완성되는 과정
+        </div>
 
-</h2>
 
-<div class="gold-line"></div>
+        <div class="process-line">
 
-</div>
+            <div class="process-item">
 
-<div class="process-line">
+                <div class="circle">
+                    01
+                </div>
 
-<div class="process-item">
+                <h4>
+                    Consultation
+                </h4>
 
-<div class="circle">01</div>
+                <p>
+                    상담
+                </p>
 
-<h4>Consultation</h4>
+            </div>
 
-<p>상담</p>
 
-</div>
+            <div class="process-connector"></div>
 
-<div class="line"></div>
 
-<div class="process-item">
+            <div class="process-item">
 
-<div class="circle">02</div>
+                <div class="circle">
+                    02
+                </div>
 
-<h4>Planning</h4>
+                <h4>
+                    Planning
+                </h4>
 
-<p>기획</p>
+                <p>
+                    기획
+                </p>
 
-</div>
+            </div>
 
-<div class="line"></div>
 
-<div class="process-item">
+            <div class="process-connector"></div>
 
-<div class="circle">03</div>
 
-<h4>Interview</h4>
+            <div class="process-item">
 
-<p>인터뷰</p>
+                <div class="circle">
+                    03
+                </div>
 
-</div>
+                <h4>
+                    Interview
+                </h4>
 
-<div class="line"></div>
+                <p>
+                    인터뷰
+                </p>
 
-<div class="process-item">
+            </div>
 
-<div class="circle">04</div>
 
-<h4>Creation</h4>
+            <div class="process-connector"></div>
 
-<p>제작</p>
 
-</div>
+            <div class="process-item">
 
-<div class="line"></div>
+                <div class="circle">
+                    04
+                </div>
 
-<div class="process-item">
+                <h4>
+                    Creation
+                </h4>
 
-<div class="circle">05</div>
+                <p>
+                    제작
+                </p>
 
-<h4>Delivery</h4>
+            </div>
 
-<p>전달</p>
 
-</div>
+            <div class="process-connector"></div>
 
-</div>
 
-</div>
+            <div class="process-item">
+
+                <div class="circle">
+                    05
+                </div>
+
+                <h4>
+                    Delivery
+                </h4>
+
+                <p>
+                    전달
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-<style>
 
-.why-grid{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:36px;
-
-}
-
-.why-card{
-
-padding:48px;
-
-border:1px solid rgba(201,169,110,.15);
-
-background:#11100e;
-
-transition:.4s;
-
-}
-
-.why-card:hover{
-
-transform:translateY(-8px);
-
-border-color:rgba(201,169,110,.45);
-
-}
-
-.why-card span{
-
-display:block;
-
-color:var(--gold);
-
-letter-spacing:.4em;
-
-font-size:12px;
-
-margin-bottom:18px;
-
-}
-
-.why-card h3{
-
-font-size:30px;
-
-margin-bottom:24px;
-
-}
-
-.why-card p{
-
-opacity:.82;
-
-line-height:2;
-
-}
-
-.process-line{
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-}
-
-.process-item{
-
-text-align:center;
-
-width:180px;
-
-}
-
-.circle{
-
-width:72px;
-
-height:72px;
-
-margin:auto;
-
-border-radius:50%;
-
-background:var(--gold);
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-color:#090807;
-
-font-weight:bold;
-
-margin-bottom:24px;
-
-}
-
-.process-item h4{
-
-font-size:20px;
-
-margin-bottom:10px;
-
-}
-
-.process-item p{
-
-opacity:.75;
-
-}
-
-.line{
-
-flex:1;
-
-height:1px;
-
-background:rgba(201,169,110,.3);
-
-margin:0 20px;
-
-}
-
-@media(max-width:900px){
-
-.why-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.process-line{
-
-flex-direction:column;
-
-}
-
-.line{
-
-width:1px;
-
-height:60px;
-
-margin:0;
-
-}
-
-.process-item{
-
-width:100%;
-
-}
-
-}
-
-</style>
-
-<!-- ======================================
-CONTACT
-====================================== -->
+<!-- =====================================================
+     CONTACT
+===================================================== -->
 
 <section id="contact" class="section">
 
-<div class="container" style="max-width:850px;">
+    <div class="container contact-container">
 
-<div style="text-align:center;margin-bottom:90px;">
+        <div class="contact-heading">
 
-<p class="text-[#c9a96e] tracking-[0.4em] uppercase text-xs mb-6">
+            <p class="section-eyebrow">
+                Consultation
+            </p>
 
-Consultation
+            <h2 class="contact-title">
+                상담 신청
+            </h2>
 
-</p>
+            <div class="gold-line"></div>
 
-<h2 style="font-size:54px;font-family:'Playfair Display';margin-bottom:30px;">
+            <p class="fade">
 
-상담 신청
+                당신의 삶이 하나의 유산이 될 수 있도록
+                헤리티지 아뜰리에가 함께하겠습니다.
 
-</h2>
+            </p>
 
-<div class="gold-line"></div>
+        </div>
 
-<p class="fade">
 
-당신의 삶이 하나의 유산이 될 수 있도록
-헤리티지 아뜰리에가 함께하겠습니다.
+        <form id="contact-form">
 
-</p>
+            <div class="form-grid">
 
-</div>
+                <div class="form-field">
 
-<form id="contact-form">
+                    <label for="name">
+                        성함
+                    </label>
 
-<div class="form-grid">
+                    <input
+                        id="name"
+                        type="text"
+                        name="name"
+                        autocomplete="name"
+                        required>
 
-<div>
+                </div>
 
-<label>성함</label>
 
-<input
-type="text"
-name="name"
-required>
+                <div class="form-field">
 
-</div>
+                    <label for="phone">
+                        연락처
+                    </label>
 
-<div>
+                    <input
+                        id="phone"
+                        type="tel"
+                        name="phone"
+                        autocomplete="tel"
+                        inputmode="tel"
+                        required>
 
-<label>연락처</label>
+                </div>
 
-<input
-type="tel"
-name="phone"
-required>
+            </div>
 
-</div>
 
-</div>
+            <div class="form-field">
 
-<label>이메일</label>
+                <label for="email">
+                    이메일
+                </label>
 
-<input
-type="email"
-name="email"
-required>
+                <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    autocomplete="email"
+                    required>
 
-<label>희망 서비스</label>
+            </div>
 
-<select name="service">
 
-<option>선택해주세요</option>
+            <div class="form-field">
 
-<option>Legacy Biography</option>
+                <label for="service">
+                    희망 서비스
+                </label>
 
-<option>Family Documentary</option>
+                <select
+                    id="service"
+                    name="service"
+                    required>
 
-<option>Animation Story</option>
+                    <option value="" selected disabled>
+                        선택해주세요
+                    </option>
 
-<option>Business Heritage</option>
+                    <option value="Legacy Biography">
+                        Legacy Biography
+                    </option>
 
-<option>Private Digital Archive</option>
+                    <option value="Family Documentary">
+                        Family Documentary
+                    </option>
 
-</select>
+                    <option value="Animation Story">
+                        Animation Story
+                    </option>
 
-<label>상담 목적</label>
+                    <option value="Business Heritage">
+                        Business Heritage
+                    </option>
 
-<input
-type="text"
-name="purpose">
+                    <option value="Private Digital Archive">
+                        Private Digital Archive
+                    </option>
 
-<label>희망 일정</label>
+                </select>
 
-<input
-type="text"
-name="schedule">
+            </div>
 
-<label>문의 내용</label>
 
-<textarea
-rows="6"
-name="message"></textarea>
+            <div class="form-field">
 
-<div class="agree">
+                <label for="purpose">
+                    상담 목적
+                </label>
 
-<input
-id="agree"
-type="checkbox"
-required>
+                <input
+                    id="purpose"
+                    type="text"
+                    name="purpose">
 
-<label for="agree">
+            </div>
 
-개인정보 수집 및 이용에 동의합니다.
 
-</label>
+            <div class="form-field">
 
-</div>
+                <label for="schedule">
+                    희망 일정
+                </label>
 
-<button type="submit">
+                <input
+                    id="schedule"
+                    type="date"
+                    name="schedule">
 
-상담 신청하기
+            </div>
 
-</button>
 
-</form>
+            <div class="form-field">
 
-<div id="success-msg" style="display:none;text-align:center;padding:80px 0;">
+                <label for="message">
+                    문의 내용
+                </label>
 
-<h3 style="color:#c9a96e;font-size:32px;margin-bottom:20px;">
+                <textarea
+                    id="message"
+                    rows="6"
+                    name="message"></textarea>
 
-감사합니다.
+            </div>
 
-</h3>
 
-<p>
+            <div class="agree">
 
-상담 신청이 접수되었습니다.
+                <input
+                    id="agree"
+                    type="checkbox"
+                    required>
 
-</p>
+                <label for="agree">
+                    개인정보 수집 및 이용에 동의합니다.
+                </label>
 
-</div>
+            </div>
+
+
+            <button
+                class="submit-btn"
+                type="submit">
+
+                상담 신청하기
+
+            </button>
+
+        </form>
+
+
+        <div id="success-msg">
+
+            <h3>
+                감사합니다.
+            </h3>
+
+            <p>
+                이메일 앱에서 상담 신청 내용을 전송해 주세요.
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer>
 
-<div class="container">
+    <div class="container">
 
-<h2>
+        <h2>
+            HERITAGE ATELIER
+        </h2>
 
-HERITAGE ATELIER
+        <div class="gold-line"></div>
 
-</h2>
+        <p>
+            대표 김라희
+        </p>
 
-<div class="gold-line"></div>
+        <p>
+            사업자등록번호 841-17-03099
+        </p>
 
-<p>
+        <p>
+            서울특별시 서초구 서초중앙로 45, 405호
+        </p>
 
-대표 김라희
+        <p>
+            010-4877-1258
+        </p>
 
-</p>
+        <p>
+            rhk1258@gmail.com
+        </p>
 
-<p>
-
-사업자등록번호 841-17-03099
-
-</p>
-
-<p>
-
-서울특별시 서초구 서초중앙로 45, 405호
-
-</p>
-
-<p>
-
-010-4877-1258
-
-</p>
-
-<p>
-
-rhk1258@gmail.com
-
-</p>
-
-</div>
+    </div>
 
 </footer>
 
-<style>
-.photo-fade{
-    overflow:hidden;
-}
-
-.photo-fade img{
-    width:100%;
-    display:block;
-
-    -webkit-mask-image: radial-gradient(
-    ellipse at center,
-    black 35%,
-    rgba(0,0,0,.8) 55%,
-    rgba(0,0,0,.45) 72%,
-    rgba(0,0,0,.15) 86%,
-    transparent 100%
-);
-
-mask-image: radial-gradient(
-    ellipse at center,
-    black 35%,
-    rgba(0,0,0,.8) 55%,
-    rgba(0,0,0,.45) 72%,
-    rgba(0,0,0,.15) 86%,
-    transparent 100%
-);
-}
-#contact{
-
-background:#090807;
-
-}
-
-form{
-
-display:flex;
-
-flex-direction:column;
-
-gap:28px;
-
-}
-
-.form-grid{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:28px;
-
-}
-
-label{
-
-display:block;
-
-margin-bottom:10px;
-
-color:#c9a96e;
-
-font-size:13px;
-
-letter-spacing:.15em;
-
-text-transform:uppercase;
-
-}
-
-input,
-
-textarea,
-
-select{
-
-width:100%;
-
-background:transparent;
-
-border:none;
-
-border-bottom:1px solid rgba(201,169,110,.25);
-
-padding:18px 0;
-
-color:white;
-
-font-size:16px;
-
-outline:none;
-
-transition:.3s;
-
-}
-
-input:focus,
-
-textarea:focus,
-
-select:focus{
-
-border-color:#c9a96e;
-
-}
-
-textarea{
-
-resize:vertical;
-
-}
-
-.agree{
-
-display:flex;
-
-align-items:flex-start;
-
-gap:12px;
-
-}
-
-.agree input{
-
-width:auto;
-
-margin-top:4px;
-
-}
-
-button{
-
-margin-top:20px;
-
-padding:18px;
-
-background:#c9a96e;
-
-color:#090807;
-
-border:none;
-
-cursor:pointer;
-
-font-size:16px;
-
-letter-spacing:.15em;
-
-transition:.3s;
-
-}
-
-button:hover{
-
-opacity:.92;
-
-transform:translateY(-2px);
-
-}
-
-footer{
-
-padding:80px 24px;
-
-border-top:1px solid rgba(201,169,110,.15);
-
-text-align:center;
-
-}
-
-footer h2{
-
-font-family:'Playfair Display';
-
-letter-spacing:.25em;
-
-font-size:28px;
-
-color:#c9a96e;
-
-margin-bottom:20px;
-
-}
-
-footer p{
-
-opacity:.7;
-
-line-height:2;
-
-}
-
-@media(max-width:900px){
-
-.form-grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-</style>
 
 <script>
 
-function toggleMenu(){
+/* =========================================================
+   MOBILE MENU
+========================================================= */
 
-document.getElementById("mobileMenu").classList.toggle("show");
+const mobileBtn = document.getElementById("mobileBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+function closeMobileMenu() {
+
+    mobileMenu.classList.remove("show");
+    mobileBtn.classList.remove("open");
+
+    mobileBtn.setAttribute("aria-expanded", "false");
+    mobileBtn.setAttribute("aria-label", "메뉴 열기");
 
 }
 
-document.getElementById("contact-form").addEventListener("submit",function(e){
+mobileBtn.addEventListener("click", function () {
 
-e.preventDefault();
+    const isOpen = mobileMenu.classList.toggle("show");
 
-const fd=new FormData(this);
+    mobileBtn.classList.toggle("open", isOpen);
 
-const body=[...fd.entries()].map(([k,v])=>`${k}: ${v}`).join("\\n");
+    mobileBtn.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+    );
 
-const mailto=`mailto:rhk1258@gmail.com?subject=${encodeURIComponent("헤리티지 아뜰리에 상담 신청")}&body=${encodeURIComponent(body)}`;
-
-window.open(mailto,"_blank");
-
-this.style.display="none";
-
-document.getElementById("success-msg").style.display="block";
+    mobileBtn.setAttribute(
+        "aria-label",
+        isOpen ? "메뉴 닫기" : "메뉴 열기"
+    );
 
 });
 
-</script>
-<script>
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll(".menu a, .mobile-menu a");
 
-window.addEventListener("scroll", () => {
+document.querySelectorAll(".mobile-menu a").forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        closeMobileMenu();
+
+    });
+
+});
+
+
+window.addEventListener("resize", function () {
+
+    if (window.innerWidth > 900) {
+
+        closeMobileMenu();
+
+    }
+
+});
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
+
+const sections = document.querySelectorAll("section[id]");
+
+const navLinks = document.querySelectorAll(
+    ".menu a, .mobile-menu a"
+);
+
+
+function updateActiveNavigation() {
 
     let current = "";
 
-    sections.forEach(section => {
+    const scrollPosition = window.scrollY + 190;
 
-        const top = section.offsetTop - 180;
-        const bottom = top + section.offsetHeight;
 
-        if(window.scrollY >= top && window.scrollY < bottom){
+    sections.forEach(function (section) {
+
+        const top = section.offsetTop;
+
+        const bottom =
+            section.offsetTop +
+            section.offsetHeight;
+
+
+        if (
+            scrollPosition >= top &&
+            scrollPosition < bottom
+        ) {
+
             current = section.id;
+
         }
 
     });
 
-    // ABOUT은 philosophy와 story 둘 다 포함
-    if(current === "philosophy" || current === "story"){
+
+    /*
+       Philosophy + Story = ABOUT
+    */
+
+    if (
+        current === "philosophy" ||
+        current === "story"
+    ) {
+
         current = "story";
+
     }
 
-    navLinks.forEach(link => {
+
+    /*
+       WHY는 별도 메뉴가 없으므로
+       SERVICES 상태 유지
+    */
+
+    if (current === "why") {
+
+        current = "services";
+
+    }
+
+
+    navLinks.forEach(function (link) {
 
         link.classList.remove("active");
 
-        if(link.getAttribute("href") === "#" + current){
+
+        if (
+            link.getAttribute("href") ===
+            "#" + current
+        ) {
+
             link.classList.add("active");
+
         }
 
     });
 
-});
+}
+
+
+window.addEventListener(
+    "scroll",
+    updateActiveNavigation,
+    { passive: true }
+);
+
+window.addEventListener(
+    "load",
+    updateActiveNavigation
+);
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+const contactForm =
+    document.getElementById("contact-form");
+
+const successMessage =
+    document.getElementById("success-msg");
+
+
+contactForm.addEventListener(
+    "submit",
+    function (event) {
+
+        event.preventDefault();
+
+
+        if (!contactForm.checkValidity()) {
+
+            contactForm.reportValidity();
+
+            return;
+
+        }
+
+
+        const formData =
+            new FormData(contactForm);
+
+
+        const labels = {
+
+            name: "성함",
+            phone: "연락처",
+            email: "이메일",
+            service: "희망 서비스",
+            purpose: "상담 목적",
+            schedule: "희망 일정",
+            message: "문의 내용"
+
+        };
+
+
+        const lines = [];
+
+
+        formData.forEach(
+            function (value, key) {
+
+                const label =
+                    labels[key] || key;
+
+                lines.push(
+                    label + ": " + value
+                );
+
+            }
+        );
+
+
+        const subject =
+            "헤리티지 아뜰리에 상담 신청";
+
+
+        const body =
+            "HERITAGE ATELIER 상담 신청\n\n" +
+            lines.join("\n");
+
+
+        const mailto =
+            "mailto:rhk1258@gmail.com" +
+            "?subject=" +
+            encodeURIComponent(subject) +
+            "&body=" +
+            encodeURIComponent(body);
+
+
+        window.location.href = mailto;
+
+
+        contactForm.style.display =
+            "none";
+
+
+        successMessage.style.display =
+            "block";
+
+    }
+);
+
 </script>
+
 </body>
 </html>
