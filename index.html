@@ -1532,7 +1532,104 @@ footer p {
     }
 
 }
+/* =========================================================
+   CONTACT FORM FIX
+========================================================= */
 
+.schedule-field {
+    display:block !important;
+    width:100%;
+}
+
+.schedule-input {
+    display:block !important;
+
+    width:100% !important;
+    height:54px;
+
+    padding:12px 4px !important;
+
+    background:transparent !important;
+
+    color:#f4efe8 !important;
+
+    border:0 !important;
+    border-bottom:1px solid rgba(201,169,110,.35) !important;
+
+    border-radius:0 !important;
+
+    font-family:
+        'Noto Serif KR',
+        'Batang',
+        '바탕',
+        serif !important;
+
+    font-size:15px !important;
+
+    color-scheme:dark;
+}
+
+.schedule-input:focus {
+    border-bottom-color:#c9a96e !important;
+    outline:none;
+}
+
+.schedule-input::-webkit-calendar-picker-indicator {
+    cursor:pointer;
+    opacity:.8;
+    filter:invert(1);
+}
+
+
+/* 전송 결과 */
+
+.form-message {
+    margin-top:12px;
+    padding:20px;
+
+    text-align:center;
+
+    font-size:14px;
+    line-height:1.9;
+}
+
+.form-success {
+    color:#c9a96e;
+
+    border:1px solid rgba(201,169,110,.3);
+}
+
+.form-error {
+    color:#e5b1a9;
+
+    border:1px solid rgba(229,177,169,.25);
+}
+
+
+/* 전송 중 버튼 */
+
+.submit-btn:disabled {
+    opacity:.6;
+    cursor:not-allowed;
+    transform:none;
+}
+
+
+/* 모바일 */
+
+@media (max-width:767px) {
+
+    .schedule-input {
+        min-height:52px;
+        font-size:16px !important;
+    }
+
+    .form-message {
+        padding:17px 12px;
+        font-size:13px;
+    }
+
+}
 </style>
 </head>
 
@@ -2206,215 +2303,195 @@ footer p {
 
 </div>
 
-
-<form id="contact-form">
-
-
-<div class="form-grid">
-
-
-<div class="form-field">
-
-    <label for="name">
-        성함
-    </label>
+<form
+    id="contact-form"
+    action="https://formspree.io/f/mgavgjbb"
+    method="POST"
+>
 
     <input
-        id="name"
-        type="text"
-        name="name"
-        autocomplete="name"
-        required>
+        type="hidden"
+        name="_subject"
+        value="Heritage Atelier 새로운 상담 신청"
+    >
 
-</div>
+    <div class="form-grid">
 
-
-<div class="form-field">
-
-    <label for="phone">
-        연락처
-    </label>
-
-    <input
-        id="phone"
-        type="tel"
-        name="phone"
-        autocomplete="tel"
-        inputmode="tel"
-        required>
-
-</div>
-
-
-</div>
-
-
-<div class="form-field">
-
-    <label for="email">
-        이메일
-    </label>
-
-    <input
-        id="email"
-        type="email"
-        name="email"
-        autocomplete="email"
-        required>
-
-</div>
-
-
-<!-- 희망 서비스 복수 선택 -->
-
-<div class="form-field">
-
-    <label>
-
-        희망 서비스
-
-        <span class="service-note">
-            (복수 선택 가능)
-        </span>
-
-    </label>
-
-
-    <div class="service-check-list">
-
-
-        <label>
-
+        <div class="form-field">
+            <label for="name">성함</label>
             <input
-                type="checkbox"
-                name="service"
-                value="Legacy Biography">
+                id="name"
+                type="text"
+                name="성함"
+                autocomplete="name"
+                required
+            >
+        </div>
 
-            <span>Legacy Biography</span>
-
-        </label>
-
-
-        <label>
-
+        <div class="form-field">
+            <label for="phone">연락처</label>
             <input
-                type="checkbox"
-                name="service"
-                value="Family Documentary">
-
-            <span>Family Documentary</span>
-
-        </label>
-
-
-        <label>
-
-            <input
-                type="checkbox"
-                name="service"
-                value="Animation Story">
-
-            <span>Animation Story</span>
-
-        </label>
-
-
-        <label>
-
-            <input
-                type="checkbox"
-                name="service"
-                value="Business Heritage">
-
-            <span>Business Heritage</span>
-
-        </label>
-
-
-        <label>
-
-            <input
-                type="checkbox"
-                name="service"
-                value="Private Digital Archive">
-
-            <span>Private Digital Archive</span>
-
-        </label>
-
+                id="phone"
+                type="tel"
+                name="연락처"
+                autocomplete="tel"
+                inputmode="tel"
+                required
+            >
+        </div>
 
     </div>
 
-</div>
+    <div class="form-field">
+        <label for="email">이메일</label>
+        <input
+            id="email"
+            type="email"
+            name="email"
+            autocomplete="email"
+            required
+        >
+    </div>
 
+    <div class="form-field">
 
-<div class="form-field">
+        <label>
+            희망 서비스
+            <span class="service-note">
+                (복수 선택 가능)
+            </span>
+        </label>
 
-    <label for="purpose">
-        상담 목적
-    </label>
+        <div class="service-check-list">
 
-    <input
-        id="purpose"
-        type="text"
-        name="purpose">
+            <label>
+                <input
+                    type="checkbox"
+                    name="희망 서비스"
+                    value="Legacy Biography"
+                >
+                <span>Legacy Biography</span>
+            </label>
 
-</div>
+            <label>
+                <input
+                    type="checkbox"
+                    name="희망 서비스"
+                    value="Family Documentary"
+                >
+                <span>Family Documentary</span>
+            </label>
 
+            <label>
+                <input
+                    type="checkbox"
+                    name="희망 서비스"
+                    value="Animation Story"
+                >
+                <span>Animation Story</span>
+            </label>
 
-<div class="form-field">
+            <label>
+                <input
+                    type="checkbox"
+                    name="희망 서비스"
+                    value="Business Heritage"
+                >
+                <span>Business Heritage</span>
+            </label>
 
-    <label for="schedule">
-        희망 일정
-    </label>
+            <label>
+                <input
+                    type="checkbox"
+                    name="희망 서비스"
+                    value="Private Digital Archive"
+                >
+                <span>Private Digital Archive</span>
+            </label>
 
-    <input
-        id="schedule"
-        type="date"
-        name="schedule">
+        </div>
 
-</div>
+    </div>
 
+    <div class="form-field">
+        <label for="purpose">상담 목적</label>
+        <input
+            id="purpose"
+            type="text"
+            name="상담 목적"
+            placeholder="예: 부모님 칠순 기념"
+        >
+    </div>
 
-<div class="form-field">
+    <div class="form-field schedule-field">
 
-    <label for="message">
-        문의 내용
-    </label>
+        <label for="schedule">
+            희망 일정
+        </label>
 
-    <textarea
-        id="message"
-        name="message"
-        rows="6"></textarea>
+        <input
+            id="schedule"
+            class="schedule-input"
+            type="date"
+            name="희망 일정"
+        >
 
-</div>
+    </div>
 
+    <div class="form-field">
+        <label for="message">문의 내용</label>
+        <textarea
+            id="message"
+            name="문의 내용"
+            rows="6"
+            placeholder="상담받고 싶은 내용을 자유롭게 작성해주세요."
+        ></textarea>
+    </div>
 
-<div class="agree">
+    <div class="agree">
 
-    <input
-        id="agree"
-        type="checkbox"
-        required>
+        <input
+            id="agree"
+            type="checkbox"
+            name="개인정보 수집 동의"
+            value="동의"
+            required
+        >
 
+        <label for="agree">
+            개인정보 수집 및 이용에 동의합니다.
+        </label>
 
-    <label for="agree">
+    </div>
 
-        개인정보 수집 및 이용에 동의합니다.
+    <button
+        id="submit-btn"
+        type="submit"
+        class="submit-btn"
+    >
+        상담 신청하기
+    </button>
 
-    </label>
+    <div
+        id="form-success"
+        class="form-message form-success"
+        role="status"
+        aria-live="polite"
+        hidden
+    >
+        상담 신청이 완료되었습니다.<br>
+        확인 후 연락드리겠습니다.
+    </div>
 
-</div>
-
-
-<button
-    type="submit"
-    class="submit-btn">
-
-    상담 신청하기
-
-</button>
-
+    <div
+        id="form-error"
+        class="form-message form-error"
+        role="alert"
+        hidden
+    >
+        전송 중 문제가 발생했습니다.<br>
+        잠시 후 다시 시도해주세요.
+    </div>
 
 </form>
 
@@ -2641,21 +2718,30 @@ window.addEventListener(
 
 
 /* =========================================================
-   CONTACT → EMAIL
+   CONTACT FORM → FORMSPREE
 ========================================================= */
 
 const contactForm =
-    document.getElementById(
-        "contact-form"
-    );
+    document.getElementById("contact-form");
+
+const submitButton =
+    document.getElementById("submit-btn");
+
+const successMessage =
+    document.getElementById("form-success");
+
+const errorMessage =
+    document.getElementById("form-error");
 
 
 contactForm.addEventListener(
     "submit",
-    function (event) {
+    async function(event) {
 
         event.preventDefault();
 
+
+        /* 입력하지 않은 필수 항목이 있는지 확인 */
 
         if (!contactForm.checkValidity()) {
 
@@ -2666,90 +2752,112 @@ contactForm.addEventListener(
         }
 
 
-        const formData =
-            new FormData(contactForm);
-
-
-        const name =
-            formData.get("name") || "";
-
-        const phone =
-            formData.get("phone") || "";
-
-        const email =
-            formData.get("email") || "";
-
-        const purpose =
-            formData.get("purpose") || "";
-
-        const schedule =
-            formData.get("schedule") || "";
-
-        const message =
-            formData.get("message") || "";
-
+        /* 희망 서비스를 하나 이상 선택했는지 확인 */
 
         const selectedServices =
-            formData.getAll("service");
+            contactForm.querySelectorAll(
+                'input[name="희망 서비스"]:checked'
+            );
 
 
-        const services =
-            selectedServices.length
-            ? selectedServices.join(", ")
-            : "선택하지 않음";
+        if (selectedServices.length === 0) {
+
+            alert("희망 서비스를 하나 이상 선택해주세요.");
+
+            return;
+
+        }
 
 
-        const subject =
-            "[Heritage Atelier 상담 신청] " +
-            name;
+        /* 이전 성공/오류 메시지 숨기기 */
+
+        successMessage.hidden = true;
+        errorMessage.hidden = true;
 
 
-        const body =
-`HERITAGE ATELIER 상담 신청
+        /* 중복 클릭 방지 */
 
-────────────────────
+        submitButton.disabled = true;
 
-성함
-${name}
-
-연락처
-${phone}
-
-이메일
-${email}
-
-희망 서비스
-${services}
-
-상담 목적
-${purpose}
-
-희망 일정
-${schedule}
-
-문의 내용
-${message}
-
-────────────────────
-
-Heritage Atelier 홈페이지에서 작성된 상담 신청입니다.`;
+        submitButton.textContent =
+            "전송 중...";
 
 
-        const recipient =
-            "rhk1258@gmail.com";
+        try {
+
+            /* 상담 폼에 입력된 모든 내용 가져오기 */
+
+            const formData =
+                new FormData(contactForm);
 
 
-        const mailto =
-            "mailto:" +
-            recipient +
-            "?subject=" +
-            encodeURIComponent(subject) +
-            "&body=" +
-            encodeURIComponent(body);
+            /* Formspree로 바로 전송 */
+
+            const response =
+                await fetch(
+                    "https://formspree.io/f/mgavgjbb",
+                    {
+                        method:"POST",
+
+                        body:formData,
+
+                        headers:{
+                            "Accept":"application/json"
+                        }
+                    }
+                );
 
 
-        window.location.href =
-            mailto;
+            /* 전송 성공 */
+
+            if (response.ok) {
+
+                contactForm.reset();
+
+                successMessage.hidden = false;
+
+                successMessage.scrollIntoView({
+                    behavior:"smooth",
+                    block:"center"
+                });
+
+            }
+
+
+            /* 전송 실패 */
+
+            else {
+
+                throw new Error(
+                    "Form submission failed."
+                );
+
+            }
+
+        }
+
+
+        /* 인터넷 문제 등으로 전송 실패 */
+
+        catch(error) {
+
+            console.error(error);
+
+            errorMessage.hidden = false;
+
+        }
+
+
+        /* 성공/실패 관계없이 버튼 원상복구 */
+
+        finally {
+
+            submitButton.disabled = false;
+
+            submitButton.textContent =
+                "상담 신청하기";
+
+        }
 
     }
 );
